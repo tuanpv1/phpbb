@@ -124,6 +124,7 @@ $lang = array_merge($lang, array(
 	'USER_GROUP_SPECIAL'			=> 'Loại nhóm đặc biệt, là thành viên của nhóm',
 	'USER_LIFTED_NR'				=> 'Gỡ bỏ thành công thành viên userâ€™s ra khỏi Thành viên mới đăng ký.',
 	'USER_NO_ATTACHMENTS'			=> 'Chưa đính kèm bất kỳ tập tin nào.',
+	'USER_NO_POSTS_TO_DELETE'		=> 'Thành viên này không có bài viết nào để giữ lại hay xóa.',
 	'USER_OUTBOX_EMPTIED'			=> 'Làm rỗng thành công hộp tin nhắn riêng gửi đi của userâ€™s.',
 	'USER_OUTBOX_EMPTY'				=> 'hộp tin nhắn riêng gửi đi của userâ€™s đã rỗng từ trước.',
 	'USER_OVERVIEW_UPDATED'			=> 'Thông tin chi tiết về thành viên đã được cập nhật thành công.',

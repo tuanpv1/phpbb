@@ -59,6 +59,7 @@ $lang = array_merge($lang, array(
 	'LANGUAGE_PACK_DELETED'				=> 'Gói ngôn ngữ <strong>%s</strong> đã được gỡ bỏ thành công. Tất cả thành viên đang sử dụng gói ngôn ngữ này sẽ được tự động thay bằng gói ngôn ngữ mặc định của hệ thống.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Thông tin chi tiết về gói ngôn ngữ',
 	'LANGUAGE_PACK_INSTALLED'			=> 'Gói ngôn ngữ <strong>%s</strong> đã được cài đặt thành công.',
+	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Chuỗi ngôn ngữ của các trường tùy biến đã được xao chép từ gói ngôn ngữ mặc định. Hãy thay đổi chúng nếu cần.',
 	'LANGUAGE_PACK_ISO'					=> 'Mã ISO của gói ngôn ngữ',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Tên hệ thống',
 	'LANGUAGE_PACK_NAME'				=> 'Tên',

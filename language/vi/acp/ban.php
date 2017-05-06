@@ -68,8 +68,11 @@ $lang = array_merge($lang, array(
 
 	'LENGTH_BAN_INVALID'	=> 'Ngày tháng thi hành lệnh cấm phải sử dụng định dạng <kbd>YYYY-MM-DD</kbd>.',
 
+	'OPTIONS_BANNED'			=> 'Bị cấm',
+	'OPTIONS_EXCLUDED'			=> 'Được loại trừ',
+
 	'PERMANENT'		=> 'Vĩnh viễn',
-	
+
 	'UNTIL'						=> 'Cho đến ngày',
 	'USER_BAN'					=> 'Cấm một hay nhiều tên thành viên',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Bật tuỳ chọn này để ngăn chặn thành viên sử dụng các tên thành viên đã bị cấm.',

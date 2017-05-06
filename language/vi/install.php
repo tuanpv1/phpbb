@@ -51,7 +51,8 @@ $lang = array_merge($lang, array(
 	'BEGIN_CONVERT'					=> 'Bắt đầu chuyển đổi',
 	'BLANK_PREFIX_FOUND'			=> 'Bạn chưa xác định tiền tố đầu mỗi tên bảng dữ liệu trong cơ sở dữ liệu.',
 	'BOARD_NOT_INSTALLED'			=> 'Không tìm thấy bản cài đặt',
-	'BOARD_NOT_INSTALLED_EXPLAIN'	=> 'Công cụ phpBB Unified Convertor Framework yêu cầu một bản cài đặt mặc định của phpBB3 để có thể sử dụng các chức năng chuyển đổi. Bạn hãy vui lòng <a href="%s">tiến hành cài đặt phpBB3</a> trước.',
+	'BOARD_NOT_INSTALLED_EXPLAIN'	=> 'Công cụ chuyển đổi dữ liệu phpBB hợp nhất yêu cầu một bản cài đặt mặc định của phpBB3 để có thể sử dụng. Bạn hãy vui lòng <a href="%s">tiến hành cài đặt phpBB3</a> trước.',
+	'BACKUP_NOTICE'					=> 'Hãy sao lưu dữ liệu của diễn đàn trước khi nâng cấp nhằm phòng hờ các vấn đề rủi ro có thể xảy ra trong quá trình nâng cấp.',
 
 	'CATEGORY'					=> 'Nhóm thông tin',
 	'CACHE_STORE'				=> 'Lưu trữ bộ nhớ đệm',
@@ -232,6 +233,7 @@ $lang = array_merge($lang, array(
 	'INST_ERR'						=> 'Lỗi cài đặt',	
 	'INST_ERR_DB_CONNECT'			=> 'Không thể kết nối đến cơ sở dữ liệu, bạn hãy xem thông báo lỗi bên dưới để biết nguyên nhân.',
 	'INST_ERR_DB_FORUM_PATH'		=> 'Tập tin cơ sở dữ liệu bạn vừa chọn đang nằm trong thư mục cài đặt của hệ thống. Bạn không nên để tập tin này trong các thư mục của máy chủ.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'Tiền tố đầu của cơ sở dữ liệu không hợp lệ, nó phải bắt đầu bằng một ký tự và sau đó chỉ chứa các ký tự, con số và dấu gạch dưới _.',
 	'INST_ERR_DB_NO_ERROR'			=> 'Không có thông báo lỗi nào được đưa ra.',
 	'INST_ERR_DB_NO_MYSQLI'			=> 'Phiên bản MySQL được cài đặt trên máy chủ không tương thích với tuỳ chọn “MySQL với phần mở rộng MySQLi” mà bạn vừa chọn. Hãy thử thay thế bằng tuỳ chọn “MySQL” để tiếp tục.',
 	'INST_ERR_DB_NO_SQLITE'			=> 'Phiên bản phần mở rộng SQLite được cài đặt trên máy chủ đã quá cũ. Nó phải được nâng cấp ít nhất đến phiên bản 2.8.2 để sử dụng với hệ thống này.',
@@ -352,6 +354,7 @@ $lang = array_merge($lang, array(
 
 	'TABLES_MISSING'		=> 'Không thể tìm thấy những bảng dữ liệu sau<br />» <strong>%s</strong>.',
 	'TABLE_PREFIX'			=> 'Tiền tố trước tên của mỗi bảng dữ liệu',
+	'TABLE_PREFIX_EXPLAIN'	=> 'Tiền tố này phải bắt đầu bằng một ký tự và sau đó chỉ chứa các ký tự, con số và dấu gạch dưới _.',
 	'TABLE_PREFIX_SAME'		=> 'Tiền tố trước tên của mỗi bảng dữ liệu đã được sử dụng bởi hệ thống mà bạn đang muốn chuyển đổi sang phpBB.<br />» Tiền tố đã được xác định là “%s”.',
 	'TESTS_PASSED'			=> 'Kiểm tra hợp lệ',
 	'TESTS_FAILED'			=> 'Kiểm tra thất bại',

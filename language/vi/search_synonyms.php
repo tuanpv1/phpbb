@@ -98,7 +98,7 @@ $synonyms = array(
 	'irrevelant'	=> 'irrelevant',
 
 	'jeweler'	=> 'jeweller',
-	'judgement'	=> 'judgment',
+	'judgment'	=> 'judgment',
 
 	'labeled'	=> 'labelled',
 	'labor'		=> 'labour',

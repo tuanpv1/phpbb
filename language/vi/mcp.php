@@ -209,7 +209,6 @@ $lang = array_merge($lang, array(
 	'MCP_WARN_POST'			=> 'Cảnh cáo bài viết xác định',
 	'MCP_WARN_USER'			=> 'Cảnh cáo thành viên',
 
-	'MERGE_POSTS'			=> 'Nhập chung bài viết',
 	'MERGE_POSTS_CONFIRM'	=> 'Bạn có chắc chắn muốn nhập chung những bài viết đã chọn?',
 	'MERGE_TOPIC_EXPLAIN'	=> 'Sử dụng bảng điều khiển bên dưới, bạn có thể nhập chung những bài viết đã chọn tạo thành chủ đề khác. Những bài viết này sẽ không thể sắp xếp trở lại như cũ và sẽ hiển thị như khi thành viên tạo chủ đề mới.<br />Bạn hãy nhập vào số ID của chủ đề muốn thực hiện hoặc bấm vào “Chọn chủ đề” để tìm kiếm trong danh sách.',
 	'MERGE_TOPIC_ID'		=> 'Số ID của chủ đề muốn nhập chung',

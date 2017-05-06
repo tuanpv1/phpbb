@@ -59,6 +59,7 @@ $lang = array_merge($lang, array(
 
 	'RESTORE_FAILURE'		=> 'Tập tin sao lưu có thể đã bị hỏng.',
 	'RESTORE_OPTIONS'		=> 'Tuỳ chọn phục hồi',
+	'RESTORE_SELECTED_BACKUP'	=> 'Bạn có chắc muốn phục hồi dữ liệu từ sao lưu đang chọn?',
 	'RESTORE_SUCCESS'		=> 'Cơ sở dữ liệu của hệ thống đã được phục hồi thành công.<br /><br />Toàn bộ dữ liệu trong hệ thống sẽ quay trở về thời điểm thực hiện bản sao lưu này.',
 
 	'SELECT_ALL'			=> 'Chọn tất cả',

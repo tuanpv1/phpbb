@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* captcha_qa [English]
+* captcha_qa [Vietnamese]
 *
 * @package language
 * @version $Id: captcha_qa.php 9966 2009-08-12 15:12:03Z Kellanved $

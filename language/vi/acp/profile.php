@@ -131,6 +131,8 @@ $lang = array_merge($lang, array(
 
 	'SAVE'							=> 'Lưu',
 	'SECOND_OPTION'					=> 'Tuỳ chọn thứ hai',
+	'SHOW_NOVALUE_FIELD'			=> 'Hiển thị trường thông tin cá nhân nếu không có giá trị nào được chọn lựa',
+	'SHOW_NOVALUE_FIELD_EXPLAIN'	=> 'Quy định việc trường trường thông tin cá nhân sẽ được hiển thị nếu không có giá trị nào đã được chọn trước đó hoặc đang không chọn trá trị này đối với trường bắt buộc.',
 	'STEP_1_EXPLAIN_CREATE'			=> 'Với công cụ này, bạn có thể nhập vào những thông số cơ bản đầu tiên cho mục thông tin cá nhân mới. Thông số này rất cần thiết trong bước thứ hai: bạn có thể thiết lập những tuỳ chọn còn lại cũng như có thể xem trước và kiểm tra mục thông tin cá nhân nhiều hơn.',
 	'STEP_1_EXPLAIN_EDIT'			=> 'Với công cụ này, bạn có thể thay đổi những thông số cớ bản của các mục thông tin cá nhân. Những tuỳ chọn có liên quan được tính toán lại trong bước thứ hai.',
 	'STEP_1_TITLE_CREATE'			=> 'Thêm vào mục thông tin cá nhân',
