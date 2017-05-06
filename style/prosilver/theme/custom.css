@@ -1,0 +1,76 @@
+/* Ovride font face for Vietnamese UTF-8 */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif!IMPORTANT;
+}
+
+.postbody h3 {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+fieldset.polls {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+.content p {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+dl.faq {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+.content {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+.notice {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+textarea {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+#message-box textarea {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+a.button1, input.button1, input.button3, a.button2, input.button2 {
+	font-family: Verdana, Helvetica, Arial, sans-serif!IMPORTANT;
+}
+
+h1 {
+	font-family: Verdana, Helvetica, sans-serif!IMPORTANT;
+}
+
+h2 {
+	font-family: Verdana, Helvetica, sans-serif!IMPORTANT;
+}
+
+h4 {
+	font-family: Verdana, Helvetica, Arial, Sans-serif!IMPORTANT;
+}
+
+p.author {
+	font-family: Verdana, sans-serif!IMPORTANT;
+}
+
+a.forumtitle {
+	font-family: Verdana, Arial, Sans-serif!IMPORTANT;
+}
+
+a.topictitle {
+	font-family: Verdana, Arial, Sans-serif!IMPORTANT;
+}
+
+a.subforum {
+	font-family: Verdana, Arial, Sans-serif!IMPORTANT;
+}
+
+.forum_lasttopic{
+	font-family: Verdana, Arial, Sans-serif!IMPORTANT;
+}
+
+.forumrow_desc {
+	font-family: Verdana, Arial, Sans-serif!IMPORTANT;
+}

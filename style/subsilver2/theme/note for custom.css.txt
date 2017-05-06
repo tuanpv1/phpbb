@@ -1,0 +1,4 @@
+// At the end for your stylesheet.css make sure to add this line, so that it will set your forum for UTF-8 font.
+// This is important for your forum to display Vietnamese letter correctly.
+
+@import url("custom.css");
