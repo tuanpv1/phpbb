@@ -1119,7 +1119,6 @@ class auth_admin extends \phpbb\auth\auth
 		{
 			$where_sql[] = $db->sql_in_set('auth_option_id', array_map('intval', $option_id_ary));
 		}
-
 		$sql = "DELETE FROM $table
 			WHERE " . implode(' AND ', $where_sql);
 		$db->sql_query($sql);

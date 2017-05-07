@@ -45,7 +45,7 @@ $lang = array_merge($lang, array(
 	'ACP_AUTH_SETTINGS'			=> 'Thiết lập xác thực',
 	'ACP_AUTOMATION'			=> 'Tự động hoá',
 	'ACP_AVATAR_SETTINGS'		=> 'Thiết lập hình đại diện',
-
+	'ACP_GROUPS_POSITION' => 'Quản lý  vị trí nhóm',
 	'ACP_BACKUP'				=> 'Sao lưu',
 	'ACP_BAN'					=> 'Danh sách cấm',
 	'ACP_BAN_EMAILS'			=> 'Cấm theo địa chỉ Email',

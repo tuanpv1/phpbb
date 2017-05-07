@@ -106,7 +106,8 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_QUICKTIME_MEDIA'		=> 'Tập tin QuickTime Media',
 	'EXT_GROUP_REAL_MEDIA'			=> 'Tập tin Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Tập tin Windows Media',
-
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
 	'GO_TO_EXTENSIONS'		=> 'Chuyển đến phần quản lý loại tập tin',
 	'GROUP_NAME'			=> 'Tên nhóm tập tin',
 
@@ -145,6 +146,7 @@ $lang = array_merge($lang, array(
 
 	'REMOVE_ALLOWED_IPS'		=> 'Gỡ bỏ hoặc ngưng loại trừ những địa chỉ IP/tên miền <em>đã cho phép</em>',
 	'REMOVE_DISALLOWED_IPS'		=> 'Gỡ bỏ hoặc ngưng loại trừ những địa chỉ IP/tên miền <em>đã bị cấm</em>',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'SEARCH_IMAGICK'				=> 'Tìm kiếm ứng dụng Imagemagick',
 	'SECURE_ALLOW_DENY'				=> 'Danh sách đồng ý/từ chối',

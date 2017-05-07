@@ -167,6 +167,8 @@ $lang = array_merge($lang, array(
 	'DELETE_RULE_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá quy định cá nhân này?',
 	'DEMOTE_SELECTED'			=> 'Giáng chức người lãnh đạo của nhóm đã chọn',
 	'DISABLE_CENSORS'			=> 'Sử dụng chế độ kiểm duyệt từ',
+	'SELECT_CURRENT_TIME'		=> 'Chọn thời gian hiện tại',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Gợi ý: %s',
 	'DISPLAY_GALLERY'			=> 'Xem thư viện',
 	'DOMAIN_NO_MX_RECORD_EMAIL'	=> 'Tên miền của địa chỉ Email mà bạn vừa nhập không phải là một bản ghi tên miền MX hợp lệ.',
 	'DOWNLOADS'					=> 'Số lần tải về',
@@ -335,7 +337,7 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_TOPICS'			=> 'Bạn không chọn theo dõi bất cứ chủ đề nào.',
 
 	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự, không được vượt quá <strong>%2$d</strong> ký tự, không có trường hợp nhạy cảm giữa chữ với số và phải có các số.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự và không được vượt quá <strong>%2$d</strong> ký tự.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$d and %2$d.',
 	'PASS_TYPE_CASE_EXPLAIN'	=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự, không được vượt quá <strong>%2$d</strong> ký tự và phải sử dụng hỗn hợp các ký tự.',
 	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự, không được vượt quá <strong>%2$d</strong> ký tự, không có trường hợp nhạy cảm giữa chữ với số, phải có các số và phải có các ký hiệu.',
 	'PASSWORD'					=> 'Mật khẩu',

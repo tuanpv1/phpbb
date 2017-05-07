@@ -615,7 +615,7 @@ $sql_ary = array(
 	'WHERE'		=> "$sql_where
 		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
 		$sql_approved
-		$sql_limit_time",
+		$sql_limit_time ",
 	'ORDER_BY'	=> 't.topic_type ' . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order,
 );
 
