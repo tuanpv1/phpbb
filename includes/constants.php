@@ -84,6 +84,13 @@ define('GROUP_HIDDEN', 2);
 define('GROUP_SPECIAL', 3);
 define('GROUP_FREE', 4);
 
+//topics display
+define('NEW_POST',1);
+define('DANG_XU_LY',2);
+define('DA_GIAI_QUYET',3);
+define('CHUA_TRA_LOI',4);
+
+
 // Forum/Topic states
 define('FORUM_CAT', 0);
 define('FORUM_POST', 1);

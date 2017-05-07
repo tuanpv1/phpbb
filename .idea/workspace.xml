@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/prosilver/template/pagination_new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adm/style/acp_permissions.html" afterPath="$PROJECT_DIR$/adm/style/acp_permissions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/acp/acp_permissions.php" afterPath="$PROJECT_DIR$/includes/acp/acp_permissions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/acp/auth.php" afterPath="$PROJECT_DIR$/includes/acp/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en/ucp.php" afterPath="$PROJECT_DIR$/language/en/ucp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/acp/attachments.php" afterPath="$PROJECT_DIR$/language/vi/acp/attachments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/acp/board.php" afterPath="$PROJECT_DIR$/language/vi/acp/board.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/acp/common.php" afterPath="$PROJECT_DIR$/language/vi/acp/common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/acp/groups.php" afterPath="$PROJECT_DIR$/language/vi/acp/groups.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/acp/permissions_phpbb.php" afterPath="$PROJECT_DIR$/language/vi/acp/permissions_phpbb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/acp/profile.php" afterPath="$PROJECT_DIR$/language/vi/acp/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/constants.php" afterPath="$PROJECT_DIR$/includes/constants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions_display.php" afterPath="$PROJECT_DIR$/includes/functions_display.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/common.php" afterPath="$PROJECT_DIR$/language/vi/common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/ucp.php" afterPath="$PROJECT_DIR$/language/vi/ucp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/prosilver/template/posting_layout.html" afterPath="$PROJECT_DIR$/styles/prosilver/template/posting_layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/viewforum.php" afterPath="$PROJECT_DIR$/language/vi/viewforum.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" afterPath="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewforum.php" afterPath="$PROJECT_DIR$/viewforum.php" />
     </list>
     <ignored path="php-bb.iws" />
@@ -38,163 +31,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="permissions_phpbb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/vi/acp/permissions_phpbb.php">
+      <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language/vi/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.4545455">
-              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.304878">
+              <caret line="521" column="37" selection-start-line="521" selection-start-column="37" selection-end-line="521" selection-end-column="37" />
+              <folding>
+                <element signature="e#6#284#0#PHP" expanded="true" />
+                <element signature="e#55777#77484#1#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewforum.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language/vi/viewforum.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.072727">
+              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/vi/acp/profile.php">
+      <file leaf-file-name="viewforum.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/viewforum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3636364">
-              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.49323016">
+              <caret line="887" column="124" selection-start-line="887" selection-start-column="124" selection-end-line="887" selection-end-column="124" />
+              <folding>
+                <element signature="e#6#287#0#PHP" expanded="true" />
+                <marker date="1494171417774" expanded="true" signature="2235:2299" placeholder="SELECT f.* $... ${$sql_from}" />
+                <marker date="1494171417774" expanded="true" signature="4777:4902" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+                <marker date="1494171417774" expanded="true" signature="5136:5263" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+                <marker date="1494171417774" expanded="true" signature="24110:24260" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewforum_body.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.1272728">
+              <caret line="301" column="27" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#!!top" expanded="false" />
+                <element signature="n#form#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#8;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagination.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="18" column="87" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="permissions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/vi/acp/permissions.php">
+      <file leaf-file-name="pagination_new.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination_new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.909091">
-              <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/vi/acp/groups.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+            <state vertical-scroll-proportion="-6.309091">
+              <caret line="26" column="100" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/vi/acp/common.php">
+        <entry file="file://$PROJECT_DIR$/language/en/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.195122">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5272727">
-              <caret line="231" column="17" selection-start-line="231" selection-start-column="17" selection-end-line="231" selection-end-column="17" />
+            <state vertical-scroll-proportion="-3.1272728">
+              <caret line="558" column="4" selection-start-line="558" selection-start-column="4" selection-end-line="558" selection-end-column="41" />
               <folding>
-                <element signature="e#6#277#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_body.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/index_body.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acp_permissions.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adm/style/acp_permissions.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.290909">
-              <caret line="383" column="0" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
-                <element signature="n#form#1;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#dd#2;n#dl#0;n#fieldset#0;n#form#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#fieldset#1;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#fieldset#1;n#form#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#2;n#dl#0;n#fieldset#0;n#form#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#0;n#form#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#fieldset#0;n#form#5;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acp_permissions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/acp/acp_permissions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.603773">
-              <caret line="201" column="107" selection-start-line="201" selection-start-column="105" selection-end-line="201" selection-end-column="107" />
-              <folding>
-                <marker date="1494141876880" expanded="true" signature="3079:3174" placeholder="SELECT group... ${GROUPS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="3851:3917" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="14748:14880" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="19076:19117" placeholder="SELECT ${$sq... ${$table}" />
-                <marker date="1494141876880" expanded="true" signature="25048:25218" placeholder="SELECT o.aut... ${ACL_OPTIONS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="27641:27710" placeholder="SELECT group... ${GROUPS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="27716:27770" placeholder="SELECT usern... ${USERS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="28703:28761" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="29863:29932" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="30656:30987" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="38551:38628" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="38909:38981" placeholder="SELECT DISTI... ${ACL_ROLES_DATA_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="39694:39935" placeholder="SELECT DISTI... ${USERS_TABLE}" />
-                <marker date="1494141876880" expanded="true" signature="40280:40507" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/acp/auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54">
-              <caret line="1120" column="9" selection-start-line="1120" selection-start-column="9" selection-end-line="1120" selection-end-column="9" />
-              <folding>
-                <marker date="1494142289532" expanded="true" signature="576:694" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="3956:3981" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="4233:4316" placeholder="SELECT user_... ${USERS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="6692:6810" placeholder="SELECT user_... ${ACL_USERS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="7028:7148" placeholder="SELECT group... ${ACL_GROUPS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="8271:8444" placeholder="SELECT user_... ${USERS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="8473:8676" placeholder="SELECT group... ${GROUPS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="9601:9733" placeholder="SELECT * FRO... ${ACL_ROLES_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="10363:10535" placeholder="SELECT r.rol... ${ACL_ROLES_DATA_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="11315:11429" placeholder="SELECT group... ${GROUPS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="20240:20384" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="21027:21180" placeholder="SELECT user_... ${USERS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="21685:21864" placeholder="SELECT group... ${GROUPS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="22718:22818" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="26699:26765" placeholder="DELETE FROM " />
-                <marker date="1494142289532" expanded="true" signature="26931:27031" placeholder="SELECT role_... ${ACL_ROLES_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="27251:27348" placeholder="DELETE FROM " />
-                <marker date="1494142289532" expanded="true" signature="29739:29799" placeholder="DELETE FROM " />
-                <marker date="1494142289532" expanded="true" signature="30863:30955" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="31377:31638" placeholder="SELECT auth_... ${$table}" />
-                <marker date="1494142289532" expanded="true" signature="31962:32144" placeholder="SELECT ao.au... ${ACL_OPTIONS_TABLE}" />
-                <marker date="1494142289532" expanded="true" signature="33060:33088" placeholder="DELETE FROM " />
+                <element signature="e#45399#64433#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -210,15 +133,12 @@
       <list>
         <option value="$PROJECT_DIR$/language/en/common.php" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/posting_layout.html" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" />
-        <option value="$PROJECT_DIR$/viewforum.php" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/ucp_agreement.html" />
         <option value="$PROJECT_DIR$/language/en/ucp.php" />
         <option value="$PROJECT_DIR$/adm/style/acp_board.html" />
         <option value="$PROJECT_DIR$/viewonline.php" />
         <option value="$PROJECT_DIR$/includes/acp/acp_board.php" />
         <option value="$PROJECT_DIR$/includes/ucp/ucp_register.php" />
-        <option value="$PROJECT_DIR$/language/vi/common.php" />
         <option value="$PROJECT_DIR$/language/vi/ucp.php" />
         <option value="$PROJECT_DIR$/language/en/acp/groups.php" />
         <option value="$PROJECT_DIR$/language/en/acp/users.php" />
@@ -228,13 +148,22 @@
         <option value="$PROJECT_DIR$/language/vi/acp/profile.php" />
         <option value="$PROJECT_DIR$/language/vi/acp/common.php" />
         <option value="$PROJECT_DIR$/language/vi/acp/groups.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/index_body.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/ucp_header.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/simple_header.html" />
         <option value="$PROJECT_DIR$/adm/style/acp_permissions.html" />
         <option value="$PROJECT_DIR$/includes/acp/acp_permissions.php" />
         <option value="$PROJECT_DIR$/includes/acp/auth.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/functions_display.php" />
+        <option value="$PROJECT_DIR$/language/vi/viewforum.php" />
+        <option value="$PROJECT_DIR$/language/vi/common.php" />
+        <option value="$PROJECT_DIR$/includes/constants.php" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/pagination1.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/pagination.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/pagination_new.html" />
+        <option value="$PROJECT_DIR$/viewforum.php" />
       </list>
     </option>
   </component>
@@ -350,38 +279,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="acp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -393,6 +290,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js-jscs-package" value="C:\xampp\htdocs\node_modules\jscs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\phpbb\styles\prosilver\template" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -448,7 +350,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -491,162 +393,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/phpbb/content_visibility.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34798536">
-          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
-          <folding>
-            <marker date="1494049856526" expanded="true" signature="12688:12791" placeholder="SELECT poste... ${$this-&gt;posts_table}" />
-            <marker date="1494049856526" expanded="true" signature="18894:19083" placeholder="SELECT 1 AS ${POSTS_TABLE}" />
-            <marker date="1494049856526" expanded="true" signature="22266:22367" placeholder="SELECT topic... ${$this-&gt;topics_table}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#5;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/acp/acp_forums.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2008" column="61" selection-start-line="2008" selection-start-column="61" selection-end-line="2008" selection-end-column="61" />
-          <folding>
-            <marker date="1494049832896" expanded="true" signature="9343:9405" placeholder="SELECT * FRO... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="10395:10560" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="10892:11015" placeholder="SELECT MIN(t... ${TOPICS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="11712:11872" placeholder="SELECT COUNT... ${TOPICS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="13324:13407" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="21007:21119" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="29313:29425" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="32318:32413" placeholder="SELECT * FRO... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="35750:35808" placeholder="SELECT * FRO... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="41216:41306" placeholder="SELECT left_... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="42218:42261" placeholder="SELECT MAX(r... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="42517:42550" placeholder="INSERT INTO ${FORUMS_TABLE}... " />
-            <marker date="1494049832896" expanded="true" signature="45330:45377" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="45467:45518" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="45608:45658" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="45803:45848" placeholder="SELECT group... ${EXTENSION_GROUPS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="46694:46769" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="47003:47077" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="53271:53344" placeholder="SELECT MAX(r... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="54806:54867" placeholder="UPDATE ${$ta... " />
-            <marker date="1494049832896" expanded="true" signature="55084:55124" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="56101:56172" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="56991:57034" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="57116:57163" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="57245:57291" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="57564:57635" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="57911:57983" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="58478:58534" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="58587:58647" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="58700:58759" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="58904:58958" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="59007:59065" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="59114:59171" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="59648:59688" placeholder="SELECT group... ${EXTENSION_GROUPS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="62363:62528" placeholder="SELECT a.top... ${POSTS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="63127:63263" placeholder="SELECT poste... ${POSTS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="65031:65101" placeholder="SELECT ${$fi... ${POSTS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="65467:65492" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="66497:66533" placeholder="DELETE FROM " />
-            <marker date="1494049832896" expanded="true" signature="66668:66716" placeholder="UPDATE ${$ta... " />
-            <marker date="1494049832896" expanded="true" signature="67334:67419" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="67609:67697" placeholder="SELECT COUNT... ${TOPICS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="67888:67928" placeholder="SELECT COUNT... ${ATTACHMENTS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="68122:68159" placeholder="SELECT SUM(f... ${ATTACHMENTS_TABLE}" />
-            <marker date="1494049832896" expanded="true" signature="68761:68892" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/posting_layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewforum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="617" column="24" selection-start-line="617" selection-start-column="24" selection-end-line="617" selection-end-column="24" />
-          <folding>
-            <element signature="e#17670#18488#0#PHP" expanded="false" />
-            <element signature="e#17954#18486#0#PHP" expanded="false" />
-            <element signature="e#18490#20630#0#PHP" expanded="false" />
-            <element signature="e#20665#21209#0#PHP" expanded="false" />
-            <element signature="e#21351#21813#0#PHP" expanded="false" />
-            <element signature="e#21704#21813#0#PHP" expanded="false" />
-            <element signature="e#21815#22026#0#PHP" expanded="false" />
-            <element signature="e#21955#22026#0#PHP" expanded="false" />
-            <element signature="e#22028#22511#0#PHP" expanded="false" />
-            <element signature="e#22155#22511#0#PHP" expanded="false" />
-            <element signature="e#22285#22511#0#PHP" expanded="false" />
-            <element signature="e#23937#24023#0#PHP" expanded="false" />
-            <marker date="1494125856276" expanded="true" signature="2105:2169" placeholder="SELECT f.* $... ${$sql_from}" />
-            <marker date="1494125856276" expanded="true" signature="2105:2178" placeholder="SELECT f.* $... ${$sql_from}" />
-            <marker date="1494125856276" expanded="true" signature="20845:20995" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/ucp_agreement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions_module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06776557">
-          <caret line="1003" column="13" selection-start-line="1003" selection-start-column="13" selection-end-line="1003" selection-end-column="13" />
-          <folding>
-            <marker date="1494049837065" expanded="true" signature="2126:2257" placeholder="SELECT * FRO... ${MODULES_TABLE}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm/style/acp_board.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.109091">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default/container/services_user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/default/routing/feed.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.12937063">
@@ -793,27 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23791103">
-          <caret line="159" column="37" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
-          <folding>
-            <element signature="e#6#284#0#PHP" expanded="true" />
-            <element signature="e#55741#77448#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/en/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30367506">
-          <caret line="162" column="6" selection-start-line="159" selection-start-column="4" selection-end-line="162" selection-end-column="6" />
-          <folding>
-            <element signature="e#45399#64433#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/ucp/ucp_register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9878049">
@@ -874,42 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/acp/permissions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.909091">
-          <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/language/vi/acp/prune.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/acp/permissions_phpbb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4545455">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/acp/groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/acp/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3636364">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -956,28 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5272727">
-          <caret line="231" column="17" selection-start-line="231" selection-start-column="17" selection-end-line="231" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#277#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adm/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5567765">
           <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326886">
-          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -990,9 +671,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/acp/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0057142857">
+          <caret line="1109" column="20" selection-start-line="1109" selection-start-column="20" selection-end-line="1109" selection-end-column="20" />
+          <folding>
+            <marker date="1494142289532" expanded="true" signature="576:694" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="3956:3981" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="4233:4316" placeholder="SELECT user_... ${USERS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="6692:6810" placeholder="SELECT user_... ${ACL_USERS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="7028:7148" placeholder="SELECT group... ${ACL_GROUPS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="8271:8444" placeholder="SELECT user_... ${USERS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="8473:8676" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="9601:9733" placeholder="SELECT * FRO... ${ACL_ROLES_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="10363:10535" placeholder="SELECT r.rol... ${ACL_ROLES_DATA_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="11315:11429" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="20240:20384" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="21027:21180" placeholder="SELECT user_... ${USERS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="21685:21864" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="22718:22818" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="26699:26765" placeholder="DELETE FROM " />
+            <marker date="1494142289532" expanded="true" signature="26931:27031" placeholder="SELECT role_... ${ACL_ROLES_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="27251:27348" placeholder="DELETE FROM " />
+            <marker date="1494142289532" expanded="true" signature="29739:29799" placeholder="DELETE FROM " />
+            <marker date="1494142289532" expanded="true" signature="30863:30955" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="31377:31638" placeholder="SELECT auth_... ${$table}" />
+            <marker date="1494142289532" expanded="true" signature="31962:32144" placeholder="SELECT ao.au... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494142289532" expanded="true" signature="33060:33088" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/acp/acp_permissions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2031662">
+          <caret line="201" column="107" selection-start-line="201" selection-start-column="105" selection-end-line="201" selection-end-column="107" />
+          <folding>
+            <marker date="1494141876880" expanded="true" signature="3079:3174" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="3851:3917" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="14748:14880" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="19076:19117" placeholder="SELECT ${$sq... ${$table}" />
+            <marker date="1494141876880" expanded="true" signature="25048:25218" placeholder="SELECT o.aut... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="27641:27710" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="27716:27770" placeholder="SELECT usern... ${USERS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="28703:28761" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="29863:29932" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="30656:30987" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="38551:38628" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="38909:38981" placeholder="SELECT DISTI... ${ACL_ROLES_DATA_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="39694:39935" placeholder="SELECT DISTI... ${USERS_TABLE}" />
+            <marker date="1494141876880" expanded="true" signature="40280:40507" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/adm/style/acp_permissions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.290909">
+        <state vertical-scroll-proportion="0.33421752">
           <caret line="383" column="0" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
@@ -1020,56 +755,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/acp/acp_permissions.php">
+    <entry file="file://$PROJECT_DIR$/language/vi/acp/groups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.603773">
-          <caret line="201" column="107" selection-start-line="201" selection-start-column="105" selection-end-line="201" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.46059114">
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/acp/permissions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86206895">
+          <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/acp/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.198939">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/acp/permissions_phpbb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0875331">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions_display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5145068">
+          <caret line="270" column="9" selection-start-line="270" selection-start-column="9" selection-end-line="270" selection-end-column="9" />
           <folding>
-            <marker date="1494141876880" expanded="true" signature="3079:3174" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="3851:3917" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="14748:14880" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="19076:19117" placeholder="SELECT ${$sq... ${$table}" />
-            <marker date="1494141876880" expanded="true" signature="25048:25218" placeholder="SELECT o.aut... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="27641:27710" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="27716:27770" placeholder="SELECT usern... ${USERS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="28703:28761" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="29863:29932" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="30656:30987" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="38551:38628" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="38909:38981" placeholder="SELECT DISTI... ${ACL_ROLES_DATA_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="39694:39935" placeholder="SELECT DISTI... ${USERS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="40280:40507" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
+            <element signature="e#4774#4907#0#PHP" expanded="false" />
+            <element signature="e#10990#12315#0#PHP" expanded="false" />
+            <element signature="e#13433#24741#0#PHP" expanded="false" />
+            <marker date="1494152107730" expanded="true" signature="30561:30758" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494152107730" expanded="true" signature="40460:40750" placeholder="SELECT forum... ${POSTS_TABLE}" />
+            <marker date="1494152107730" expanded="true" signature="40919:40988" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494152107730" expanded="true" signature="41210:41500" placeholder="SELECT topic... ${POSTS_TABLE}" />
+            <marker date="1494152107730" expanded="true" signature="41669:41739" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+            <marker date="1494152107730" expanded="true" signature="44816:44909" placeholder="SELECT notif... ${$table_sql}" />
+            <marker date="1494152107730" expanded="true" signature="45866:45953" placeholder="DELETE FROM " />
+            <marker date="1494152107730" expanded="true" signature="48019:48141" placeholder="INSERT INTO ${$table_sql}... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/acp/auth.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54">
-          <caret line="1120" column="9" selection-start-line="1120" selection-start-column="9" selection-end-line="1120" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.5915751">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
-            <marker date="1494142289532" expanded="true" signature="576:694" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="3956:3981" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="4233:4316" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="6692:6810" placeholder="SELECT user_... ${ACL_USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="7028:7148" placeholder="SELECT group... ${ACL_GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="8271:8444" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="8473:8676" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="9601:9733" placeholder="SELECT * FRO... ${ACL_ROLES_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="10363:10535" placeholder="SELECT r.rol... ${ACL_ROLES_DATA_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="11315:11429" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="20240:20384" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="21027:21180" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="21685:21864" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="22718:22818" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="26699:26765" placeholder="DELETE FROM " />
-            <marker date="1494142289532" expanded="true" signature="26931:27031" placeholder="SELECT role_... ${ACL_ROLES_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="27251:27348" placeholder="DELETE FROM " />
-            <marker date="1494142289532" expanded="true" signature="29739:29799" placeholder="DELETE FROM " />
-            <marker date="1494142289532" expanded="true" signature="30863:30955" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="31377:31638" placeholder="SELECT auth_... ${$table}" />
-            <marker date="1494142289532" expanded="true" signature="31962:32144" placeholder="SELECT ao.au... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="33060:33088" placeholder="DELETE FROM " />
+            <element signature="e#6#277#0#PHP" expanded="true" />
+            <marker date="1494151259058" expanded="true" signature="2054:2211" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1494151259058" expanded="true" signature="2232:2660" placeholder="SELECT g.gro... ${GROUPS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/viewforum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.072727">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1272728">
+          <caret line="558" column="4" selection-start-line="558" selection-start-column="4" selection-end-line="558" selection-end-column="41" />
+          <folding>
+            <element signature="e#45399#64433#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download/file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34798536">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+          <folding>
+            <marker date="1494049830938" expanded="true" signature="4824:5024" placeholder="SELECT attac... ${ATTACHMENTS_TABLE}" />
+            <marker date="1494049830938" expanded="true" signature="6380:6462" placeholder="SELECT forum... ${POSTS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpbb/auth/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.025641026">
+          <caret line="168" column="13" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="13" />
+          <folding>
+            <marker date="1494049851152" expanded="true" signature="706:824" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="2830:2931" placeholder="SELECT user_... ${USERS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="6058:6084" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="12817:12886" placeholder="SELECT * FRO... ${ACL_ROLES_DATA_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="20008:20345" placeholder="SELECT a.use... ${ACL_USERS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="20408:20803" placeholder="SELECT a.use... ${ACL_USERS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="21813:22154" placeholder="SELECT a.gro... ${ACL_GROUPS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="22222:22603" placeholder="SELECT a.gro... ${ACL_GROUPS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="23325:23396" placeholder="SELECT * FRO... ${ACL_ROLES_DATA_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="23881:23992" placeholder="SELECT forum... ${ACL_USERS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="24641:24973" placeholder="SELECT a.for... ${ACL_GROUPS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="27541:27731" placeholder="SELECT user_... ${USERS_TABLE}" />
+            <marker date="1494049851152" expanded="true" signature="30216:30349" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpbb/content_visibility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5970696">
+          <caret line="125" column="29" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
+          <folding>
+            <marker date="1494049856526" expanded="true" signature="12688:12791" placeholder="SELECT poste... ${$this-&gt;posts_table}" />
+            <marker date="1494049856526" expanded="true" signature="18894:19083" placeholder="SELECT 1 AS ${POSTS_TABLE}" />
+            <marker date="1494049856526" expanded="true" signature="22266:22367" placeholder="SELECT topic... ${$this-&gt;topics_table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7735848">
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpbb/pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34798536">
+          <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.304878">
+          <caret line="521" column="37" selection-start-line="521" selection-start-column="37" selection-end-line="521" selection-end-column="37" />
+          <folding>
+            <element signature="e#6#284#0#PHP" expanded="true" />
+            <element signature="e#55777#77484#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="18" column="87" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination_new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.309091">
+          <caret line="26" column="100" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1272728">
+          <caret line="301" column="27" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#!!top" expanded="false" />
+            <element signature="n#form#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#dl#0;n#li#0;n#ul#1;n#div#0;n#div#8;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewforum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49323016">
+          <caret line="887" column="124" selection-start-line="887" selection-start-column="124" selection-end-line="887" selection-end-column="124" />
+          <folding>
+            <element signature="e#6#287#0#PHP" expanded="true" />
+            <marker date="1494171417774" expanded="true" signature="2235:2299" placeholder="SELECT f.* $... ${$sql_from}" />
+            <marker date="1494171417774" expanded="true" signature="4777:4902" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+            <marker date="1494171417774" expanded="true" signature="5136:5263" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+            <marker date="1494171417774" expanded="true" signature="24110:24260" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
           </folding>
         </state>
       </provider>

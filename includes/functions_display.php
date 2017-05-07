@@ -99,7 +99,6 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		),
 		'LEFT_JOIN'	=> array(),
 	);
-
 	if ($config['load_db_lastread'] && $user->data['is_registered'])
 	{
 		$sql_array['LEFT_JOIN'][] = array('FROM' => array(FORUMS_TRACK_TABLE => 'ft'), 'ON' => 'ft.user_id = ' . $user->data['user_id'] . ' AND ft.forum_id = f.forum_id');
@@ -157,16 +156,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 
 	while ($row = $db->sql_fetchrow($result))
 	{
-		/**
-		* Event to modify the data set of a forum
-		*
-		* This event is triggered once per forum
-		*
-		* @event core.display_forums_modify_row
-		* @var	int		branch_root_id	Last top-level forum
-		* @var	array	row				The data of the forum
-		* @since 3.1.0-a1
-		*/
+
 		$vars = array('branch_root_id', 'row');
 		extract($phpbb_dispatcher->trigger_event('core.display_forums_modify_row', compact($vars)));
 
@@ -184,6 +174,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		}
 
 		// Category with no members
+
 		if ($row['forum_type'] == FORUM_CAT && ($row['left_id'] + 1 == $row['right_id']))
 		{
 			continue;
@@ -337,7 +328,6 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		extract($phpbb_dispatcher->trigger_event('core.display_forums_modify_forum_rows', compact($vars)));
 	}
 	$db->sql_freeresult($result);
-
 	// Handle marking posts
 	if ($mark_read == 'forums')
 	{

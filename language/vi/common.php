@@ -160,7 +160,6 @@ $lang = array_merge($lang, array(
     'CONNECTION_SUCCESS' => 'Kết nối thành công!',
     'COOKIES_DELETED' => 'Tất cả cookie đã được xoá thành công.',
     'CURRENT_TIME' => 'Hôm nay, %s',
-
     'DAY' => 'Ngày',
     'DAYS' => 'Ngày',
     'DELETE' => 'Xoá',
@@ -520,6 +519,7 @@ $lang = array_merge($lang, array(
     'OPTIONS' => 'Tuỳ chọn',
 
     'PAGE_OF' => 'Bạn đang xem trang <strong>%1$d</strong> / <strong>%2$d</strong> trang',
+	'PAGE_TITLE_NUMBER'		=> 'Trang %s',
     'PASSWORD' => 'Mật khẩu',
     'PIXEL' => 'px',
     'PLAY_QUICKTIME_FILE' => 'Chạy tập tin Quicktime',

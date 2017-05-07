@@ -1,26 +1,24 @@
 <?php
-/** 
-*
-* viewforum [Vietnamese]
-*
-* @package language
-* @version $Id: viewforum.php,v 1.09 2010/08/23 23:52:00
-* @copyright (c) 2006, 2007 phpBBVietNam Group, (c) 2009 - 2010 ytuongsangtaovn.com
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
-*
-*/
+/**
+ *
+ * viewforum [Vietnamese]
+ *
+ * @package language
+ * @version $Id: viewforum.php,v 1.09 2010/08/23 23:52:00
+ * @copyright (c) 2006, 2007 phpBBVietNam Group, (c) 2009 - 2010 ytuongsangtaovn.com
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ *
+ */
 
 /**
-* DO NOT CHANGE
-*/
-if (!defined('IN_PHPBB'))
-{
-	exit;
+ * DO NOT CHANGE
+ */
+if (!defined('IN_PHPBB')) {
+    exit;
 }
 
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
+if (empty($lang) || !is_array($lang)) {
+    $lang = array();
 }
 
 // DEVELOPERS PLEASE NOTE
@@ -36,36 +34,40 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACTIVE_TOPICS'			=> 'Những chủ đề không bị khoá',
-	'ANNOUNCEMENTS'			=> 'Thông báo',
+    'ACTIVE_TOPICS' => 'Những chủ đề không bị khoá',
+    'ANNOUNCEMENTS' => 'Thông báo',
 
-	'FORUM_PERMISSIONS'		=> 'Cấp phép chuyên mục',
+    'FORUM_PERMISSIONS' => 'Cấp phép chuyên mục',
 
-	'ICON_ANNOUNCEMENT'		=> 'Thông báo',
-	'ICON_STICKY'			=> 'Chú ý',
+    'ICON_ANNOUNCEMENT' => 'Thông báo',
+    'ICON_STICKY' => 'Chú ý',
 
-	'LOGIN_NOTIFY_FORUM'	=> 'Hãy vui lòng đăng nhập để xem chuyên mục này.',
+    'LOGIN_NOTIFY_FORUM' => 'Hãy vui lòng đăng nhập để xem chuyên mục này.',
 
-	'MARK_TOPICS_READ'		=> 'Đánh dấu tất cả chủ đề như là đã xem',
+    'MARK_TOPICS_READ' => 'Đánh dấu tất cả chủ đề như là đã xem',
 
-	'NEW_POSTS_HOT'			=> 'Có bài viết mới [ Nhiều người xem ]',
-	'NEW_POSTS_LOCKED'		=> 'Có bài viết mới [ Đã khoá ]',
-	'NO_NEW_POSTS_HOT'		=> 'Không có bài viết mới [ Nhiều người xem ]',
-	'NO_NEW_POSTS_LOCKED'	=> 'Không có bài viết mới [ Đã khoá ]',
-	'NO_READ_ACCESS'		=> 'Bạn không được cấp phép để xem các chủ đề trong chuyên mục này.',
-	'NO_UNREAD_POSTS_HOT'		=> 'Không có bài viết chưa xem [ Nhiều người xem ]',
-	'NO_UNREAD_POSTS_LOCKED'	=> 'Không có bài viết chưa xem [ Đã khóa ]',
+    'NEW_POSTS_HOT' => 'Có bài viết mới [ Nhiều người xem ]',
+    'NEW_POSTS_LOCKED' => 'Có bài viết mới [ Đã khoá ]',
+    'NO_NEW_POSTS_HOT' => 'Không có bài viết mới [ Nhiều người xem ]',
+    'NO_NEW_POSTS_LOCKED' => 'Không có bài viết mới [ Đã khoá ]',
+    'NO_READ_ACCESS' => 'Bạn không được cấp phép để xem các chủ đề trong chuyên mục này.',
+    'NO_UNREAD_POSTS_HOT' => 'Không có bài viết chưa xem [ Nhiều người xem ]',
+    'NO_UNREAD_POSTS_LOCKED' => 'Không có bài viết chưa xem [ Đã khóa ]',
 
-	'POST_FORUM_LOCKED'		=> 'Chuyên mục đã bị khoá',
+    'POST_FORUM_LOCKED' => 'Chuyên mục đã bị khoá',
 
-	'TOPICS_MARKED'			=> 'Những chủ đề trong chuyên mục này đã được đánh dấu xem rồi.',
+    'TOPICS_MARKED' => 'Những chủ đề trong chuyên mục này đã được đánh dấu xem rồi.',
 
-	'UNREAD_POSTS_HOT'		=> 'Bài viết chưa xem [ Nhiều người xem ]',
-	'UNREAD_POSTS_LOCKED'	=> 'Bài viết chưa xem [ Đã khóa ]',
+    'UNREAD_POSTS_HOT' => 'Bài viết chưa xem [ Nhiều người xem ]',
+    'UNREAD_POSTS_LOCKED' => 'Bài viết chưa xem [ Đã khóa ]',
 
-	'VIEW_FORUM'			=> 'Xem chuyên mục',
-	'VIEW_FORUM_TOPIC'		=> '1 chủ đề',
-	'VIEW_FORUM_TOPICS'		=> '%d chủ đề',
+    'VIEW_FORUM' => 'Xem chuyên mục',
+    'VIEW_FORUM_TOPIC' => '1 chủ đề',
+    'VIEW_FORUM_TOPICS' => '%d chủ đề',
+    'NEW_POST'=>'Mới post',
+    'DANG_XU_LY' => 'Đang xử lý',
+    'DA_GIAI_QUYET' => 'Đã giải quyết',
+    'CHUA_TRA_LOI' => 'Chưa trả lời',
 ));
 
 ?>
