@@ -85,10 +85,10 @@ define('GROUP_SPECIAL', 3);
 define('GROUP_FREE', 4);
 
 //topics display
-define('NEW_POST',1);
-define('DANG_XU_LY',2);
-define('DA_GIAI_QUYET',3);
-define('CHUA_TRA_LOI',4);
+define('STATUS_NEW_POST',1);
+define('STATUS_IN_PROCESS',2);
+define('STATUS_ANSWERED',3);
+define('STATUS_UNANSWERED',4);
 
 
 // Forum/Topic states

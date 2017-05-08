@@ -158,7 +158,7 @@
             <li class="header">
                 <dl class="row-item">
                     <dt id="active_topics">
-                    <div class="list-inner">{NEW_POST}</div>
+                    <div class="list-inner">{STATUS_NEW_POST}</div>
                     </dt>
                     <dd class="posts">{L_REPLIES}</dd>
                     <dd class="views">{L_VIEWS}</dd>
@@ -320,7 +320,7 @@
             <li class="header">
                 <dl class="row-item">
                     <dt id="active_topics">
-                    <div class="list-inner">{DANG_XU_LY}</div>
+                    <div class="list-inner">{STATUS_IN_PROCESS}</div>
                     </dt>
                     <dd class="posts">{L_REPLIES}</dd>
                     <dd class="views">{L_VIEWS}</dd>
@@ -447,6 +447,8 @@
 <!-- END topicrow1 -->
 
 
+
+
 <!-- IF .topicrow and not S_DISPLAY_ACTIVE -->
 <div class="action-bar bar-bottom">
     <!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
@@ -461,6 +463,340 @@
         {TOTAL_TOPICS_NEW}
         <!-- IF .pagination_new -->
         <!-- INCLUDE pagination_new.html -->
+        <!-- ELSE -->
+        &bull; {PAGE_NUMBER}
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- ENDIF -->
+
+
+
+<!-- BEGIN topicrow_answer -->
+
+<!-- IF not topicrow_answer.S_TOPIC_TYPE_SWITCH and not topicrow_answer.S_FIRST_ROW -->
+</ul>
+</div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF topicrow_answer.S_FIRST_ROW or not topicrow_answer.S_TOPIC_TYPE_SWITCH -->
+<div class="forumbg">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl class="row-item">
+                    <dt id="active_topics">
+                    <div class="list-inner">{STATUS_ANSWERED}</div>
+                    </dt>
+                    <dd class="posts">{L_REPLIES}</dd>
+                    <dd class="views">{L_VIEWS}</dd>
+                    <dd class="lastpost"><span>{L_LAST_POST}</span></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="topiclist topics">
+            <!-- ENDIF -->
+
+            <!-- EVENT viewforum_body_topicrow_answer_row_before -->
+            <li class="row<!-- IF topicrow_answer.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow_answer.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow_answer.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow_answer.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow_answer.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
+                <!-- EVENT viewforum_body_topic_row_prepend -->
+                <dl class="row-item {topicrow_answer.TOPIC_IMG_STYLE}">
+                    <dt<!-- IF topicrow_answer.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image:
+                    url({T_ICONS_PATH}{topicrow_answer.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF -->
+                    title="{topicrow_answer.TOPIC_FOLDER_IMG_ALT}">
+                    <!-- IF topicrow_answer.S_UNREAD_TOPIC and not S_IS_BOT --><a href="{topicrow_answer.U_NEWEST_POST}"
+                                                                                  class="row-item-link"></a><!-- ENDIF -->
+                    <div class="list-inner">
+                        <!-- EVENT topiclist_row_prepend -->
+                        <!-- IF topicrow_answer.S_UNREAD_TOPIC and not S_IS_BOT -->
+                        <a class="unread" href="{topicrow_answer.U_NEWEST_POST}">
+                            <i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{NEW_POST}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <a href="{topicrow_answer.U_VIEW_TOPIC}" class="topictitle">{topicrow_answer.TOPIC_TITLE}</a>
+                        <!-- IF topicrow_answer.S_TOPIC_UNAPPROVED or topicrow_answer.S_POSTS_UNAPPROVED -->
+                        <a href="{topicrow_answer.U_MCP_QUEUE}" title="{L_TOPIC_UNAPPROVED}">
+                            <i class="icon fa-question fa-fw icon-blue" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_UNAPPROVED}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <!-- IF topicrow_answer.S_TOPIC_DELETED -->
+                        <a href="{topicrow_answer.U_MCP_QUEUE}" title="{L_TOPIC_DELETED}">
+                            <i class="icon fa-recycle fa-fw icon-green" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_DELETED}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <!-- IF topicrow_answer.S_TOPIC_REPORTED -->
+                        <a href="{topicrow_answer.U_MCP_REPORT}" title="{L_TOPIC_REPORTED}">
+                            <i class="icon fa-exclamation fa-fw icon-red" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_REPORTED}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <br/>
+                        <!-- EVENT topiclist_row_topic_title_after -->
+
+                        <!-- IF not S_IS_BOT -->
+                        <div class="responsive-show" style="display: none;">
+                            {L_LAST_POST} {L_POST_BY_AUTHOR} {topicrow_answer.LAST_POST_AUTHOR_FULL} &laquo; <a
+                                href="{topicrow_answer.U_LAST_POST}" title="{L_GOTO_LAST_POST}">{topicrow_answer.LAST_POST_TIME}</a>
+                            <!-- IF topicrow_answer.S_POST_GLOBAL and FORUM_ID != topicrow_answer.FORUM_ID --><br/>{L_POSTED} {L_IN}
+                            <a href="{topicrow_answer.U_VIEW_FORUM}">{topicrow_answer.FORUM_NAME}</a><!-- ENDIF -->
+                        </div>
+                        <!-- IF topicrow_answer.REPLIES --><span class="responsive-show left-box" style="display: none;">{L_REPLIES}{L_COLON} <strong>{topicrow_answer.REPLIES}</strong></span>
+                        <!-- ENDIF -->
+                        <!-- ENDIF -->
+
+                        <div class="topic-poster responsive-hide">
+                            <!-- IF topicrow_answer.S_HAS_POLL --><i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i>
+                            <!-- ENDIF -->
+                            <!-- IF topicrow_answer.ATTACH_ICON_IMG --><i class="icon fa-paperclip fa-fw"
+                                                                          aria-hidden="true"></i><!-- ENDIF -->
+                            {L_POST_BY_AUTHOR} {topicrow_answer.TOPIC_AUTHOR_FULL} &raquo; {topicrow_answer.FIRST_POST_TIME}
+                            <!-- IF topicrow_answer.S_POST_GLOBAL and FORUM_ID != topicrow_answer.FORUM_ID --> &raquo; {L_IN} <a
+                                href="{topicrow_answer.U_VIEW_FORUM}">{topicrow_answer.FORUM_NAME}</a><!-- ENDIF -->
+                        </div>
+
+                        <!-- IF .topicrow_answer.pagination -->
+                        <div class="pagination">
+                            <span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+                            <ul>
+                                <!-- BEGIN pagination -->
+                                <!-- IF topicrow_answer.pagination.S_IS_PREV -->
+                                <!-- ELSEIF topicrow_answer.pagination.S_IS_CURRENT -->
+                                <li class="active"><span>{topicrow_answer.pagination.PAGE_NUMBER}</span></li>
+                                <!-- ELSEIF topicrow_answer.pagination.S_IS_ELLIPSIS -->
+                                <li class="ellipsis"><span>{L_ELLIPSIS}</span></li>
+                                <!-- ELSEIF topicrow_answer.pagination.S_IS_NEXT -->
+                                <!-- ELSE -->
+                                <li><a class="button" href="{topicrow_answer.pagination.PAGE_URL}">{topicrow_answer.pagination.PAGE_NUMBER}</a>
+                                </li>
+                                <!-- ENDIF -->
+                                <!-- END pagination -->
+                            </ul>
+                        </div>
+                        <!-- ENDIF -->
+
+                        <!-- EVENT topiclist_row_append -->
+                    </div>
+                    </dt>
+                    <dd class="posts">{topicrow_answer.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
+                    <dd class="views">{topicrow_answer.VIEWS} <dfn>{L_VIEWS}</dfn></dd>
+                    <dd class="lastpost">
+					<span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {topicrow_answer.LAST_POST_AUTHOR_FULL}
+                        <!-- IF not S_IS_BOT -->
+							<a href="{topicrow_answer.U_LAST_POST}" title="{L_GOTO_LAST_POST}">
+                                <i class="icon fa-external-link-square fa-fw icon-lightgray icon-md"
+                                   aria-hidden="true"></i><span class="sr-only">{VIEW_LATEST_POST}</span>
+                            </a>
+                        <!-- ENDIF -->
+						<br/>{topicrow_answer.LAST_POST_TIME}
+					</span>
+                    </dd>
+                </dl>
+                <!-- EVENT viewforum_body_topic_row_append -->
+            </li>
+            <!-- EVENT viewforum_body_topic_row_after -->
+
+            <!-- IF topicrow_answer.S_LAST_ROW -->
+        </ul>
+    </div>
+</div>
+
+
+<!-- ENDIF -->
+
+<!-- BEGINELSE -->
+<!-- IF S_IS_POSTABLE -->
+<div class="panel">
+    <div class="inner">
+        <strong>{L_NO_TOPICS}</strong>
+    </div>
+</div>
+<!-- ENDIF -->
+<!-- END topicrow_answer -->
+
+
+
+
+<!-- IF .topicrow and not S_DISPLAY_ACTIVE -->
+<div class="action-bar bar-bottom">
+    <!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
+    <!-- EVENT viewforum_buttons_bottom_before -->
+
+    <!-- EVENT viewforum_buttons_bottom_after -->
+    <!-- ENDIF -->
+    <div class="pagination">
+        <!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" class="mark" accesskey="m"
+                                                                   data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull;
+        <!-- ENDIF -->
+        {TOTAL_TOPICS_ANSWER}
+        <!-- IF .pagination_answer -->
+        <!-- INCLUDE pagination_answer.html -->
+        <!-- ELSE -->
+        &bull; {PAGE_NUMBER}
+        <!-- ENDIF -->
+    </div>
+</div>
+<!-- ENDIF -->
+
+
+
+<!-- BEGIN topicrow_noanswer -->
+
+<!-- IF not topicrow_noanswer.S_TOPIC_TYPE_SWITCH and not topicrow_noanswer.S_FIRST_ROW -->
+</ul>
+</div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF topicrow_noanswer.S_FIRST_ROW or not topicrow_noanswer.S_TOPIC_TYPE_SWITCH -->
+<div class="forumbg">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl class="row-item">
+                    <dt id="active_topics">
+                    <div class="list-inner">{STATUS_UNANSWERED}</div>
+                    </dt>
+                    <dd class="posts">{L_REPLIES}</dd>
+                    <dd class="views">{L_VIEWS}</dd>
+                    <dd class="lastpost"><span>{L_LAST_POST}</span></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="topiclist topics">
+            <!-- ENDIF -->
+
+            <!-- EVENT viewforum_body_topicrow_noanswer_row_before -->
+            <li class="row<!-- IF topicrow_noanswer.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- IF topicrow_noanswer.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow_noanswer.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow_noanswer.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow_noanswer.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
+                <!-- EVENT viewforum_body_topic_row_prepend -->
+                <dl class="row-item {topicrow_noanswer.TOPIC_IMG_STYLE}">
+                    <dt<!-- IF topicrow_noanswer.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image:
+                    url({T_ICONS_PATH}{topicrow_noanswer.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF -->
+                    title="{topicrow_noanswer.TOPIC_FOLDER_IMG_ALT}">
+                    <!-- IF topicrow_noanswer.S_UNREAD_TOPIC and not S_IS_BOT --><a href="{topicrow_noanswer.U_NEWEST_POST}"
+                                                                                  class="row-item-link"></a><!-- ENDIF -->
+                    <div class="list-inner">
+                        <!-- EVENT topiclist_row_prepend -->
+                        <!-- IF topicrow_noanswer.S_UNREAD_TOPIC and not S_IS_BOT -->
+                        <a class="unread" href="{topicrow_noanswer.U_NEWEST_POST}">
+                            <i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{NEW_POST}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <a href="{topicrow_noanswer.U_VIEW_TOPIC}" class="topictitle">{topicrow_noanswer.TOPIC_TITLE}</a>
+                        <!-- IF topicrow_noanswer.S_TOPIC_UNAPPROVED or topicrow_noanswer.S_POSTS_UNAPPROVED -->
+                        <a href="{topicrow_noanswer.U_MCP_QUEUE}" title="{L_TOPIC_UNAPPROVED}">
+                            <i class="icon fa-question fa-fw icon-blue" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_UNAPPROVED}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <!-- IF topicrow_noanswer.S_TOPIC_DELETED -->
+                        <a href="{topicrow_noanswer.U_MCP_QUEUE}" title="{L_TOPIC_DELETED}">
+                            <i class="icon fa-recycle fa-fw icon-green" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_DELETED}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <!-- IF topicrow_noanswer.S_TOPIC_REPORTED -->
+                        <a href="{topicrow_noanswer.U_MCP_REPORT}" title="{L_TOPIC_REPORTED}">
+                            <i class="icon fa-exclamation fa-fw icon-red" aria-hidden="true"></i><span class="sr-only">{L_TOPIC_REPORTED}</span>
+                        </a>
+                        <!-- ENDIF -->
+                        <br/>
+                        <!-- EVENT topiclist_row_topic_title_after -->
+
+                        <!-- IF not S_IS_BOT -->
+                        <div class="responsive-show" style="display: none;">
+                            {L_LAST_POST} {L_POST_BY_AUTHOR} {topicrow_noanswer.LAST_POST_AUTHOR_FULL} &laquo; <a
+                                href="{topicrow_noanswer.U_LAST_POST}" title="{L_GOTO_LAST_POST}">{topicrow_noanswer.LAST_POST_TIME}</a>
+                            <!-- IF topicrow_noanswer.S_POST_GLOBAL and FORUM_ID != topicrow_noanswer.FORUM_ID --><br/>{L_POSTED} {L_IN}
+                            <a href="{topicrow_noanswer.U_VIEW_FORUM}">{topicrow_noanswer.FORUM_NAME}</a><!-- ENDIF -->
+                        </div>
+                        <!-- IF topicrow_noanswer.REPLIES --><span class="responsive-show left-box" style="display: none;">{L_REPLIES}{L_COLON} <strong>{topicrow_noanswer.REPLIES}</strong></span>
+                        <!-- ENDIF -->
+                        <!-- ENDIF -->
+
+                        <div class="topic-poster responsive-hide">
+                            <!-- IF topicrow_noanswer.S_HAS_POLL --><i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i>
+                            <!-- ENDIF -->
+                            <!-- IF topicrow_noanswer.ATTACH_ICON_IMG --><i class="icon fa-paperclip fa-fw"
+                                                                          aria-hidden="true"></i><!-- ENDIF -->
+                            {L_POST_BY_AUTHOR} {topicrow_noanswer.TOPIC_AUTHOR_FULL} &raquo; {topicrow_noanswer.FIRST_POST_TIME}
+                            <!-- IF topicrow_noanswer.S_POST_GLOBAL and FORUM_ID != topicrow_noanswer.FORUM_ID --> &raquo; {L_IN} <a
+                                href="{topicrow_noanswer.U_VIEW_FORUM}">{topicrow_noanswer.FORUM_NAME}</a><!-- ENDIF -->
+                        </div>
+
+                        <!-- IF .topicrow_noanswer.pagination -->
+                        <div class="pagination">
+                            <span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+                            <ul>
+                                <!-- BEGIN pagination -->
+                                <!-- IF topicrow_noanswer.pagination.S_IS_PREV -->
+                                <!-- ELSEIF topicrow_noanswer.pagination.S_IS_CURRENT -->
+                                <li class="active"><span>{topicrow_noanswer.pagination.PAGE_NUMBER}</span></li>
+                                <!-- ELSEIF topicrow_noanswer.pagination.S_IS_ELLIPSIS -->
+                                <li class="ellipsis"><span>{L_ELLIPSIS}</span></li>
+                                <!-- ELSEIF topicrow_noanswer.pagination.S_IS_NEXT -->
+                                <!-- ELSE -->
+                                <li><a class="button" href="{topicrow_noanswer.pagination.PAGE_URL}">{topicrow_noanswer.pagination.PAGE_NUMBER}</a>
+                                </li>
+                                <!-- ENDIF -->
+                                <!-- END pagination -->
+                            </ul>
+                        </div>
+                        <!-- ENDIF -->
+
+                        <!-- EVENT topiclist_row_append -->
+                    </div>
+                    </dt>
+                    <dd class="posts">{topicrow_noanswer.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
+                    <dd class="views">{topicrow_noanswer.VIEWS} <dfn>{L_VIEWS}</dfn></dd>
+                    <dd class="lastpost">
+					<span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {topicrow_noanswer.LAST_POST_AUTHOR_FULL}
+                        <!-- IF not S_IS_BOT -->
+							<a href="{topicrow_noanswer.U_LAST_POST}" title="{L_GOTO_LAST_POST}">
+                                <i class="icon fa-external-link-square fa-fw icon-lightgray icon-md"
+                                   aria-hidden="true"></i><span class="sr-only">{VIEW_LATEST_POST}</span>
+                            </a>
+                        <!-- ENDIF -->
+						<br/>{topicrow_noanswer.LAST_POST_TIME}
+					</span>
+                    </dd>
+                </dl>
+                <!-- EVENT viewforum_body_topic_row_append -->
+            </li>
+            <!-- EVENT viewforum_body_topic_row_after -->
+
+            <!-- IF topicrow_noanswer.S_LAST_ROW -->
+        </ul>
+    </div>
+</div>
+
+
+<!-- ENDIF -->
+
+<!-- BEGINELSE -->
+<!-- IF S_IS_POSTABLE -->
+<div class="panel">
+    <div class="inner">
+        <strong>{L_NO_TOPICS}</strong>
+    </div>
+</div>
+<!-- ENDIF -->
+<!-- END topicrow_noanswer -->
+
+
+
+
+<!-- IF .topicrow and not S_DISPLAY_ACTIVE -->
+<div class="action-bar bar-bottom">
+    <!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
+    <!-- EVENT viewforum_buttons_bottom_before -->
+
+    <!-- EVENT viewforum_buttons_bottom_after -->
+    <!-- ENDIF -->
+    <div class="pagination">
+        <!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" class="mark" accesskey="m"
+                                                                   data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull;
+        <!-- ENDIF -->
+        {TOTAL_TOPICS_UNANSWERED}
+        <!-- IF .pagination_answer -->
+        <!-- INCLUDE pagination_noanswer.html -->
         <!-- ELSE -->
         &bull; {PAGE_NUMBER}
         <!-- ENDIF -->

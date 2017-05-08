@@ -64,10 +64,10 @@ $lang = array_merge($lang, array(
     'VIEW_FORUM' => 'Xem chuyên mục',
     'VIEW_FORUM_TOPIC' => '1 chủ đề',
     'VIEW_FORUM_TOPICS' => '%d chủ đề',
-    'NEW_POST'=>'Mới post',
-    'DANG_XU_LY' => 'Đang xử lý',
-    'DA_GIAI_QUYET' => 'Đã giải quyết',
-    'CHUA_TRA_LOI' => 'Chưa trả lời',
+    'STATUS_NEW_POST'=>'Mới post',
+    'STATUS_IN_PROCESS' => 'Đang xử lý',
+    'STATUS_ANSWERED' => 'Đang giải quyết',
+    'STATUS_UNANSWERED' => 'Chưa trả lời',
 ));
 
 ?>

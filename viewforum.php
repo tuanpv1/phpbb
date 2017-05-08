@@ -28,7 +28,9 @@ $auth->acl($user->data);
 $forum_id = $request->variable('f', 0);
 $mark_read = $request->variable('mark', '');
 $start = $request->variable('start', 0);
-$news_post_page = $request->variable('news', 0);
+$process_post_page = $request->variable('process', 0);
+$answer_post_page = $request->variable('answer', 0);
+$noanswer_post_page = $request->variable('noanswer', 0);
 
 $default_sort_days = (!empty($user->data['user_topic_show_days'])) ? $user->data['user_topic_show_days'] : 0;
 $default_sort_key = (!empty($user->data['user_topic_sortby_type'])) ? $user->data['user_topic_sortby_type'] : 't';
@@ -39,8 +41,7 @@ $sort_key = $request->variable('sk', $default_sort_key);
 $sort_dir = $request->variable('sd', $default_sort_dir);
 
 /* @var $pagination \phpbb\pagination */
-$pagination = $phpbb_container->get('pagination');
-$pagination_new = $phpbb_container->get('pagination');
+$pagination_noanswer = $pagination_process = $pagination = $pagination_answer = $phpbb_container->get('pagination');
 
 // Check if the user has actually sent a forum ID with his/her request
 // If not give them a nice error page.
@@ -141,22 +142,39 @@ $phpbb_content_visibility = $phpbb_container->get('content.visibility');
 // Dump out the page header and load viewforum template
 //lay so luong topics theo forum_id va topics_display
 
-$sql = "Select COUNT(topic_id) AS topic_count from " . TOPICS_TABLE . " where topic_status_display = " . NEW_POST . " and forum_id = " . $forum_id;
+//bai viet moi
+$sql = "Select COUNT(topic_id) AS topic_count from " . TOPICS_TABLE . " where topic_status_display = " . STATUS_NEW_POST . " and forum_id = " . $forum_id;
 $result = $db->sql_query($sql);
 $topics_count = (int)$db->sql_fetchfield('topic_count');
 $db->sql_freeresult($result);
 
 $start = $pagination->validate_start($start, $config['topics_per_page'], $topics_count);
 
-
-$sql = "Select COUNT(topic_id) AS topic_count from " . TOPICS_TABLE . " where topic_status_display = " . DANG_XU_LY . " and forum_id = " . $forum_id;
+//bai viet dang xu ly
+$sql = "Select COUNT(topic_id) AS topic_count from " . TOPICS_TABLE . " where topic_status_display = " . STATUS_IN_PROCESS . " and forum_id = " . $forum_id;
 $result = $db->sql_query($sql);
-$topics_count1 = (int)$db->sql_fetchfield('topic_count');
+$topics_count_process = (int)$db->sql_fetchfield('topic_count');
 $db->sql_freeresult($result);
 
-//bai viet moi nhat
+$process_post_page = $pagination_process->validate_start($process_post_page, $config['topics_per_page'], $topics_count_process);
 
-$news_post_page = $pagination_new->validate_start($news_post_page, $config['topics_per_page'], $topics_count1);
+//bai viet dang giai quyet
+
+$sql = "Select COUNT(topic_id) AS topic_count from " . TOPICS_TABLE . " where topic_status_display = " . STATUS_ANSWERED . " and forum_id = " . $forum_id;
+$result = $db->sql_query($sql);
+$topics_count_answer = (int)$db->sql_fetchfield('topic_count');
+$db->sql_freeresult($result);
+
+$answer_post_page = $pagination_answer->validate_start($answer_post_page, $config['topics_per_page'], $topics_count_answer);
+
+//bai viet chua tra loi
+
+$sql = "Select COUNT(topic_id) AS topic_count from " . TOPICS_TABLE . " where topic_status_display = " . STATUS_UNANSWERED . " and forum_id = " . $forum_id;
+$result = $db->sql_query($sql);
+$topics_count_noanswer = (int)$db->sql_fetchfield('topic_count');
+$db->sql_freeresult($result);
+
+$noanswer_post_page = $pagination_answer->validate_start($noanswer_post_page, $config['topics_per_page'], $topics_count_noanswer);
 
 page_header($forum_data['forum_name'] . ($start ? ' - ' . $user->lang('PAGE_TITLE_NUMBER', $pagination->get_on_page($config['topics_per_page'], $start)) : ''), true, $forum_id);
 
@@ -167,7 +185,7 @@ $template->set_filenames(array(
 make_jumpbox(append_sid("{$phpbb_root_path}viewforum.$phpEx"), $forum_id);
 
 $template->assign_vars(array(
-    'U_VIEW_FORUM' => append_sid("{$phpbb_root_path}viewforum.$phpEx", "f=$forum_id" . (($start == 0) ? '' : "&amp;start=$start&amp;news=$news_post_page")),
+    'U_VIEW_FORUM' => append_sid("{$phpbb_root_path}viewforum.$phpEx", "f=$forum_id" . (($start == 0) ? '' : "&amp;start=$start&amp;process=$process_post_page&amp;answer=$answer_post_page&amp;noanswer=$noanswer_post_page")),
 ));
 
 // Not postable forum or showing active topics?
@@ -395,7 +413,9 @@ $icons = $cache->obtain_icons();
 
 // Grab all topic data
 $rowset = $announcement_list = $topic_list = $global_announce_forums = array();
-$rowset1 = $announcement_list1 = $topic_list1 = $global_announce_forums1 = array();
+$rowset_process = $announcement_list_process = $topic_list_process = $global_announce_forums_process = array();
+$rowset_answer = $announcement_list_answer = $topic_list_answer = $global_announce_forums_answer = array();
+$rowset_noanswer = $announcement_list_noanswer = $topic_list_noanswer = $global_announce_forums_noanswer = array();
 
 $sql_array = array(
     'SELECT' => 't.*',
@@ -469,7 +489,7 @@ if ($forum_data['forum_type'] == FORUM_POST) {
         'FROM' => $sql_array['FROM'],
         'LEFT_JOIN' => $sql_anounce_array['LEFT_JOIN'],
 
-        'WHERE' => '(t.forum_id = ' . $forum_id . ' and t.topic_status_display =.' . NEW_POST . '
+        'WHERE' => '(t.forum_id = ' . $forum_id . ' and t.topic_status_display =.' . STATUS_NEW_POST . '
 				AND t.topic_type = ' . POST_ANNOUNCE . ') OR
 			(' . $db->sql_in_set('t.forum_id', $g_forum_ary) . '
 				AND t.topic_type = ' . POST_GLOBAL . ')',
@@ -477,12 +497,12 @@ if ($forum_data['forum_type'] == FORUM_POST) {
         'ORDER_BY' => 't.topic_time DESC',
     );
 
-    $sql_ary1 = array(
+    $sql_ary_process = array(
         'SELECT' => $sql_anounce_array['SELECT'],
         'FROM' => $sql_array['FROM'],
         'LEFT_JOIN' => $sql_anounce_array['LEFT_JOIN'],
 
-        'WHERE' => '(t.forum_id = ' . $forum_id . ' and t.topic_status_display =.' . DANG_XU_LY . '
+        'WHERE' => '(t.forum_id = ' . $forum_id . ' and t.topic_status_display =.' . STATUS_IN_PROCESS . '
 				AND t.topic_type = ' . POST_ANNOUNCE . ') OR
 			(' . $db->sql_in_set('t.forum_id', $g_forum_ary) . '
 				AND t.topic_type = ' . POST_GLOBAL . ')',
@@ -490,6 +510,32 @@ if ($forum_data['forum_type'] == FORUM_POST) {
         'ORDER_BY' => 't.topic_time DESC',
     );
 
+    $sql_ary_answer = array(
+        'SELECT' => $sql_anounce_array['SELECT'],
+        'FROM' => $sql_array['FROM'],
+        'LEFT_JOIN' => $sql_anounce_array['LEFT_JOIN'],
+
+        'WHERE' => '(t.forum_id = ' . $forum_id . ' and t.topic_status_display =.' . STATUS_ANSWERED . '
+				AND t.topic_type = ' . POST_ANNOUNCE . ') OR
+			(' . $db->sql_in_set('t.forum_id', $g_forum_ary) . '
+				AND t.topic_type = ' . POST_GLOBAL . ')',
+
+        'ORDER_BY' => 't.topic_time DESC',
+    );
+
+
+    $sql_ary_noanswer = array(
+        'SELECT' => $sql_anounce_array['SELECT'],
+        'FROM' => $sql_array['FROM'],
+        'LEFT_JOIN' => $sql_anounce_array['LEFT_JOIN'],
+
+        'WHERE' => '(t.forum_id = ' . $forum_id . ' and t.topic_status_display =.' . STATUS_UNANSWERED . '
+				AND t.topic_type = ' . POST_ANNOUNCE . ') OR
+			(' . $db->sql_in_set('t.forum_id', $g_forum_ary) . '
+				AND t.topic_type = ' . POST_GLOBAL . ')',
+
+        'ORDER_BY' => 't.topic_time DESC',
+    );
 
     /**
      * Event to modify the SQL query before the announcement topic ids data is retrieved
@@ -513,9 +559,17 @@ if ($forum_data['forum_type'] == FORUM_POST) {
     extract($phpbb_dispatcher->trigger_event('core.viewforum_get_announcement_topic_ids_data', compact($vars)));
 
     $sql = $db->sql_build_query('SELECT', $sql_ary);
-    $sql1 = $db->sql_build_query('SELECT', $sql_ary1);
+    $sql_process = $db->sql_build_query('SELECT', $sql_ary_process);
+    $sql_answer = $db->sql_build_query('SELECT', $sql_ary_answer);
+    $sql_noanswer = $db->sql_build_query('SELECT', $sql_ary_noanswer);
+
+
     $result = $db->sql_query($sql);
-    $result1 = $db->sql_query($sql1);
+    $result_process = $db->sql_query($sql_process);
+    $result_answer = $db->sql_query($sql_answer);
+    $result_noanswer = $db->sql_query($sql_noanswer);
+
+
     while ($row = $db->sql_fetchrow($result)) {
         if ($row['topic_visibility'] != ITEM_APPROVED && !$auth->acl_get('m_approve', $row['forum_id'])) {
             // Do not display announcements that are waiting for approval or soft deleted.
@@ -531,22 +585,55 @@ if ($forum_data['forum_type'] == FORUM_POST) {
         }
     }
 
-    while ($row = $db->sql_fetchrow($result1)) {
+    while ($row = $db->sql_fetchrow($result_process)) {
         if ($row['topic_visibility'] != ITEM_APPROVED && !$auth->acl_get('m_approve', $row['forum_id'])) {
             // Do not display announcements that are waiting for approval or soft deleted.
             continue;
         }
 
-        $rowset1[$row['topic_id']] = $row;
-        $announcement_list1[] = $row['topic_id'];
+        $rowset_process[$row['topic_id']] = $row;
+        $announcement_list_process[] = $row['topic_id'];
 
         if ($forum_id != $row['forum_id']) {
-            $total_topic_count1++;
-            $global_announce_forums1[] = $row['forum_id'];
+            $total_topic_count_process++;
+            $global_announce_forums_process[] = $row['forum_id'];
         }
     }
-    $db->sql_freeresult($result1);
+
+    while ($row = $db->sql_fetchrow($result_answer)) {
+        if ($row['topic_visibility'] != ITEM_APPROVED && !$auth->acl_get('m_approve', $row['forum_id'])) {
+            // Do not display announcements that are waiting for approval or soft deleted.
+            continue;
+        }
+
+        $rowset_answer[$row['topic_id']] = $row;
+        $announcement_list_answer[] = $row['topic_id'];
+
+        if ($forum_id != $row['forum_id']) {
+            $total_topic_count_answer++;
+            $global_announce_forums_answer[] = $row['forum_id'];
+        }
+    }
+
+    while ($row = $db->sql_fetchrow($result_noanswer)) {
+        if ($row['topic_visibility'] != ITEM_APPROVED && !$auth->acl_get('m_approve', $row['forum_id'])) {
+            // Do not display announcements that are waiting for approval or soft deleted.
+            continue;
+        }
+
+        $rowset_noanswer[$row['topic_id']] = $row;
+        $announcement_list_noanswer[] = $row['topic_id'];
+
+        if ($forum_id != $row['forum_id']) {
+            $total_topic_count_noanswer++;
+            $global_announce_forums_noanswer[] = $row['forum_id'];
+        }
+    }
+
+    $db->sql_freeresult($result_process);
     $db->sql_freeresult($result);
+    $db->sql_freeresult($result_answer);
+    $db->sql_freeresult($result_noanswer);
 }
 
 $forum_tracking_info = array();
@@ -570,8 +657,7 @@ if ($user->data['is_registered'] && $config['load_db_lastread']) {
 
 // If the user is trying to reach late pages, start searching from the end
 $store_reverse = false;
-$sql_limit = $config['topics_per_page'];
-$sql_limit1 = $config['topics_per_page'];
+$sql_limit_noanswer = $sql_limit_answer = $sql_limit = $sql_limit_process = $config['topics_per_page'];
 
 if ($start > $topics_count / 2) {
     $store_reverse = true;
@@ -586,19 +672,48 @@ if ($start > $topics_count / 2) {
     $direction = (($sort_dir == 'd') ? 'DESC' : 'ASC');
     $sql_start = $start;
 }
-if ($news_post_page > $topics_count1 / 2) {
+if ($process_post_page > $topics_count_process / 2) {
     $store_reverse = true;
 
     // Select the sort order
     $direction = (($sort_dir == 'd') ? 'ASC' : 'DESC');
 
-    $sql_limit1 = $pagination_new->reverse_limit($news_post_page, $sql_limit1, $topics_count1 - sizeof($announcement_list1));
-    $sql_start1 = $pagination_new->reverse_start($news_post_page, $sql_limit1, $topics_count1 - sizeof($announcement_list1));
+    $sql_limit_process = $pagination_process->reverse_limit($process_post_page, $sql_limit_process, $topics_count_process - sizeof($announcement_list_process));
+    $sql_start_process = $pagination_process->reverse_start($process_post_page, $sql_limit_process, $topics_count_process - sizeof($announcement_list_process));
 } else {
     // Select the sort order
     $direction = (($sort_dir == 'd') ? 'DESC' : 'ASC');
-    $sql_start1 = $news_post_page;
+    $sql_start_process = $process_post_page;
 }
+
+if ($answer_post_page > $topics_count_answer / 2) {
+    $store_reverse = true;
+
+    // Select the sort order
+    $direction = (($sort_dir == 'd') ? 'ASC' : 'DESC');
+
+    $sql_limit_answer = $pagination_answer->reverse_limit($answer_post_page, $sql_limit_answer, $topics_count_answer - sizeof($announcement_list_answer));
+    $sql_start_answer = $pagination_answer->reverse_start($answer_post_page, $sql_limit_answer, $topics_count_answer - sizeof($announcement_list_answer));
+} else {
+    // Select the sort order
+    $direction = (($sort_dir == 'd') ? 'DESC' : 'ASC');
+    $sql_start_answer = $answer_post_page;
+}
+
+if ($noanswer_post_page > $topics_count_noanswer / 2) {
+    $store_reverse = true;
+
+    // Select the sort order
+    $direction = (($sort_dir == 'd') ? 'ASC' : 'DESC');
+
+    $sql_limit_noanswer = $pagination_noanswer->reverse_limit($noanswer_post_page, $sql_limit_noanswer, $topics_count_noanswer - sizeof($announcement_list_noanswer));
+    $sql_start_noanswer = $pagination_noanswer->reverse_start($noanswer_post_page, $sql_limit_noanswer, $topics_count_noanswer - sizeof($announcement_list_noanswer));
+} else {
+    // Select the sort order
+    $direction = (($sort_dir == 'd') ? 'DESC' : 'ASC');
+    $sql_start_noanswer = $noanswer_post_page;
+}
+
 
 if (is_array($sort_by_sql[$sort_key])) {
     $sql_sort_order = implode(' ' . $direction . ', ', $sort_by_sql[$sort_key]) . ' ' . $direction;
@@ -624,12 +739,12 @@ $sql_ary = array(
     'WHERE' => "$sql_where
 		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
 		$sql_approved
-		$sql_limit_time and topic_status_display =   " . NEW_POST,
+		$sql_limit_time and topic_status_display =   " . STATUS_NEW_POST,
     'ORDER_BY' => 't.topic_type ' . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order,
 );
 
 
-$sql_ary1 = array(
+$sql_ary_process = array(
     'SELECT' => 't.topic_id',
     'FROM' => array(
         TOPICS_TABLE => 't',
@@ -637,7 +752,32 @@ $sql_ary1 = array(
     'WHERE' => "$sql_where
 		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
 		$sql_approved
-		$sql_limit_time and topic_status_display =  " . DANG_XU_LY,
+		$sql_limit_time and topic_status_display =  " . STATUS_IN_PROCESS,
+    'ORDER_BY' => 't.topic_type ' . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order,
+);
+
+
+$sql_ary_answer = array(
+    'SELECT' => 't.topic_id',
+    'FROM' => array(
+        TOPICS_TABLE => 't',
+    ),
+    'WHERE' => "$sql_where
+		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
+		$sql_approved
+		$sql_limit_time and topic_status_display =  " . STATUS_ANSWERED,
+    'ORDER_BY' => 't.topic_type ' . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order,
+);
+
+$sql_ary_noanswer = array(
+    'SELECT' => 't.topic_id',
+    'FROM' => array(
+        TOPICS_TABLE => 't',
+    ),
+    'WHERE' => "$sql_where
+		AND t.topic_type IN (" . POST_NORMAL . ', ' . POST_STICKY . ")
+		$sql_approved
+		$sql_limit_time and topic_status_display =  " . STATUS_UNANSWERED,
     'ORDER_BY' => 't.topic_type ' . ((!$store_reverse) ? 'DESC' : 'ASC') . ', ' . $sql_sort_order,
 );
 
@@ -674,9 +814,15 @@ $vars = array(
 extract($phpbb_dispatcher->trigger_event('core.viewforum_get_topic_ids_data', compact($vars)));
 
 $sql = $db->sql_build_query('SELECT', $sql_ary);
-$sql1 = $db->sql_build_query('SELECT', $sql_ary1);
+$sql_process = $db->sql_build_query('SELECT', $sql_ary_process);
+$sql_answer = $db->sql_build_query('SELECT', $sql_ary_answer);
+$sql_noanswer = $db->sql_build_query('SELECT', $sql_ary_noanswer);
+
+
 $result = $db->sql_query_limit($sql, $sql_limit, $sql_start);
-$result1 = $db->sql_query_limit($sql1, $sql_limit1, $sql_start1);
+$result_process = $db->sql_query_limit($sql_process, $sql_limit_process, $sql_start_process);
+$result_answer = $db->sql_query_limit($sql_answer, $sql_limit_answer, $sql_start_answer);
+$result_noanswer = $db->sql_query_limit($sql_noanswer, $sql_limit_noanswer, $sql_start_noanswer);
 
 while ($row = $db->sql_fetchrow($result)) {
     $topic_list[] = (int)$row['topic_id'];
@@ -684,13 +830,27 @@ while ($row = $db->sql_fetchrow($result)) {
 $db->sql_freeresult($result);
 
 
-while ($row = $db->sql_fetchrow($result1)) {
-    $topic_list1[] = (int)$row['topic_id'];
+while ($row = $db->sql_fetchrow($result_process)) {
+    $topic_list_process[] = (int)$row['topic_id'];
 }
-$db->sql_freeresult($result1);
+$db->sql_freeresult($result_process);
+
+while ($row = $db->sql_fetchrow($result_answer)) {
+    $topic_list_answer[] = (int)$row['topic_id'];
+}
+$db->sql_freeresult($result_answer);
+
+while ($row = $db->sql_fetchrow($result_noanswer)) {
+    $topic_list_noanswer[] = (int)$row['topic_id'];
+}
+$db->sql_freeresult($result_noanswer);
+
 // For storing shadow topics
 $shadow_topic_list = array();
-$shadow_topic_list1 = array();
+$shadow_topic_list_process = array();
+$shadow_topic_list_answer = array();
+$shadow_topic_list_noanswer = array();
+
 if (sizeof($topic_list)) {
     // SQL array for obtaining topics/stickies
     $sql_array = array(
@@ -717,14 +877,14 @@ if (sizeof($topic_list)) {
     $db->sql_freeresult($result);
 }
 
-if (sizeof($topic_list1)) {
+if (sizeof($topic_list_process)) {
     // SQL array for obtaining topics/stickies
     $sql_array = array(
         'SELECT' => $sql_array['SELECT'],
         'FROM' => $sql_array['FROM'],
         'LEFT_JOIN' => $sql_array['LEFT_JOIN'],
 
-        'WHERE' => $db->sql_in_set('t.topic_id', $topic_list1),
+        'WHERE' => $db->sql_in_set('t.topic_id', $topic_list_process),
     );
 
     // If store_reverse, then first obtain topics, then stickies, else the other way around...
@@ -735,23 +895,75 @@ if (sizeof($topic_list1)) {
 
     while ($row = $db->sql_fetchrow($result)) {
         if ($row['topic_status'] == ITEM_MOVED) {
-            $shadow_topic_list1[$row['topic_moved_id']] = $row['topic_id'];
+            $shadow_topic_list_process[$row['topic_moved_id']] = $row['topic_id'];
         }
 
-        $rowset1[$row['topic_id']] = $row;
+        $rowset_process[$row['topic_id']] = $row;
+    }
+    $db->sql_freeresult($result);
+}
+
+if (sizeof($topic_list_answer)) {
+    // SQL array for obtaining topics/stickies
+    $sql_array = array(
+        'SELECT' => $sql_array['SELECT'],
+        'FROM' => $sql_array['FROM'],
+        'LEFT_JOIN' => $sql_array['LEFT_JOIN'],
+
+        'WHERE' => $db->sql_in_set('t.topic_id', $topic_list_answer),
+    );
+
+    // If store_reverse, then first obtain topics, then stickies, else the other way around...
+    // Funnily enough you typically save one query if going from the last page to the middle (store_reverse) because
+    // the number of stickies are not known
+    $sql = $db->sql_build_query('SELECT', $sql_array);
+    $result = $db->sql_query($sql);
+
+    while ($row = $db->sql_fetchrow($result)) {
+        if ($row['topic_status'] == ITEM_MOVED) {
+            $shadow_topic_list_answer[$row['topic_moved_id']] = $row['topic_id'];
+        }
+
+        $rowset_answer[$row['topic_id']] = $row;
+    }
+    $db->sql_freeresult($result);
+}
+
+if (sizeof($topic_list_noanswer)) {
+    // SQL array for obtaining topics/stickies
+    $sql_array = array(
+        'SELECT' => $sql_array['SELECT'],
+        'FROM' => $sql_array['FROM'],
+        'LEFT_JOIN' => $sql_array['LEFT_JOIN'],
+
+        'WHERE' => $db->sql_in_set('t.topic_id', $topic_list_noanswer),
+    );
+
+    // If store_reverse, then first obtain topics, then stickies, else the other way around...
+    // Funnily enough you typically save one query if going from the last page to the middle (store_reverse) because
+    // the number of stickies are not known
+    $sql = $db->sql_build_query('SELECT', $sql_array);
+    $result = $db->sql_query($sql);
+
+    while ($row = $db->sql_fetchrow($result)) {
+        if ($row['topic_status'] == ITEM_MOVED) {
+            $shadow_topic_list_noanswer[$row['topic_moved_id']] = $row['topic_id'];
+        }
+
+        $rowset_noanswer[$row['topic_id']] = $row;
     }
     $db->sql_freeresult($result);
 }
 
 // If we have some shadow topics, update the rowset to reflect their topic information
-if (sizeof($shadow_topic_list1)) {
+if (sizeof($shadow_topic_list_process)) {
     // SQL array for obtaining shadow topics
     $sql_array = array(
         'SELECT' => 't.*',
         'FROM' => array(
             TOPICS_TABLE => 't'
         ),
-        'WHERE' => $db->sql_in_set('t.topic_id', array_keys($shadow_topic_list1)),
+        'WHERE' => $db->sql_in_set('t.topic_id', array_keys($shadow_topic_list_process)),
     );
 
     /**
@@ -768,13 +980,13 @@ if (sizeof($shadow_topic_list1)) {
     $result = $db->sql_query($sql);
 
     while ($row = $db->sql_fetchrow($result)) {
-        $orig_topic_id = $shadow_topic_list1[$row['topic_id']];
+        $orig_topic_id = $shadow_topic_list_process[$row['topic_id']];
 
         // If the shadow topic is already listed within the rowset (happens for active topics for example), then do not include it...
-        if (isset($rowset[$row['topic_id']])) {
+        if (isset($rowset_process[$row['topic_id']])) {
             // We need to remove any trace regarding this topic. :)
-            unset($rowset1[$orig_topic_id]);
-            unset($topic_list1[array_search($orig_topic_id, $topic_list1)]);
+            unset($rowset_process[$orig_topic_id]);
+            unset($topic_list_process[array_search($orig_topic_id, $topic_list_process)]);
             $topics_count--;
 
             continue;
@@ -792,20 +1004,20 @@ if (sizeof($shadow_topic_list1)) {
 
         // We want to retain some values
         $row = array_merge($row, array(
-            'topic_moved_id' => $rowset1[$orig_topic_id]['topic_moved_id'],
-            'topic_status' => $rowset1[$orig_topic_id]['topic_status'],
-            'topic_type' => $rowset1[$orig_topic_id]['topic_type'],
-            'topic_title' => $rowset1[$orig_topic_id]['topic_title'],
+            'topic_moved_id' => $rowset_process[$orig_topic_id]['topic_moved_id'],
+            'topic_status' => $rowset_process[$orig_topic_id]['topic_status'],
+            'topic_type' => $rowset_process[$orig_topic_id]['topic_type'],
+            'topic_title' => $rowset_process[$orig_topic_id]['topic_title'],
         ));
 
         // Shadow topics are never reported
         $row['topic_reported'] = 0;
 
-        $rowset1[$orig_topic_id] = $row;
+        $rowset_process[$orig_topic_id] = $row;
     }
     $db->sql_freeresult($result);
 }
-unset($shadow_topic_list1);
+unset($shadow_topic_list_process);
 
 if (sizeof($shadow_topic_list)) {
     // SQL array for obtaining shadow topics
@@ -871,6 +1083,134 @@ if (sizeof($shadow_topic_list)) {
 unset($shadow_topic_list);
 
 
+if (sizeof($shadow_topic_list_answer)) {
+    // SQL array for obtaining shadow topics
+    $sql_array = array(
+        'SELECT' => 't.*',
+        'FROM' => array(
+            TOPICS_TABLE => 't'
+        ),
+        'WHERE' => $db->sql_in_set('t.topic_id', array_keys($shadow_topic_list_answer)),
+    );
+
+    /**
+     * Event to modify the SQL query before the shadowtopic data is retrieved
+     *
+     * @event core.viewforum_get_shadowtopic_data
+     * @var    array    sql_array        SQL array to get the data of any shadowtopics
+     * @since 3.1.0-a1
+     */
+    $vars = array('sql_array');
+    extract($phpbb_dispatcher->trigger_event('core.viewforum_get_shadowtopic_data', compact($vars)));
+
+    $sql = $db->sql_build_query('SELECT', $sql_array);
+    $result = $db->sql_query($sql);
+
+    while ($row = $db->sql_fetchrow($result)) {
+        $orig_topic_id = $shadow_topic_list_answer[$row['topic_id']];
+
+        // If the shadow topic is already listed within the rowset (happens for active topics for example), then do not include it...
+        if (isset($rowset_answer[$row['topic_id']])) {
+            // We need to remove any trace regarding this topic. :)
+            unset($rowset_answer[$orig_topic_id]);
+            unset($topic_list_answer[array_search($orig_topic_id, $topic_list_answer)]);
+            $topics_count_answer--;
+
+            continue;
+        }
+
+        // Do not include those topics the user has no permission to access
+        if (!$auth->acl_get('f_read', $row['forum_id'])) {
+            // We need to remove any trace regarding this topic. :)
+            unset($rowset_answer[$orig_topic_id]);
+            unset($topic_list_answer[array_search($orig_topic_id, $topic_list_answer)]);
+            $topics_count_answer--;
+
+            continue;
+        }
+
+        // We want to retain some values
+        $row = array_merge($row, array(
+            'topic_moved_id' => $rowset_answer[$orig_topic_id]['topic_moved_id'],
+            'topic_status' => $rowset_answer[$orig_topic_id]['topic_status'],
+            'topic_type' => $rowset_answer[$orig_topic_id]['topic_type'],
+            'topic_title' => $rowset_answer[$orig_topic_id]['topic_title'],
+        ));
+
+        // Shadow topics are never reported
+        $row['topic_reported'] = 0;
+
+        $rowset_answer[$orig_topic_id] = $row;
+    }
+    $db->sql_freeresult($result);
+}
+unset($shadow_topic_list_answer);
+
+
+if (sizeof($shadow_topic_list_noanswer)) {
+    // SQL array for obtaining shadow topics
+    $sql_array = array(
+        'SELECT' => 't.*',
+        'FROM' => array(
+            TOPICS_TABLE => 't'
+        ),
+        'WHERE' => $db->sql_in_set('t.topic_id', array_keys($shadow_topic_list_noanswer)),
+    );
+
+    /**
+     * Event to modify the SQL query before the shadowtopic data is retrieved
+     *
+     * @event core.viewforum_get_shadowtopic_data
+     * @var    array    sql_array        SQL array to get the data of any shadowtopics
+     * @since 3.1.0-a1
+     */
+    $vars = array('sql_array');
+    extract($phpbb_dispatcher->trigger_event('core.viewforum_get_shadowtopic_data', compact($vars)));
+
+    $sql = $db->sql_build_query('SELECT', $sql_array);
+    $result = $db->sql_query($sql);
+
+    while ($row = $db->sql_fetchrow($result)) {
+        $orig_topic_id = $shadow_topic_list_noanswer[$row['topic_id']];
+
+        // If the shadow topic is already listed within the rowset (happens for active topics for example), then do not include it...
+        if (isset($rowset_noanswer[$row['topic_id']])) {
+            // We need to remove any trace regarding this topic. :)
+            unset($rowset_noanswer[$orig_topic_id]);
+            unset($topic_list_noanswer[array_search($orig_topic_id, $topic_list_noanswer)]);
+            $topics_count_noanswer--;
+
+            continue;
+        }
+
+        // Do not include those topics the user has no permission to access
+        if (!$auth->acl_get('f_read', $row['forum_id'])) {
+            // We need to remove any trace regarding this topic. :)
+            unset($rowset_noanswer[$orig_topic_id]);
+            unset($topic_list_noanswer[array_search($orig_topic_id, $topic_list_noanswer)]);
+            $topics_count_noanswer--;
+
+            continue;
+        }
+
+        // We want to retain some values
+        $row = array_merge($row, array(
+            'topic_moved_id' => $rowset_noanswer[$orig_topic_id]['topic_moved_id'],
+            'topic_status' => $rowset_noanswer[$orig_topic_id]['topic_status'],
+            'topic_type' => $rowset_noanswer[$orig_topic_id]['topic_type'],
+            'topic_title' => $rowset_noanswer[$orig_topic_id]['topic_title'],
+        ));
+
+        // Shadow topics are never reported
+        $row['topic_reported'] = 0;
+
+        $rowset_noanswer[$orig_topic_id] = $row;
+    }
+    $db->sql_freeresult($result);
+}
+unset($shadow_topic_list_noanswer);
+
+
 // Ok, adjust topics count for active topics list
 if ($s_display_active) {
     $topics_count = 1;
@@ -880,25 +1220,34 @@ if ($s_display_active) {
 // otherwise the number is different from the one on the forum list
 
 $total_topic_count = $topics_count - sizeof($topic_list);
-$total_topic_count1 = $topics_count1 - sizeof($topic_list1);
+$total_topic_count_process = $topics_count_process - sizeof($topic_list_process);
+$total_topic_count_answer = $topics_count_answer - sizeof($topic_list_answer);
+$total_topic_count_noanswer = $topics_count_noanswer - sizeof($topic_list_noanswer);
 
 
 $base_url = append_sid("{$phpbb_root_path}viewforum.$phpEx", "f=$forum_id" . ((strlen($u_sort_param)) ? "&amp;$u_sort_param" : ''));
 $pagination->generate_template_pagination($base_url, 'pagination', 'start', $total_topic_count + sizeof($topic_list), $config['topics_per_page'], $start);
-$pagination_new->generate_template_pagination($base_url, 'pagination_new', 'news', $total_topic_count1 + sizeof($topic_list1), $config['topics_per_page'], $news_post_page);
+$pagination_process->generate_template_pagination($base_url, 'pagination_new', 'process', $total_topic_count_process + sizeof($topic_list_process), $config['topics_per_page'], $process_post_page);
+$pagination_answer->generate_template_pagination($base_url, 'pagination_answer', 'answer', $total_topic_count_answer + sizeof($topic_list_answer), $config['topics_per_page'], $answer_post_page);
+$pagination_noanswer->generate_template_pagination($base_url, 'pagination_noanswer', 'noanswer', $total_topic_count_noanswer + sizeof($topic_list_noanswer), $config['topics_per_page'], $noanswer_post_page);
 
 $template->assign_vars(array(
     'TOTAL_TOPICS' => ($s_display_active) ? false : $user->lang('VIEW_FORUM_TOPICS', (int)$total_topic_count),
-    'TOTAL_TOPICS_NEW' => ($s_display_active) ? false : $user->lang('VIEW_FORUM_TOPICS', (int)$total_topic_count1),
-    'NEW_POST' => ($s_display_active) ? false : $user->lang('NEW_POST', (int)$total_topic_count),
-    'DANG_XU_LY' => ($s_display_active) ? false : $user->lang('DANG_XU_LY', (int)$total_topic_count),
-    'DA_GIAI_QUYET' => ($s_display_active) ? false : $user->lang('DA_GIAI_QUYET', (int)$total_topic_count),
-    'CHUA_TRA_LOI' => ($s_display_active) ? false : $user->lang('CHUA_TRA_LOI', (int)$total_topic_count),
+    'TOTAL_TOPICS_NEW' => ($s_display_active) ? false : $user->lang('VIEW_FORUM_TOPICS', (int)$total_topic_count_process),
+    'TOTAL_TOPICS_ANSWER' => ($s_display_active) ? false : $user->lang('VIEW_FORUM_TOPICS', (int)$total_topic_count_answer),
+    'TOTAL_TOPICS_UNANSWERED' => ($s_display_active) ? false : $user->lang('VIEW_FORUM_TOPICS', (int)$total_topic_count_noanswer),
+    'STATUS_NEW_POST' => ($s_display_active) ? false : $user->lang('STATUS_NEW_POST', (int)$total_topic_count),
+    'STATUS_IN_PROCESS' => ($s_display_active) ? false : $user->lang('STATUS_IN_PROCESS', (int)$total_topic_count),
+    'STATUS_ANSWERED' => ($s_display_active) ? false : $user->lang('STATUS_ANSWERED', (int)$total_topic_count),
+    'STATUS_UNANSWERED' => ($s_display_active) ? false : $user->lang('STATUS_UNANSWERED', (int)$total_topic_count),
 
 ));
 
 $topic_list = ($store_reverse) ? array_merge($announcement_list, array_reverse($topic_list)) : array_merge($announcement_list, $topic_list);
-$topic_list1 = ($store_reverse) ? array_merge($announcement_list1, array_reverse($topic_list1)) : array_merge($announcement_list1, $topic_list1);
+$topic_list_process = ($store_reverse) ? array_merge($announcement_list_process, array_reverse($topic_list_process)) : array_merge($announcement_list_process, $topic_list_process);
+$topic_list_answer = ($store_reverse) ? array_merge($announcement_list_answer, array_reverse($topic_list_answer)) : array_merge($announcement_list_answer, $topic_list_answer);
+$topic_list_noanswer = ($store_reverse) ? array_merge($announcement_list_noanswer, array_reverse($topic_list_noanswer)) : array_merge($announcement_list_noanswer, $topic_list_noanswer);
+
 $topic_tracking_info = $tracking_topics = array();
 
 /**
@@ -1098,13 +1447,13 @@ if (sizeof($topic_list)) {
     }
 }
 
-if (sizeof($topic_list1)) {
+if (sizeof($topic_list_process)) {
     $mark_forum_read = true;
     $mark_time_forum = 0;
 
     // Generate topic forum list...
     $topic_forum_list = array();
-    foreach ($rowset1 as $t_id => $row) {
+    foreach ($rowset_process as $t_id => $row) {
         if (isset($forum_tracking_info[$row['forum_id']])) {
             $row['forum_mark_time'] = $forum_tracking_info[$row['forum_id']];
         }
@@ -1115,7 +1464,7 @@ if (sizeof($topic_list1)) {
 
     if ($config['load_db_lastread'] && $user->data['is_registered']) {
         foreach ($topic_forum_list as $f_id => $topic_row) {
-            $topic_tracking_info += get_topic_tracking($f_id, $topic_row['topics'], $rowset1, array($f_id => $topic_row['forum_mark_time']));
+            $topic_tracking_info += get_topic_tracking($f_id, $topic_row['topics'], $rowset_process, array($f_id => $topic_row['forum_mark_time']));
         }
     } else if ($config['load_anon_lastread'] || $user->data['is_registered']) {
         foreach ($topic_forum_list as $f_id => $topic_row) {
@@ -1137,8 +1486,8 @@ if (sizeof($topic_list1)) {
     }
 
     $s_type_switch = 0;
-    foreach ($topic_list1 as $topic_id) {
-        $row = &$rowset1[$topic_id];
+    foreach ($topic_list_process as $topic_id) {
+        $row = &$rowset_process[$topic_id];
 
         $topic_forum_id = ($row['forum_id']) ? (int)$row['forum_id'] : $forum_id;
 
@@ -1266,7 +1615,7 @@ if (sizeof($topic_list1)) {
             'rowset1',
             's_type_switch',
             'topic_id',
-            'topic_list111',
+            'topic_list',
             'topic_row',
             'topicrow1'
         );
@@ -1276,7 +1625,372 @@ if (sizeof($topic_list1)) {
             $mark_forum_read = false;
         }
 
-        unset($rowset1[$topic_id]);
+        unset($rowset_process[$topic_id]);
+    }
+}
+
+if (sizeof($topic_list_answer)) {
+    $mark_forum_read = true;
+    $mark_time_forum = 0;
+
+    // Generate topic forum list...
+    $topic_forum_list = array();
+    foreach ($rowset_answer as $t_id => $row) {
+        if (isset($forum_tracking_info[$row['forum_id']])) {
+            $row['forum_mark_time'] = $forum_tracking_info[$row['forum_id']];
+        }
+
+        $topic_forum_list[$row['forum_id']]['forum_mark_time'] = ($config['load_db_lastread'] && $user->data['is_registered'] && isset($row['forum_mark_time'])) ? $row['forum_mark_time'] : 0;
+        $topic_forum_list[$row['forum_id']]['topics'][] = (int)$t_id;
+    }
+
+    if ($config['load_db_lastread'] && $user->data['is_registered']) {
+        foreach ($topic_forum_list as $f_id => $topic_row) {
+            $topic_tracking_info += get_topic_tracking($f_id, $topic_row['topics'], $rowset_answer, array($f_id => $topic_row['forum_mark_time']));
+        }
+    } else if ($config['load_anon_lastread'] || $user->data['is_registered']) {
+        foreach ($topic_forum_list as $f_id => $topic_row) {
+            $topic_tracking_info += get_complete_topic_tracking($f_id, $topic_row['topics']);
+        }
+    }
+
+    unset($topic_forum_list);
+
+    if (!$s_display_active) {
+        if ($config['load_db_lastread'] && $user->data['is_registered']) {
+            $mark_time_forum = (!empty($forum_data['mark_time'])) ? $forum_data['mark_time'] : $user->data['user_lastmark'];
+        } else if ($config['load_anon_lastread'] || $user->data['is_registered']) {
+            if (!$user->data['is_registered']) {
+                $user->data['user_lastmark'] = (isset($tracking_topics['l'])) ? (int)(base_convert($tracking_topics['l'], 36, 10) + $config['board_startdate']) : 0;
+            }
+            $mark_time_forum = (isset($tracking_topics['f'][$forum_id])) ? (int)(base_convert($tracking_topics['f'][$forum_id], 36, 10) + $config['board_startdate']) : $user->data['user_lastmark'];
+        }
+    }
+
+    $s_type_switch = 0;
+    foreach ($topic_list_answer as $topic_id) {
+        $row = &$rowset_answer[$topic_id];
+
+        $topic_forum_id = ($row['forum_id']) ? (int)$row['forum_id'] : $forum_id;
+
+        // This will allow the style designer to output a different header
+        // or even separate the list of announcements from sticky and normal topics
+        $s_type_switch_test = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
+
+        // Replies
+        $replies = $phpbb_content_visibility->get_count('topic_posts', $row, $topic_forum_id) - 1;
+
+        if ($row['topic_status'] == ITEM_MOVED) {
+            $topic_id = $row['topic_moved_id'];
+            $unread_topic = false;
+        } else {
+            $unread_topic = (isset($topic_tracking_info[$topic_id]) && $row['topic_last_post_time'] > $topic_tracking_info[$topic_id]) ? true : false;
+        }
+
+        // Get folder img, topic status/type related information
+        $folder_img = $folder_alt = $topic_type = '';
+        topic_status($row, $replies, $unread_topic, $folder_img, $folder_alt, $topic_type);
+
+        // Generate all the URIs ...
+        $view_topic_url_params = 'f=' . $row['forum_id'] . '&amp;t=' . $topic_id;
+        $view_topic_url = append_sid("{$phpbb_root_path}viewtopic.$phpEx", $view_topic_url_params);
+
+        $topic_unapproved = (($row['topic_visibility'] == ITEM_UNAPPROVED || $row['topic_visibility'] == ITEM_REAPPROVE) && $auth->acl_get('m_approve', $row['forum_id']));
+        $posts_unapproved = ($row['topic_visibility'] == ITEM_APPROVED && $row['topic_posts_unapproved'] && $auth->acl_get('m_approve', $row['forum_id']));
+        $topic_deleted = $row['topic_visibility'] == ITEM_DELETED;
+
+        $u_mcp_queue = ($topic_unapproved || $posts_unapproved) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=queue&amp;mode=' . (($topic_unapproved) ? 'approve_details' : 'unapproved_posts') . "&amp;t=$topic_id", true, $user->session_id) : '';
+        $u_mcp_queue = (!$u_mcp_queue && $topic_deleted) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=queue&amp;mode=deleted_topics&amp;t=' . $topic_id, true, $user->session_id) : $u_mcp_queue;
+
+        // Send vars to template
+        $topic_row = array(
+            'FORUM_ID' => $row['forum_id'],
+            'TOPIC_ID' => $topic_id,
+            'TOPIC_AUTHOR' => get_username_string('username', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'TOPIC_AUTHOR_COLOUR' => get_username_string('colour', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'TOPIC_AUTHOR_FULL' => get_username_string('full', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'FIRST_POST_TIME' => $user->format_date($row['topic_time']),
+            'LAST_POST_SUBJECT' => censor_text($row['topic_last_post_subject']),
+            'LAST_POST_TIME' => $user->format_date($row['topic_last_post_time']),
+            'LAST_VIEW_TIME' => $user->format_date($row['topic_last_view_time']),
+            'LAST_POST_AUTHOR' => get_username_string('username', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'LAST_POST_AUTHOR_COLOUR' => get_username_string('colour', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'LAST_POST_AUTHOR_FULL' => get_username_string('full', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+
+            'REPLIES' => $replies,
+            'VIEWS' => $row['topic_views'],
+            'TOPIC_TITLE' => censor_text($row['topic_title']),
+            'TOPIC_TYPE' => $topic_type,
+            'FORUM_NAME' => (isset($row['forum_name'])) ? $row['forum_name'] : $forum_data['forum_name'],
+
+            'TOPIC_IMG_STYLE' => $folder_img,
+            'TOPIC_FOLDER_IMG' => $user->img($folder_img, $folder_alt),
+            'TOPIC_FOLDER_IMG_ALT' => $user->lang[$folder_alt],
+
+            'TOPIC_ICON_IMG' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['img'] : '',
+            'TOPIC_ICON_IMG_WIDTH' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['width'] : '',
+            'TOPIC_ICON_IMG_HEIGHT' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['height'] : '',
+            'ATTACH_ICON_IMG' => ($auth->acl_get('u_download') && $auth->acl_get('f_download', $row['forum_id']) && $row['topic_attachment']) ? $user->img('icon_topic_attach', $user->lang['TOTAL_ATTACHMENTS']) : '',
+            'UNAPPROVED_IMG' => ($topic_unapproved || $posts_unapproved) ? $user->img('icon_topic_unapproved', ($topic_unapproved) ? 'TOPIC_UNAPPROVED' : 'POSTS_UNAPPROVED') : '',
+
+            'S_TOPIC_TYPE' => $row['topic_type'],
+            'S_USER_POSTED' => (isset($row['topic_posted']) && $row['topic_posted']) ? true : false,
+            'S_UNREAD_TOPIC' => $unread_topic,
+            'S_TOPIC_REPORTED' => (!empty($row['topic_reported']) && $auth->acl_get('m_report', $row['forum_id'])) ? true : false,
+            'S_TOPIC_UNAPPROVED' => $topic_unapproved,
+            'S_POSTS_UNAPPROVED' => $posts_unapproved,
+            'S_TOPIC_DELETED' => $topic_deleted,
+            'S_HAS_POLL' => ($row['poll_start']) ? true : false,
+            'S_POST_ANNOUNCE' => ($row['topic_type'] == POST_ANNOUNCE) ? true : false,
+            'S_POST_GLOBAL' => ($row['topic_type'] == POST_GLOBAL) ? true : false,
+            'S_POST_STICKY' => ($row['topic_type'] == POST_STICKY) ? true : false,
+            'S_TOPIC_LOCKED' => ($row['topic_status'] == ITEM_LOCKED) ? true : false,
+            'S_TOPIC_MOVED' => ($row['topic_status'] == ITEM_MOVED) ? true : false,
+
+            'U_NEWEST_POST' => append_sid("{$phpbb_root_path}viewtopic.$phpEx", $view_topic_url_params . '&amp;view=unread') . '#unread',
+            'U_LAST_POST' => append_sid("{$phpbb_root_path}viewtopic.$phpEx", $view_topic_url_params . '&amp;p=' . $row['topic_last_post_id']) . '#p' . $row['topic_last_post_id'],
+            'U_LAST_POST_AUTHOR' => get_username_string('profile', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'U_TOPIC_AUTHOR' => get_username_string('profile', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'U_VIEW_TOPIC' => $view_topic_url,
+            'U_VIEW_FORUM' => append_sid("{$phpbb_root_path}viewforum.$phpEx", 'f=' . $row['forum_id']),
+            'U_MCP_REPORT' => append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=reports&amp;mode=reports&amp;f=' . $row['forum_id'] . '&amp;t=' . $topic_id, true, $user->session_id),
+            'U_MCP_QUEUE' => $u_mcp_queue,
+
+            'S_TOPIC_TYPE_SWITCH' => ($s_type_switch == $s_type_switch_test) ? -1 : $s_type_switch_test,
+        );
+
+        /**
+         * Modify the topic data before it is assigned to the template
+         *
+         * @event core.viewforum_modify_topicrow
+         * @var    array    row                    Array with topic data
+         * @var    array    topic_row            Template array with topic data
+         * @var    bool    s_type_switch        Flag indicating if the topic type is [global] announcement
+         * @var    bool    s_type_switch_test    Flag indicating if the test topic type is [global] announcement
+         * @since 3.1.0-a1
+         *
+         * @changed 3.1.10-RC1 Added s_type_switch, s_type_switch_test
+         */
+        $vars = array('row', 'topic_row', 's_type_switch', 's_type_switch_test');
+        extract($phpbb_dispatcher->trigger_event('core.viewforum_modify_topicrow', compact($vars)));
+
+        $template->assign_block_vars('topicrow_answer', $topic_row);
+
+        $pagination->generate_template_pagination($view_topic_url, 'topicrow_answer.pagination_answer', 'answer', $replies + 1, $config['posts_per_page'], 1, true, true);
+
+        $s_type_switch = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
+
+        /**
+         * Event after the topic data has been assigned to the template
+         *
+         * @event core.viewforum_topic_row_after
+         * @var    array    row                Array with the topic data
+         * @var    array    rowset1            Array with topics data (in topic_id => topic_data format)
+         * @var    bool    s_type_switch    Flag indicating if the topic type is [global] announcement
+         * @var    int        topic_id        The topic ID
+         * @var    array    topic_list111        Array with current viewforum page topic ids
+         * @var    array    topic_row        Template array with topic data
+         * @since 3.1.3-RC1
+         */
+        $vars = array(
+            'row',
+            'rowset_answer',
+            's_type_switch',
+            'topic_id',
+            'topic_list',
+            'topic_row',
+            'topicrow_answer'
+        );
+        extract($phpbb_dispatcher->trigger_event('core.viewforum_topic_row_after', compact($vars)));
+
+        if ($unread_topic) {
+            $mark_forum_read = false;
+        }
+
+        unset($rowset_answer[$topic_id]);
+    }
+}
+
+
+if (sizeof($topic_list_noanswer)) {
+    $mark_forum_read = true;
+    $mark_time_forum = 0;
+
+    // Generate topic forum list...
+    $topic_forum_list = array();
+    foreach ($rowset_noanswer as $t_id => $row) {
+        if (isset($forum_tracking_info[$row['forum_id']])) {
+            $row['forum_mark_time'] = $forum_tracking_info[$row['forum_id']];
+        }
+
+        $topic_forum_list[$row['forum_id']]['forum_mark_time'] = ($config['load_db_lastread'] && $user->data['is_registered'] && isset($row['forum_mark_time'])) ? $row['forum_mark_time'] : 0;
+        $topic_forum_list[$row['forum_id']]['topics'][] = (int)$t_id;
+    }
+
+    if ($config['load_db_lastread'] && $user->data['is_registered']) {
+        foreach ($topic_forum_list as $f_id => $topic_row) {
+            $topic_tracking_info += get_topic_tracking($f_id, $topic_row['topics'], $rowset_noanswer, array($f_id => $topic_row['forum_mark_time']));
+        }
+    } else if ($config['load_anon_lastread'] || $user->data['is_registered']) {
+        foreach ($topic_forum_list as $f_id => $topic_row) {
+            $topic_tracking_info += get_complete_topic_tracking($f_id, $topic_row['topics']);
+        }
+    }
+
+    unset($topic_forum_list);
+
+    if (!$s_display_active) {
+        if ($config['load_db_lastread'] && $user->data['is_registered']) {
+            $mark_time_forum = (!empty($forum_data['mark_time'])) ? $forum_data['mark_time'] : $user->data['user_lastmark'];
+        } else if ($config['load_anon_lastread'] || $user->data['is_registered']) {
+            if (!$user->data['is_registered']) {
+                $user->data['user_lastmark'] = (isset($tracking_topics['l'])) ? (int)(base_convert($tracking_topics['l'], 36, 10) + $config['board_startdate']) : 0;
+            }
+            $mark_time_forum = (isset($tracking_topics['f'][$forum_id])) ? (int)(base_convert($tracking_topics['f'][$forum_id], 36, 10) + $config['board_startdate']) : $user->data['user_lastmark'];
+        }
+    }
+
+    $s_type_switch = 0;
+    foreach ($topic_list_noanswer as $topic_id) {
+        $row = &$rowset_noanswer[$topic_id];
+
+        $topic_forum_id = ($row['forum_id']) ? (int)$row['forum_id'] : $forum_id;
+
+        // This will allow the style designer to output a different header
+        // or even separate the list of announcements from sticky and normal topics
+        $s_type_switch_test = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
+
+        // Replies
+        $replies = $phpbb_content_visibility->get_count('topic_posts', $row, $topic_forum_id) - 1;
+
+        if ($row['topic_status'] == ITEM_MOVED) {
+            $topic_id = $row['topic_moved_id'];
+            $unread_topic = false;
+        } else {
+            $unread_topic = (isset($topic_tracking_info[$topic_id]) && $row['topic_last_post_time'] > $topic_tracking_info[$topic_id]) ? true : false;
+        }
+
+        // Get folder img, topic status/type related information
+        $folder_img = $folder_alt = $topic_type = '';
+        topic_status($row, $replies, $unread_topic, $folder_img, $folder_alt, $topic_type);
+
+        // Generate all the URIs ...
+        $view_topic_url_params = 'f=' . $row['forum_id'] . '&amp;t=' . $topic_id;
+        $view_topic_url = append_sid("{$phpbb_root_path}viewtopic.$phpEx", $view_topic_url_params);
+
+        $topic_unapproved = (($row['topic_visibility'] == ITEM_UNAPPROVED || $row['topic_visibility'] == ITEM_REAPPROVE) && $auth->acl_get('m_approve', $row['forum_id']));
+        $posts_unapproved = ($row['topic_visibility'] == ITEM_APPROVED && $row['topic_posts_unapproved'] && $auth->acl_get('m_approve', $row['forum_id']));
+        $topic_deleted = $row['topic_visibility'] == ITEM_DELETED;
+
+        $u_mcp_queue = ($topic_unapproved || $posts_unapproved) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=queue&amp;mode=' . (($topic_unapproved) ? 'approve_details' : 'unapproved_posts') . "&amp;t=$topic_id", true, $user->session_id) : '';
+        $u_mcp_queue = (!$u_mcp_queue && $topic_deleted) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=queue&amp;mode=deleted_topics&amp;t=' . $topic_id, true, $user->session_id) : $u_mcp_queue;
+
+        // Send vars to template
+        $topic_row = array(
+            'FORUM_ID' => $row['forum_id'],
+            'TOPIC_ID' => $topic_id,
+            'TOPIC_AUTHOR' => get_username_string('username', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'TOPIC_AUTHOR_COLOUR' => get_username_string('colour', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'TOPIC_AUTHOR_FULL' => get_username_string('full', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'FIRST_POST_TIME' => $user->format_date($row['topic_time']),
+            'LAST_POST_SUBJECT' => censor_text($row['topic_last_post_subject']),
+            'LAST_POST_TIME' => $user->format_date($row['topic_last_post_time']),
+            'LAST_VIEW_TIME' => $user->format_date($row['topic_last_view_time']),
+            'LAST_POST_AUTHOR' => get_username_string('username', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'LAST_POST_AUTHOR_COLOUR' => get_username_string('colour', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'LAST_POST_AUTHOR_FULL' => get_username_string('full', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+
+            'REPLIES' => $replies,
+            'VIEWS' => $row['topic_views'],
+            'TOPIC_TITLE' => censor_text($row['topic_title']),
+            'TOPIC_TYPE' => $topic_type,
+            'FORUM_NAME' => (isset($row['forum_name'])) ? $row['forum_name'] : $forum_data['forum_name'],
+
+            'TOPIC_IMG_STYLE' => $folder_img,
+            'TOPIC_FOLDER_IMG' => $user->img($folder_img, $folder_alt),
+            'TOPIC_FOLDER_IMG_ALT' => $user->lang[$folder_alt],
+
+            'TOPIC_ICON_IMG' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['img'] : '',
+            'TOPIC_ICON_IMG_WIDTH' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['width'] : '',
+            'TOPIC_ICON_IMG_HEIGHT' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['height'] : '',
+            'ATTACH_ICON_IMG' => ($auth->acl_get('u_download') && $auth->acl_get('f_download', $row['forum_id']) && $row['topic_attachment']) ? $user->img('icon_topic_attach', $user->lang['TOTAL_ATTACHMENTS']) : '',
+            'UNAPPROVED_IMG' => ($topic_unapproved || $posts_unapproved) ? $user->img('icon_topic_unapproved', ($topic_unapproved) ? 'TOPIC_UNAPPROVED' : 'POSTS_UNAPPROVED') : '',
+
+            'S_TOPIC_TYPE' => $row['topic_type'],
+            'S_USER_POSTED' => (isset($row['topic_posted']) && $row['topic_posted']) ? true : false,
+            'S_UNREAD_TOPIC' => $unread_topic,
+            'S_TOPIC_REPORTED' => (!empty($row['topic_reported']) && $auth->acl_get('m_report', $row['forum_id'])) ? true : false,
+            'S_TOPIC_UNAPPROVED' => $topic_unapproved,
+            'S_POSTS_UNAPPROVED' => $posts_unapproved,
+            'S_TOPIC_DELETED' => $topic_deleted,
+            'S_HAS_POLL' => ($row['poll_start']) ? true : false,
+            'S_POST_ANNOUNCE' => ($row['topic_type'] == POST_ANNOUNCE) ? true : false,
+            'S_POST_GLOBAL' => ($row['topic_type'] == POST_GLOBAL) ? true : false,
+            'S_POST_STICKY' => ($row['topic_type'] == POST_STICKY) ? true : false,
+            'S_TOPIC_LOCKED' => ($row['topic_status'] == ITEM_LOCKED) ? true : false,
+            'S_TOPIC_MOVED' => ($row['topic_status'] == ITEM_MOVED) ? true : false,
+
+            'U_NEWEST_POST' => append_sid("{$phpbb_root_path}viewtopic.$phpEx", $view_topic_url_params . '&amp;view=unread') . '#unread',
+            'U_LAST_POST' => append_sid("{$phpbb_root_path}viewtopic.$phpEx", $view_topic_url_params . '&amp;p=' . $row['topic_last_post_id']) . '#p' . $row['topic_last_post_id'],
+            'U_LAST_POST_AUTHOR' => get_username_string('profile', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'U_TOPIC_AUTHOR' => get_username_string('profile', $row['topic_poster'], $row['topic_first_poster_name'], $row['topic_first_poster_colour']),
+            'U_VIEW_TOPIC' => $view_topic_url,
+            'U_VIEW_FORUM' => append_sid("{$phpbb_root_path}viewforum.$phpEx", 'f=' . $row['forum_id']),
+            'U_MCP_REPORT' => append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=reports&amp;mode=reports&amp;f=' . $row['forum_id'] . '&amp;t=' . $topic_id, true, $user->session_id),
+            'U_MCP_QUEUE' => $u_mcp_queue,
+
+            'S_TOPIC_TYPE_SWITCH' => ($s_type_switch == $s_type_switch_test) ? -1 : $s_type_switch_test,
+        );
+
+        /**
+         * Modify the topic data before it is assigned to the template
+         *
+         * @event core.viewforum_modify_topicrow
+         * @var    array    row                    Array with topic data
+         * @var    array    topic_row            Template array with topic data
+         * @var    bool    s_type_switch        Flag indicating if the topic type is [global] announcement
+         * @var    bool    s_type_switch_test    Flag indicating if the test topic type is [global] announcement
+         * @since 3.1.0-a1
+         *
+         * @changed 3.1.10-RC1 Added s_type_switch, s_type_switch_test
+         */
+        $vars = array('row', 'topic_row', 's_type_switch', 's_type_switch_test');
+        extract($phpbb_dispatcher->trigger_event('core.viewforum_modify_topicrow', compact($vars)));
+
+        $template->assign_block_vars('topicrow_noanswer', $topic_row);
+
+        $pagination->generate_template_pagination($view_topic_url, 'topicrow_noanswer.pagination_noanswer', 'answer', $replies + 1, $config['posts_per_page'], 1, true, true);
+
+        $s_type_switch = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
+
+        /**
+         * Event after the topic data has been assigned to the template
+         *
+         * @event core.viewforum_topic_row_after
+         * @var    array    row                Array with the topic data
+         * @var    array    rowset1            Array with topics data (in topic_id => topic_data format)
+         * @var    bool    s_type_switch    Flag indicating if the topic type is [global] announcement
+         * @var    int        topic_id        The topic ID
+         * @var    array    topic_list111        Array with current viewforum page topic ids
+         * @var    array    topic_row        Template array with topic data
+         * @since 3.1.3-RC1
+         */
+        $vars = array(
+            'row',
+            'rowset_answer',
+            's_type_switch',
+            'topic_id',
+            'topic_list',
+            'topic_row',
+            'topicrow_noanswer'
+        );
+        extract($phpbb_dispatcher->trigger_event('core.viewforum_topic_row_after', compact($vars)));
+
+        if ($unread_topic) {
+            $mark_forum_read = false;
+        }
+
+        unset($rowset_noanswer[$topic_id]);
     }
 }
 

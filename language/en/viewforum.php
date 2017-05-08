@@ -67,8 +67,8 @@ $lang = array_merge($lang, array(
         1 => '%d topic',
         2 => '%d topics',
     ),
-    'NEW_POST' => 'New post',
-    'DANG_XU_LY' => 'In process',
-    'DA_GIAI_QUYET' => 'Answered',
-    'CHUA_TRA_LOI' => 'UnAnswered',
+    'STATUS_NEW_POST' => 'New post',
+    'STATUS_IN_PROCESS' => 'In process',
+    'STATUS_ANSWERED' => 'Answered',
+    'STATUS_UNANSWERED' => 'UnAnswered',
 ));
