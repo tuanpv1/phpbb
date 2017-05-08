@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/prosilver/template/pagination_new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/constants.php" afterPath="$PROJECT_DIR$/includes/constants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions_display.php" afterPath="$PROJECT_DIR$/includes/functions_display.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en/viewforum.php" afterPath="$PROJECT_DIR$/language/en/viewforum.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/common.php" afterPath="$PROJECT_DIR$/language/vi/common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/viewforum.php" afterPath="$PROJECT_DIR$/language/vi/viewforum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" afterPath="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/ucp.php" afterPath="$PROJECT_DIR$/language/vi/ucp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewforum.php" afterPath="$PROJECT_DIR$/viewforum.php" />
     </list>
     <ignored path="php-bb.iws" />
@@ -34,37 +31,36 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/language/vi/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.304878">
-              <caret line="521" column="37" selection-start-line="521" selection-start-column="37" selection-end-line="521" selection-end-column="37" />
+            <state vertical-scroll-proportion="-2.2727273">
+              <caret line="108" column="68" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="68" />
               <folding>
                 <element signature="e#6#284#0#PHP" expanded="true" />
-                <element signature="e#55777#77484#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewforum.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/vi/viewforum.php">
+      <file leaf-file-name="ucp.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/language/vi/ucp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.072727">
-              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.331565">
+              <caret line="337" column="139" selection-start-line="337" selection-start-column="139" selection-end-line="337" selection-end-column="139" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewforum.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewforum.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewforum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49323016">
-              <caret line="887" column="124" selection-start-line="887" selection-start-column="124" selection-end-line="887" selection-end-column="124" />
+            <state vertical-scroll-proportion="-2.2727273">
+              <caret line="629" column="0" selection-start-line="629" selection-start-column="0" selection-end-line="629" selection-end-column="0" />
               <folding>
                 <element signature="e#6#287#0#PHP" expanded="true" />
-                <marker date="1494171417774" expanded="true" signature="2235:2299" placeholder="SELECT f.* $... ${$sql_from}" />
-                <marker date="1494171417774" expanded="true" signature="4777:4902" placeholder="Select COUNT... ${TOPICS_TABLE}" />
-                <marker date="1494171417774" expanded="true" signature="5136:5263" placeholder="Select COUNT... ${TOPICS_TABLE}" />
-                <marker date="1494171417774" expanded="true" signature="24110:24260" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+                <marker date="1494211992291" expanded="true" signature="2235:2299" placeholder="SELECT f.* $... ${$sql_from}" />
+                <marker date="1494211992291" expanded="true" signature="4777:4902" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+                <marker date="1494211992291" expanded="true" signature="5136:5263" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+                <marker date="1494211992291" expanded="true" signature="24110:24260" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
               </folding>
             </state>
           </provider>
@@ -73,7 +69,7 @@
       <file leaf-file-name="viewforum_body.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1272728">
+            <state vertical-scroll-proportion="0.0">
               <caret line="301" column="27" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -94,7 +90,7 @@
       <file leaf-file-name="pagination.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
+            <state vertical-scroll-proportion="0.0">
               <caret line="18" column="87" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="87" />
               <folding />
             </state>
@@ -104,7 +100,7 @@
       <file leaf-file-name="pagination_new.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination_new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.309091">
+            <state vertical-scroll-proportion="0.0">
               <caret line="26" column="100" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="100" />
               <folding />
             </state>
@@ -114,7 +110,7 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/language/en/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1272728">
+            <state vertical-scroll-proportion="0.0">
               <caret line="558" column="4" selection-start-line="558" selection-start-column="4" selection-end-line="558" selection-end-column="41" />
               <folding>
                 <element signature="e#45399#64433#1#PHP" expanded="false" />
@@ -139,7 +135,6 @@
         <option value="$PROJECT_DIR$/viewonline.php" />
         <option value="$PROJECT_DIR$/includes/acp/acp_board.php" />
         <option value="$PROJECT_DIR$/includes/ucp/ucp_register.php" />
-        <option value="$PROJECT_DIR$/language/vi/ucp.php" />
         <option value="$PROJECT_DIR$/language/en/acp/groups.php" />
         <option value="$PROJECT_DIR$/language/en/acp/users.php" />
         <option value="$PROJECT_DIR$/language/en/acp/common.php" />
@@ -157,13 +152,15 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/functions_display.php" />
         <option value="$PROJECT_DIR$/language/vi/viewforum.php" />
-        <option value="$PROJECT_DIR$/language/vi/common.php" />
         <option value="$PROJECT_DIR$/includes/constants.php" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/pagination1.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/pagination.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/pagination_new.html" />
+        <option value="$PROJECT_DIR$/language/en/viewforum.php" />
         <option value="$PROJECT_DIR$/viewforum.php" />
+        <option value="$PROJECT_DIR$/language/vi/common.php" />
+        <option value="$PROJECT_DIR$/language/vi/ucp.php" />
       </list>
     </option>
   </component>
@@ -207,6 +204,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,7 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="language" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,11 +248,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="language" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prosilver" />
+              <option name="myItemId" value="vi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,26 +266,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="language" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="prosilver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="en" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum-be" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js-jscs-package" value="C:\xampp\htdocs\node_modules\jscs" />
@@ -343,14 +336,13 @@
     <frame x="-6" y="2" width="1370" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26946566" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27328244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -358,6 +350,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -399,19 +392,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/default/routing/feed.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12937063">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/installer/routing/installer.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1695805">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -419,7 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="20.16619">
           <caret line="424" column="13" selection-start-line="424" selection-start-column="13" selection-end-line="424" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -427,9 +410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3323782">
           <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <marker date="1494049856210" expanded="true" signature="6914:7048" placeholder="SELECT group... ${GROUPS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -437,14 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.504298">
           <caret line="503" column="30" selection-start-line="503" selection-start-column="25" selection-end-line="503" selection-end-column="30" />
-          <folding>
-            <marker date="1494128047493" expanded="true" signature="1995:2204" placeholder="SELECT u.use... ${USERS_TABLE}" />
-            <marker date="1494128047493" expanded="true" signature="3555:3804" placeholder="SELECT COUNT... session_ip" />
-            <marker date="1494128047493" expanded="true" signature="3610:3746" placeholder="SELECT DISTI... ${SESSIONS_TABLE}" />
-            <marker date="1494128047493" expanded="true" signature="3839:3990" placeholder="SELECT COUNT... ${SESSIONS_TABLE}" />
-            <marker date="1494128047493" expanded="true" signature="13695:13852" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494128047493" expanded="true" signature="13873:14301" placeholder="SELECT g.gro... ${GROUPS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -452,15 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4615383">
           <caret line="239" column="128" selection-start-line="239" selection-start-column="128" selection-end-line="239" selection-end-column="128" />
-          <folding>
-            <marker date="1494049850082" expanded="true" signature="18810:19351" placeholder="..." />
-            <marker date="1494049850082" expanded="true" signature="19814:20078" placeholder="..." />
-            <marker date="1494049850082" expanded="true" signature="28901:28927" placeholder="..." />
-            <marker date="1494049850082" expanded="true" signature="28978:29004" placeholder="..." />
-            <marker date="1494049850082" expanded="false" signature="55248:55284" placeholder="..." />
-            <marker date="1494049850082" expanded="true" signature="55285:55709" placeholder="..." />
-            <marker date="1494049850082" expanded="true" signature="55716:56225" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -468,7 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.988539">
           <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -476,7 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22893773">
           <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -484,11 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5106383">
           <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#277#0#PHP" expanded="true" />
-            <marker date="1494049889571" expanded="true" signature="5754:5810" placeholder="SELECT * FRO... ${USERS_TABLE}" />
-            <marker date="1494049889571" expanded="true" signature="6995:7058" placeholder="SELECT usern... ${USERS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,9 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3326886">
           <caret line="874" column="79" selection-start-line="874" selection-start-column="79" selection-end-line="874" selection-end-column="79" />
-          <folding>
-            <marker date="1494128362049" expanded="true" signature="51220:51285" placeholder="SELECT user_... ${USERS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5">
           <caret line="30" column="94" selection-start-line="30" selection-start-column="76" selection-end-line="30" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,10 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27079305">
           <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
-          <folding>
-            <marker date="1494049845275" expanded="true" signature="1562:1589" placeholder="..." />
-            <marker date="1494049845275" expanded="true" signature="3990:4017" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7001934">
           <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -533,15 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68085104">
           <caret line="615" column="56" selection-start-line="615" selection-start-column="56" selection-end-line="615" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/ucp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19795918">
-          <caret line="477" column="97" selection-start-line="477" selection-start-column="97" selection-end-line="477" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -549,11 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9878049">
           <caret line="541" column="120" selection-start-line="541" selection-start-column="110" selection-end-line="541" selection-end-column="120" />
-          <folding>
-            <element signature="e#6#277#0#PHP" expanded="true" />
-            <marker date="1494129012673" expanded="true" signature="4017:4041" placeholder="SELECT lang_... ${LANG_TABLE}" />
-            <marker date="1494129012673" expanded="true" signature="9849:9982" placeholder="SELECT group... ${GROUPS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,7 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.8076925">
           <caret line="189" column="48" selection-start-line="189" selection-start-column="48" selection-end-line="189" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -569,7 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.509091">
           <caret line="65" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,7 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6219512">
           <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,7 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31501833">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.418182">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.327839">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,7 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,9 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.3351648">
           <caret line="75" column="105" selection-start-line="75" selection-start-column="92" selection-end-line="75" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.67033">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37362638">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,7 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.195122">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5567765">
           <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075">
           <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,30 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0057142857">
           <caret line="1109" column="20" selection-start-line="1109" selection-start-column="20" selection-end-line="1109" selection-end-column="20" />
-          <folding>
-            <marker date="1494142289532" expanded="true" signature="576:694" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="3956:3981" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="4233:4316" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="6692:6810" placeholder="SELECT user_... ${ACL_USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="7028:7148" placeholder="SELECT group... ${ACL_GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="8271:8444" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="8473:8676" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="9601:9733" placeholder="SELECT * FRO... ${ACL_ROLES_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="10363:10535" placeholder="SELECT r.rol... ${ACL_ROLES_DATA_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="11315:11429" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="20240:20384" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="21027:21180" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="21685:21864" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="22718:22818" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="26699:26765" placeholder="DELETE FROM " />
-            <marker date="1494142289532" expanded="true" signature="26931:27031" placeholder="SELECT role_... ${ACL_ROLES_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="27251:27348" placeholder="DELETE FROM " />
-            <marker date="1494142289532" expanded="true" signature="29739:29799" placeholder="DELETE FROM " />
-            <marker date="1494142289532" expanded="true" signature="30863:30955" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="31377:31638" placeholder="SELECT auth_... ${$table}" />
-            <marker date="1494142289532" expanded="true" signature="31962:32144" placeholder="SELECT ao.au... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494142289532" expanded="true" signature="33060:33088" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,22 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2031662">
           <caret line="201" column="107" selection-start-line="201" selection-start-column="105" selection-end-line="201" selection-end-column="107" />
-          <folding>
-            <marker date="1494141876880" expanded="true" signature="3079:3174" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="3851:3917" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="14748:14880" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="19076:19117" placeholder="SELECT ${$sq... ${$table}" />
-            <marker date="1494141876880" expanded="true" signature="25048:25218" placeholder="SELECT o.aut... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="27641:27710" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="27716:27770" placeholder="SELECT usern... ${USERS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="28703:28761" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="29863:29932" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="30656:30987" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="38551:38628" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="38909:38981" placeholder="SELECT DISTI... ${ACL_ROLES_DATA_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="39694:39935" placeholder="SELECT DISTI... ${USERS_TABLE}" />
-            <marker date="1494141876880" expanded="true" signature="40280:40507" placeholder="SELECT DISTI... ${GROUPS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,29 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33421752">
           <caret line="383" column="0" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
-            <element signature="n#form#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#dd#2;n#dl#0;n#fieldset#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#fieldset#1;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#1;n#dl#0;n#fieldset#0;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#fieldset#1;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#fieldset#1;n#form#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#2;n#dl#0;n#fieldset#0;n#form#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#dd#0;n#dl#0;n#fieldset#0;n#form#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#0;n#form#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#0;n#form#5;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46059114">
           <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.86206895">
           <caret line="177" column="4" selection-start-line="177" selection-start-column="4" selection-end-line="177" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.198939">
           <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0875331">
           <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,29 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5915751">
           <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding>
-            <element signature="e#6#277#0#PHP" expanded="true" />
-            <marker date="1494151259058" expanded="true" signature="2054:2211" placeholder="SELECT group... ${GROUPS_TABLE}" />
-            <marker date="1494151259058" expanded="true" signature="2232:2660" placeholder="SELECT g.gro... ${GROUPS_TABLE}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/viewforum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.072727">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/language/en/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1272728">
-          <caret line="558" column="4" selection-start-line="558" selection-start-column="4" selection-end-line="558" selection-end-column="41" />
-          <folding>
-            <element signature="e#45399#64433#1#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,21 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.025641026">
           <caret line="168" column="13" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="13" />
-          <folding>
-            <marker date="1494049851152" expanded="true" signature="706:824" placeholder="SELECT auth_... ${ACL_OPTIONS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="2830:2931" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="6058:6084" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="12817:12886" placeholder="SELECT * FRO... ${ACL_ROLES_DATA_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="20008:20345" placeholder="SELECT a.use... ${ACL_USERS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="20408:20803" placeholder="SELECT a.use... ${ACL_USERS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="21813:22154" placeholder="SELECT a.gro... ${ACL_GROUPS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="22222:22603" placeholder="SELECT a.gro... ${ACL_GROUPS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="23325:23396" placeholder="SELECT * FRO... ${ACL_ROLES_DATA_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="23881:23992" placeholder="SELECT forum... ${ACL_USERS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="24641:24973" placeholder="SELECT a.for... ${ACL_GROUPS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="27541:27731" placeholder="SELECT user_... ${USERS_TABLE}" />
-            <marker date="1494049851152" expanded="true" signature="30216:30349" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,36 +710,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/language/vi/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.304878">
-          <caret line="521" column="37" selection-start-line="521" selection-start-column="37" selection-end-line="521" selection-end-column="37" />
-          <folding>
-            <element signature="e#6#284#0#PHP" expanded="true" />
-            <element signature="e#55777#77484#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="18" column="87" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination_new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.309091">
-          <caret line="26" column="100" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1272728">
+        <state vertical-scroll-proportion="0.0">
           <caret line="301" column="27" selection-start-line="301" selection-start-column="16" selection-end-line="301" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -944,17 +729,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="87" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/pagination_new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="100" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="558" column="4" selection-start-line="558" selection-start-column="4" selection-end-line="558" selection-end-column="41" />
+          <folding>
+            <element signature="e#45399#64433#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/viewforum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59416443">
+          <caret line="69" column="37" selection-start-line="66" selection-start-column="4" selection-end-line="69" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en/viewforum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0591133">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/viewforum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49323016">
-          <caret line="887" column="124" selection-start-line="887" selection-start-column="124" selection-end-line="887" selection-end-column="124" />
+        <state vertical-scroll-proportion="-2.2727273">
+          <caret line="629" column="0" selection-start-line="629" selection-start-column="0" selection-end-line="629" selection-end-column="0" />
           <folding>
             <element signature="e#6#287#0#PHP" expanded="true" />
-            <marker date="1494171417774" expanded="true" signature="2235:2299" placeholder="SELECT f.* $... ${$sql_from}" />
-            <marker date="1494171417774" expanded="true" signature="4777:4902" placeholder="Select COUNT... ${TOPICS_TABLE}" />
-            <marker date="1494171417774" expanded="true" signature="5136:5263" placeholder="Select COUNT... ${TOPICS_TABLE}" />
-            <marker date="1494171417774" expanded="true" signature="24110:24260" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+            <marker date="1494211992291" expanded="true" signature="2235:2299" placeholder="SELECT f.* $... ${$sql_from}" />
+            <marker date="1494211992291" expanded="true" signature="4777:4902" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+            <marker date="1494211992291" expanded="true" signature="5136:5263" placeholder="Select COUNT... ${TOPICS_TABLE}" />
+            <marker date="1494211992291" expanded="true" signature="24110:24260" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2727273">
+          <caret line="108" column="68" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="68" />
+          <folding>
+            <element signature="e#6#284#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/vi/ucp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.331565">
+          <caret line="337" column="139" selection-start-line="337" selection-start-column="139" selection-end-line="337" selection-end-column="139" />
+          <folding />
         </state>
       </provider>
     </entry>

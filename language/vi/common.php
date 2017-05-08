@@ -648,6 +648,7 @@ $lang = array_merge($lang, array(
     'SEND_PRIVATE_MESSAGE' => 'Gửi tin nhắn',
     'SETTINGS' => 'Thiết lập',
     'SIGNATURE' => 'Chữ ký cá nhân',
+	'CONTACT_US' => 'Liên hệ với chúng tôi',
     'SKIP' => 'Bỏ qua nội dung',
     'SMTP_NO_AUTH_SUPPORT' => 'Máy chủ SMTP không hỗ trợ giao thức xác thực.',
     'SORRY_AUTH_READ' => 'Bạn không được cấp phép để xem chuyên mục này.',
