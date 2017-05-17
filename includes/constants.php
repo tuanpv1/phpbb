@@ -90,6 +90,9 @@ define('STATUS_IN_PROCESS',2);
 define('STATUS_ANSWERED',3);
 define('STATUS_UNANSWERED',4);
 
+// post status
+define('POST_STATUS_SOLVED',2);
+
 
 // Forum/Topic states
 define('FORUM_CAT', 0);

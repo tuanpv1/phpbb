@@ -23,6 +23,7 @@ include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
 // Start session
 $user->session_begin();
 $auth->acl($user->data);
+$icon_resold = $phpbb_root_path.'/images/icons/icon_topics/icon_solved.png';
 
 // Start initial var setup
 $forum_id = $request->variable('f', 0);
@@ -1534,6 +1535,7 @@ if (sizeof($topic_list_process)) {
             'LAST_POST_AUTHOR' => get_username_string('username', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
             'LAST_POST_AUTHOR_COLOUR' => get_username_string('colour', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
             'LAST_POST_AUTHOR_FULL' => get_username_string('full', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
+            'TOPIC_RESOLD' => ($row['topic_status_display'] == STATUS_IN_PROCESS)?$icon_resold:"",
 
             'REPLIES' => $replies,
             'VIEWS' => $row['topic_views'],
