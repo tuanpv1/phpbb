@@ -22,6 +22,8 @@ include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
 include($phpbb_root_path . 'includes/bbcode.' . $phpEx);
 include($phpbb_root_path . 'includes/functions_user.' . $phpEx);
 
+$icon_message_resold = $phpbb_root_path.'/images/icons/icon_topics/message_solved.png';
+
 // Start session management
 $user->session_begin();
 $auth->acl($user->data);
@@ -187,7 +189,6 @@ $sql_array = array(
 
 	'FROM'		=> array(FORUMS_TABLE => 'f'),
 );
-
 // The FROM-Order is quite important here, else t.* columns can not be correctly bound.
 if ($post_id)
 {
@@ -1175,7 +1176,7 @@ $sql_ary = array(
 
 	'FROM'		=> array(
 		USERS_TABLE		=> 'u',
-		POSTS_TABLE		=> 'p',
+			POSTS_TABLE		=> 'p',
 	),
 
 	'LEFT_JOIN'	=> array(
@@ -1270,6 +1271,7 @@ while ($row = $db->sql_fetchrow($result))
 		'post_delete_time'	=> $row['post_delete_time'],
 		'post_delete_reason'=> $row['post_delete_reason'],
 		'post_delete_user'	=> $row['post_delete_user'],
+		'post_status_display'	=> $row['post_status_display'],
 
 		// Make sure the icon actually exists
 		'icon_id'			=> (isset($icons[$row['icon_id']]['img'], $icons[$row['icon_id']]['height'], $icons[$row['icon_id']]['width'])) ? $row['icon_id'] : 0,
@@ -1629,6 +1631,7 @@ extract($phpbb_dispatcher->trigger_event('core.viewtopic_modify_post_data', comp
 
 // Output the posts
 $first_unread = $post_unread = false;
+
 for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 {
 	// A non-existing rowset only happens if there was no user present for the entered poster_id
@@ -1913,7 +1916,6 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 		$u_pm = append_sid("{$phpbb_root_path}ucp.$phpEx", 'i=pm&amp;mode=compose&amp;action=quotepost&amp;p=' . $row['post_id']);
 	}
 
-	//
 	$post_row = array(
 		'POST_AUTHOR_FULL'		=> ($poster_id != ANONYMOUS) ? $user_cache[$poster_id]['author_full'] : get_username_string('full', $poster_id, $row['username'], $row['user_colour'], $row['post_username']),
 		'POST_AUTHOR_COLOUR'	=> ($poster_id != ANONYMOUS) ? $user_cache[$poster_id]['author_colour'] : get_username_string('colour', $poster_id, $row['username'], $row['user_colour'], $row['post_username']),
@@ -1939,6 +1941,7 @@ for ($i = 0, $end = sizeof($post_list); $i < $end; ++$i)
 		'DELETED_MESSAGE'	=> $l_deleted_by,
 		'DELETE_REASON'		=> $row['post_delete_reason'],
 		'BUMPED_MESSAGE'	=> $l_bumped_by,
+		'TOPIC_MESSAGE_RESOLD' => ($row['post_status_display'] == POST_STATUS_SOLVED)?$icon_message_resold:"",
 
 		'MINI_POST_IMG'			=> ($post_unread) ? $user->img('icon_post_target_unread', 'UNREAD_POST') : $user->img('icon_post_target', 'POST'),
 		'POST_ICON_IMG'			=> ($topic_data['enable_icons'] && !empty($row['icon_id'])) ? $icons[$row['icon_id']]['img'] : '',
