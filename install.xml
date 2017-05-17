@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.5.xsd">
+	<header>
+		<title lang="en"><![CDATA[phpBB [video]]]></title>
+		<description lang="en"><![CDATA[Universal video bbcode without any code changes.]]></description>
+		<author-group>
+			<author>
+				<username><![CDATA[VEG]]></username>
+				<homepage><![CDATA[http://vrublevsky.org/]]></homepage>
+				<email><![CDATA[veg@tut.by]]></email>
+			</author>
+		</author-group>
+		<mod-version>1.15</mod-version>
+		<installation>
+			<level>easy</level>
+			<time>120</time>
+			<target-version>3.0.10</target-version>
+		</installation>
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/bbmedia.php" to="bbmedia.php"/>
+			<file from="root/install_bbvideo.php" to="install_bbvideo.php"/>
+		</copy>
+		<php-installer>install_bbvideo.php</php-installer>
+		<diy-instructions lang="en"><![CDATA[Delete install_bbvideo.php from your forum directory]]></diy-instructions>
+	</action-group>
+</mod>
