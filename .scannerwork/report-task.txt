@@ -1,0 +1,5 @@
+projectKey=phpbb
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/phpbb
+ceTaskId=AVwUrEQ-E_9V8Vdl3s4O
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVwUrEQ-E_9V8Vdl3s4O

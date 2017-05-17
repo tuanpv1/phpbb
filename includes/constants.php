@@ -89,6 +89,8 @@ define('STATUS_NEW_POST',1);
 define('STATUS_IN_PROCESS',2);
 define('STATUS_ANSWERED',3);
 define('STATUS_UNANSWERED',4);
+define('STATUS_NOT_DISPLAY',0);
+define('STATUS_BLOCK',5);
 
 
 // Forum/Topic states

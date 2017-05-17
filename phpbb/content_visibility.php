@@ -130,6 +130,13 @@ class content_visibility
 
 		return (int) $data[$mode . '_approved'] + (int) $data[$mode . '_unapproved'] + (int) $data[$mode . '_softdeleted'];
 	}
+	public function getCount($model, $data, $forum_id){
+		$sql_topics1 = 'SELECT COUNT(topic_id) AS topic_count from phpbb_topics where forum_id  = '.$forum_id.' and topic_status_display
+						not in ('.STATUS_NOT_DISPLAY.','.STATUS_BLOCK.')';
+		$result = $this->db->sql_query($sql_topics1);
+		$topics_count = (int)$this->db->sql_fetchfield('topic_count');
+		return $topics_count;
+	}
 
 	/**
 	* Create topic/post visibility SQL for a given forum ID
