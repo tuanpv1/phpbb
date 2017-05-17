@@ -110,6 +110,7 @@ $lang = array_merge($lang, array(
 	'VIEW_UNREAD_POST'		=> 'Bài viết chưa xem đầu tiên',
 	'VISIT_WEBSITE'			=> 'Ghé thăm website của người gửi',
 	'VOTE_SUBMITTED'		=> 'Bạn đã tham gia bình chọn xong.',
+    'LIKE_TEXT'				=> 'like(s) this thread.',
 	'VOTE_CONVERTED'		=> 'Thay đổi bình chọn không được hỗ trợ cho các bình chọn được chuyển đổi.'
 
 ));
