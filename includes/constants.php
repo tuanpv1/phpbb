@@ -92,6 +92,9 @@ define('STATUS_UNANSWERED',4);
 define('STATUS_NOT_DISPLAY',0);
 define('STATUS_BLOCK',5);
 
+// post status
+define('POST_STATUS_SOLVED',2);
+
 
 // Forum/Topic states
 define('FORUM_CAT', 0);
