@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="" />
+    <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/anavaro/postlove" afterPath="$PROJECT_DIR$/ext/anavaro/postlove" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="php-bb.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,74 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="viewtopic.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/viewtopic.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-524.38464">
-              <caret line="812" column="35" selection-start-line="812" selection-start-column="35" selection-end-line="812" selection-end-column="35" />
-              <folding>
-                <marker date="1495018356068" expanded="true" signature="2305:2370" placeholder="SELECT forum... ${TOPICS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="2806:3084" placeholder="SELECT post_... ${POSTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="3228:3336" placeholder="SELECT topic... ${TOPICS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="3837:3924" placeholder="SELECT forum... ${TOPICS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="4288:4652" placeholder="SELECT topic... ${TOPICS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="4815:4887" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="8852:8976" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="14161:14295" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="17117:17153" placeholder="INSERT INTO ${BOOKMARKS_TABLE}... " />
-                <marker date="1495018356068" expanded="true" signature="17323:17424" placeholder="DELETE FROM " />
-                <marker date="1495018356068" expanded="true" signature="30796:31044" placeholder="SELECT o.*, ${POLL_OPTIONS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="31404:31520" placeholder="SELECT poll_... ${POLL_VOTES_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="35430:35467" placeholder="INSERT INTO ${POLL_VOTES_TABLE}... " />
-                <marker date="1495018356068" expanded="true" signature="35936:36096" placeholder="DELETE FROM " />
-                <marker date="1495018356068" expanded="true" signature="42870:43205" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="54498:54712" placeholder="SELECT sessi... ${SESSIONS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="55216:55387" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="56094:56306" placeholder="SELECT a.pos... ${ATTACHMENTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="61637:61911" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
-                <marker date="1495018356068" expanded="true" signature="64197:64443" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_listener.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
-              <folding>
-                <marker date="1495034418356" expanded="true" signature="5631:5722" placeholder="SELECT COUNT... " />
-                <marker date="1495034418356" expanded="true" signature="7240:7297" placeholder="DELETE FROM " />
-                <marker date="1495034418356" expanded="true" signature="7575:7632" placeholder="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="viewtopic_body_postrow_post_notices_after.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65700483">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.16425121">
+              <caret line="4" column="80" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajaxify.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="56" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="56" />
-              <folding>
-                <marker date="1495030665439" expanded="true" signature="2437:2610" placeholder="INSERT INTO ${$this-&gt;table_prefix}posts_likes... " />
-                <marker date="1495030665439" expanded="true" signature="2716:2798" placeholder="SELECT topic... ${POSTS_TABLE}" />
-                <marker date="1495030665439" expanded="true" signature="3351:3446" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -153,14 +96,14 @@
         <option value="$PROJECT_DIR$/includes/functions_display.php" />
         <option value="$PROJECT_DIR$/viewtopic.php" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/memberlist_view_user_statistics_after.html" />
-        <option value="$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/tests/functional/postlove_post_test.php" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/all/theme/default.css" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/language/en/postlove.php" />
-        <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html" />
-        <option value="$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/all/template/js/lover.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php" />
+        <option value="$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php" />
+        <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html" />
       </list>
     </option>
   </component>
@@ -254,10 +197,6 @@
               <option name="myItemId" value="anavaro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -324,9 +263,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35801527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35801527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -719,10 +658,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12348668">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+        <state vertical-scroll-proportion="-2.1923077">
+          <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
           <folding>
             <marker date="1495034418356" expanded="true" signature="5631:5722" placeholder="SELECT COUNT... " />
             <marker date="1495034418356" expanded="true" signature="7240:7297" placeholder="DELETE FROM " />
@@ -733,31 +680,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="56" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="56" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
-            <marker date="1495030665439" expanded="true" signature="2437:2610" placeholder="INSERT INTO ${$this-&gt;table_prefix}posts_likes... " />
-            <marker date="1495030665439" expanded="true" signature="2716:2798" placeholder="SELECT topic... ${POSTS_TABLE}" />
-            <marker date="1495030665439" expanded="true" signature="3351:3446" placeholder="DELETE FROM " />
+            <marker date="1495077164569" expanded="true" signature="3078:3251" placeholder="INSERT INTO ${$this-&gt;table_prefix}posts_likes... " />
+            <marker date="1495077164569" expanded="true" signature="3420:3502" placeholder="SELECT topic... ${POSTS_TABLE}" />
+            <marker date="1495077164569" expanded="true" signature="4256:4351" placeholder="DELETE FROM " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12348668">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65700483">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.16425121">
+          <caret line="4" column="80" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
