@@ -892,7 +892,7 @@ fieldset.fields1 dl.pmlist dd.recipients {
 }
 
 .topic-poster {
-	float: left;
+	/*float: left;*/
 	padding-right: 0.5em;
 	margin-top: 0.3em;
 }

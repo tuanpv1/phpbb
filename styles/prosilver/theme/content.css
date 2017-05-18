@@ -252,6 +252,8 @@ dd.option {
 
 .postbody h3 img {
 	vertical-align: bottom;
+	margin-bottom: 3px;
+	padding-right: 10px;
 }
 
 .has-profile .postbody h3 {

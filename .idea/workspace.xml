@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ext/lygav/phpbbPostLike" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/prosilver/theme/common.css" afterPath="$PROJECT_DIR$/styles/prosilver/theme/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/prosilver/theme/content.css" afterPath="$PROJECT_DIR$/styles/prosilver/theme/content.css" />
     </list>
     <ignored path="php-bb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,26 +26,131 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="viewtopic_body_postrow_post_notices_after.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
+      <file leaf-file-name="overall_header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/overall_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.8076925">
+              <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar_header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/navbar_header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.0384617">
+              <caret line="159" column="56" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#li#2;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#li#3;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#ul#1;n#div#0;n#div#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acp_postlove_info.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/acp/acp_postlove_info.php">
+      <file leaf-file-name="ucp_login_link.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/ucp_login_link.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45169082">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ucp_header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/ucp_header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ucp.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ucp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.043701798">
+              <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+              <folding>
+                <element signature="e#6#277#0#PHP" expanded="true" />
+                <marker date="1495103520976" expanded="true" signature="5754:5810" placeholder="SELECT * FRO... ${USERS_TABLE}" />
+                <marker date="1495103520976" expanded="true" signature="6995:7058" placeholder="SELECT usern... ${USERS_TABLE}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.3773584">
+              <caret line="2300" column="81" selection-start-line="2300" selection-start-column="81" selection-end-line="2300" selection-end-column="81" />
+              <folding>
+                <marker date="1495103515751" expanded="true" signature="7592:7679" placeholder="SELECT lang_... ${LANG_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="8211:8301" placeholder="SELECT style... ${STYLES_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="16869:16966" placeholder="DELETE FROM " />
+                <marker date="1495103515751" expanded="true" signature="18848:18902" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="19516:19641" placeholder="DELETE FROM " />
+                <marker date="1495103515751" expanded="true" signature="19722:19828" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="23104:23143" placeholder="INSERT INTO ${TOPICS_TRACK_TABLE}... " />
+                <marker date="1495103515751" expanded="true" signature="25884:25924" placeholder="INSERT INTO ${TOPICS_POSTED_TABLE}... " />
+                <marker date="1495103515751" expanded="true" signature="27367:27481" placeholder="SELECT topic... ${TOPICS_TRACK_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="27804:27932" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="33328:33487" placeholder="SELECT t.top... ${TOPICS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="36656:37135" placeholder="SELECT t.for... ${TOPICS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="37552:37741" placeholder="SELECT t.top... ${TOPICS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="51077:51096" placeholder="..." />
+                <marker date="1495103515751" expanded="true" signature="71868:72082" placeholder="SELECT forum... ${FORUMS_ACCESS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="72288:72446" placeholder="SELECT f.ses... ${FORUMS_ACCESS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="72700:72750" placeholder="DELETE FROM " />
+                <marker date="1495103515751" expanded="true" signature="73253:73293" placeholder="INSERT INTO ${FORUMS_ACCESS_TABLE}... " />
+                <marker date="1495103515751" expanded="true" signature="77119:77142" placeholder="..." />
+                <marker date="1495103515751" expanded="true" signature="110062:110314" placeholder="SELECT COUNT... session_ip" />
+                <marker date="1495103515751" expanded="true" signature="110115:110253" placeholder="SELECT DISTI... ${SESSIONS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="110339:110495" placeholder="SELECT COUNT... ${SESSIONS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="111697:111900" placeholder="SELECT s.ses... ${SESSIONS_TABLE}" />
+                <marker date="1495103515751" expanded="true" signature="133019:133073" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_forum.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/login_forum.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_body.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/prosilver/template/login_body.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.423077">
+              <caret line="243" column="14" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
+              <folding>
+                <marker date="1495103425247" expanded="true" signature="2054:2211" placeholder="SELECT group... ${GROUPS_TABLE}" />
+                <marker date="1495103425247" expanded="true" signature="2232:2660" placeholder="SELECT g.gro... ${GROUPS_TABLE}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,28 +170,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/language/vi/acp/groups.php" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/ucp_header.html" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/simple_header.html" />
-        <option value="$PROJECT_DIR$/adm/style/acp_permissions.html" />
-        <option value="$PROJECT_DIR$/includes/acp/acp_permissions.php" />
-        <option value="$PROJECT_DIR$/includes/acp/auth.php" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/pagination1.html" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/pagination.html" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/pagination_new.html" />
         <option value="$PROJECT_DIR$/language/vi/ucp.php" />
         <option value="$PROJECT_DIR$/language/en/viewforum.php" />
         <option value="$PROJECT_DIR$/language/vi/viewforum.php" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/pagination_answer.html" />
-        <option value="$PROJECT_DIR$/styles/prosilver/theme/content.css" />
         <option value="$PROJECT_DIR$/styles/prosilver/theme/colours.css" />
         <option value="$PROJECT_DIR$/language/en/common.php" />
         <option value="$PROJECT_DIR$/language/vi/common.php" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/pagination_noanswer.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/viewforum_body.html" />
         <option value="$PROJECT_DIR$/viewforum.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/index_body.html" />
         <option value="$PROJECT_DIR$/includes/ucp/ucp_main.php" />
         <option value="$PROJECT_DIR$/includes/constants.php" />
         <option value="$PROJECT_DIR$/phpbb/content_visibility.php" />
@@ -115,6 +209,18 @@
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/acp/acp_postlove_info.php" />
+        <option value="$PROJECT_DIR$/styles/prosilver/theme/common.css" />
+        <option value="$PROJECT_DIR$/styles/prosilver/theme/content.css" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/index_body.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/navbar_header.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/ucp_login_link.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/ucp_header.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/ucp_agreement.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/login_forum.html" />
+        <option value="$PROJECT_DIR$/styles/prosilver/template/login_body.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/functions.php" />
+        <option value="$PROJECT_DIR$/ucp.php" />
       </list>
     </option>
   </component>
@@ -187,7 +293,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -201,15 +307,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
+              <option name="myItemId" value="prosilver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php-bb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpbb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prosilver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,15 +402,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35801527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36335877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23404256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23404256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -294,7 +419,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -336,20 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ext/phpbb/viglink/config/cron.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41834453">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default/routing/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -431,13 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
           <caret line="99" column="51" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/overall_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030520646">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -545,28 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-524.38464">
           <caret line="812" column="35" selection-start-line="812" selection-start-column="35" selection-end-line="812" selection-end-column="35" />
-          <folding>
-            <marker date="1495018356068" expanded="true" signature="2305:2370" placeholder="SELECT forum... ${TOPICS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="2806:3084" placeholder="SELECT post_... ${POSTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="3228:3336" placeholder="SELECT topic... ${TOPICS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="3837:3924" placeholder="SELECT forum... ${TOPICS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="4288:4652" placeholder="SELECT topic... ${TOPICS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="4815:4887" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="8852:8976" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="14161:14295" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="17117:17153" placeholder="INSERT INTO ${BOOKMARKS_TABLE}... " />
-            <marker date="1495018356068" expanded="true" signature="17323:17424" placeholder="DELETE FROM " />
-            <marker date="1495018356068" expanded="true" signature="30796:31044" placeholder="SELECT o.*, ${POLL_OPTIONS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="31404:31520" placeholder="SELECT poll_... ${POLL_VOTES_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="35430:35467" placeholder="INSERT INTO ${POLL_VOTES_TABLE}... " />
-            <marker date="1495018356068" expanded="true" signature="35936:36096" placeholder="DELETE FROM " />
-            <marker date="1495018356068" expanded="true" signature="42870:43205" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="54498:54712" placeholder="SELECT sessi... ${SESSIONS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="55216:55387" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="56094:56306" placeholder="SELECT a.pos... ${ATTACHMENTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="61637:61911" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
-            <marker date="1495018356068" expanded="true" signature="64197:64443" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12348668">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,11 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1923077">
           <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-          <folding>
-            <marker date="1495034418356" expanded="true" signature="5631:5722" placeholder="SELECT COUNT... " />
-            <marker date="1495034418356" expanded="true" signature="7240:7297" placeholder="DELETE FROM " />
-            <marker date="1495034418356" expanded="true" signature="7575:7632" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,18 +683,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <marker date="1495077164569" expanded="true" signature="3078:3251" placeholder="INSERT INTO ${$this-&gt;table_prefix}posts_likes... " />
-            <marker date="1495077164569" expanded="true" signature="3420:3502" placeholder="SELECT topic... ${POSTS_TABLE}" />
-            <marker date="1495077164569" expanded="true" signature="4256:4351" placeholder="DELETE FROM " />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hotdeal/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/acp/acp_postlove_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
@@ -628,11 +714,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/acp/acp_postlove_info.php">
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/theme/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45169082">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state vertical-scroll-proportion="-6.6153846">
+          <caret line="895" column="18" selection-start-line="895" selection-start-column="18" selection-end-line="895" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/theme/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5660377">
+          <caret line="255" column="24" selection-start-line="255" selection-start-column="24" selection-end-line="255" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/index_body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/overall_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8076925">
+          <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/navbar_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0384617">
+          <caret line="159" column="56" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
+          <folding>
+            <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#2;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#3;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/ucp_login_link.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/ucp_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/ucp_agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="13.730769">
+          <caret line="12" column="74" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/login_forum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/login_body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/phpbbcli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4903846">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.423077">
+          <caret line="243" column="14" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
+          <folding>
+            <marker date="1495103425247" expanded="true" signature="2054:2211" placeholder="SELECT group... ${GROUPS_TABLE}" />
+            <marker date="1495103425247" expanded="true" signature="2232:2660" placeholder="SELECT g.gro... ${GROUPS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3773584">
+          <caret line="2300" column="81" selection-start-line="2300" selection-start-column="81" selection-end-line="2300" selection-end-column="81" />
+          <folding>
+            <marker date="1495103515751" expanded="true" signature="7592:7679" placeholder="SELECT lang_... ${LANG_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="8211:8301" placeholder="SELECT style... ${STYLES_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="16869:16966" placeholder="DELETE FROM " />
+            <marker date="1495103515751" expanded="true" signature="18848:18902" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="19516:19641" placeholder="DELETE FROM " />
+            <marker date="1495103515751" expanded="true" signature="19722:19828" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="23104:23143" placeholder="INSERT INTO ${TOPICS_TRACK_TABLE}... " />
+            <marker date="1495103515751" expanded="true" signature="25884:25924" placeholder="INSERT INTO ${TOPICS_POSTED_TABLE}... " />
+            <marker date="1495103515751" expanded="true" signature="27367:27481" placeholder="SELECT topic... ${TOPICS_TRACK_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="27804:27932" placeholder="SELECT forum... ${FORUMS_TRACK_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="33328:33487" placeholder="SELECT t.top... ${TOPICS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="36656:37135" placeholder="SELECT t.for... ${TOPICS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="37552:37741" placeholder="SELECT t.top... ${TOPICS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="51077:51096" placeholder="..." />
+            <marker date="1495103515751" expanded="true" signature="71868:72082" placeholder="SELECT forum... ${FORUMS_ACCESS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="72288:72446" placeholder="SELECT f.ses... ${FORUMS_ACCESS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="72700:72750" placeholder="DELETE FROM " />
+            <marker date="1495103515751" expanded="true" signature="73253:73293" placeholder="INSERT INTO ${FORUMS_ACCESS_TABLE}... " />
+            <marker date="1495103515751" expanded="true" signature="77119:77142" placeholder="..." />
+            <marker date="1495103515751" expanded="true" signature="110062:110314" placeholder="SELECT COUNT... session_ip" />
+            <marker date="1495103515751" expanded="true" signature="110115:110253" placeholder="SELECT DISTI... ${SESSIONS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="110339:110495" placeholder="SELECT COUNT... ${SESSIONS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="111697:111900" placeholder="SELECT s.ses... ${SESSIONS_TABLE}" />
+            <marker date="1495103515751" expanded="true" signature="133019:133073" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ucp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.043701798">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+          <folding>
+            <element signature="e#6#277#0#PHP" expanded="true" />
+            <marker date="1495103520976" expanded="true" signature="5754:5810" placeholder="SELECT * FRO... ${USERS_TABLE}" />
+            <marker date="1495103520976" expanded="true" signature="6995:7058" placeholder="SELECT usern... ${USERS_TABLE}" />
+          </folding>
         </state>
       </provider>
     </entry>
