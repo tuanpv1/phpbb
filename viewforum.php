@@ -24,6 +24,7 @@ include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
 $user->session_begin();
 $auth->acl($user->data);
 $icon_resold = $phpbb_root_path.'/images/icons/icon_topics/icon_solved.png';
+$icon_avatar = $phpbb_root_path.'download/file.php?avatar='.$user->data['user_avatar'];
 
 // Start initial var setup
 $forum_id = $request->variable('f', 0);
@@ -1338,7 +1339,6 @@ if (sizeof($topic_list)) {
 
         $u_mcp_queue = ($topic_unapproved || $posts_unapproved) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=queue&amp;mode=' . (($topic_unapproved) ? 'approve_details' : 'unapproved_posts') . "&amp;t=$topic_id", true, $user->session_id) : '';
         $u_mcp_queue = (!$u_mcp_queue && $topic_deleted) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=queue&amp;mode=deleted_topics&amp;t=' . $topic_id, true, $user->session_id) : $u_mcp_queue;
-
         // Send vars to template
         $topic_row = array(
             'FORUM_ID' => $row['forum_id'],
@@ -1363,7 +1363,7 @@ if (sizeof($topic_list)) {
             'TOPIC_IMG_STYLE' => $folder_img,
             'TOPIC_FOLDER_IMG' => $user->img($folder_img, $folder_alt),
             'TOPIC_FOLDER_IMG_ALT' => $user->lang[$folder_alt],
-
+            'AVATAR_AUTHOR'=> $icon_avatar,
             'TOPIC_ICON_IMG' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['img'] : '',
             'TOPIC_ICON_IMG_WIDTH' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['width'] : '',
             'TOPIC_ICON_IMG_HEIGHT' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['height'] : '',

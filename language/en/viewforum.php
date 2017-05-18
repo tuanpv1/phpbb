@@ -68,7 +68,7 @@ $lang = array_merge($lang, array(
         2 => '%d topics',
     ),
     'STATUS_NEW_POST' => 'New post',
-    'STATUS_IN_PROCESS' => 'In process',
-    'STATUS_ANSWERED' => 'Answered',
+    'STATUS_IN_PROCESS' => 'Answered',
+    'STATUS_ANSWERED' => 'In Process',
     'STATUS_UNANSWERED' => 'UnAnswered',
 ));

@@ -65,7 +65,7 @@ $lang = array_merge($lang, array(
     'VIEW_FORUM_TOPIC' => '1 chủ đề',
     'VIEW_FORUM_TOPICS' => '%d chủ đề',
     'STATUS_NEW_POST'=>'Mới post',
-    'STATUS_IN_PROCESS' => 'Đang xử lý',
+    'STATUS_IN_PROCESS' => 'Đã xử lý',
     'STATUS_ANSWERED' => 'Đang giải quyết',
     'STATUS_UNANSWERED' => 'Chưa trả lời',
 ));

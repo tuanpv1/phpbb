@@ -258,7 +258,7 @@ class tags_manager
 				' . $this->table_prefix . tables::TAGS . ' AS t,
 				' . $this->table_prefix . tables::TOPICTAGS . " AS tt
 			WHERE tt.topic_id = $topic_id
-				AND t.id = tt.tag_id";
+				AND t.id = tt.tag_id and t.tag_status = ". TAG_STATUS_ACTIVE ;
 		return $this->db_helper->get_array_by_fieldname($sql, 'tag');
 	}
 

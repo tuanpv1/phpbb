@@ -23,6 +23,8 @@
 
 <form id="postform" method="post" action="{S_POST_ACTION}"{S_FORM_ENCTYPE}>
 
+	<!-- IF S_DISPLAY_REVIEW --><!-- INCLUDE posting_topic_review.html --><!-- ENDIF -->
+
 <!-- IF S_DRAFT_LOADED -->
 	<div class="panel">
 		<div class="inner">
@@ -79,9 +81,11 @@
 <!-- IF S_SHOW_POLL_BOX or S_POLL_DELETE --><!-- INCLUDE posting_poll_body.html --><!-- ENDIF -->
 
 <!-- EVENT posting_layout_include_panel_body -->
-
-<!-- IF S_DISPLAY_REVIEW --><!-- INCLUDE posting_topic_review.html --><!-- ENDIF -->
-
+	<p>
+		<a href="<!-- IF S_MCP_REPORT -->#report<!-- ELSE -->#postingbox<!-- ENDIF -->" class="top">
+			<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i><span>{L_BACK_TO_TOP}</span>
+		</a>
+	</p>
 </form>
 
 <!-- INCLUDE overall_footer.html -->
