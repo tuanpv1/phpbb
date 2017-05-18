@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/prosilver/theme/images/like_sprite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/prosilver/theme/mods.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/anavaro/postlove" afterPath="$PROJECT_DIR$/ext/anavaro/postlove" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/lygav/phpbbPostLike" afterPath="$PROJECT_DIR$/ext/lygav/phpbbPostLike" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en/viewtopic.php" afterPath="$PROJECT_DIR$/language/en/viewtopic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/vi/viewtopic.php" afterPath="$PROJECT_DIR$/language/vi/viewtopic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewtopic.php" afterPath="$PROJECT_DIR$/viewtopic.php" />
     </list>
     <ignored path="php-bb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="viewtopic.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewtopic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8">
+            <state vertical-scroll-proportion="0.0">
               <caret line="812" column="35" selection-start-line="812" selection-start-column="35" selection-end-line="812" selection-end-column="35" />
               <folding>
                 <marker date="1495018356068" expanded="true" signature="2305:2370" placeholder="SELECT forum... ${TOPICS_TABLE}" />
@@ -63,7 +61,7 @@
       <file leaf-file-name="main_listener.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.6181817">
+            <state vertical-scroll-proportion="0.0">
               <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
               <folding>
                 <marker date="1495034418356" expanded="true" signature="5631:5722" placeholder="SELECT COUNT... " />
@@ -74,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewtopic_body_postrow_post_notices_after.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewtopic_body_postrow_post_notices_after.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22077923">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="28" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
@@ -88,10 +86,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12348668">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ajaxify.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.923077">
+            <state vertical-scroll-proportion="0.0">
               <caret line="88" column="56" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="56" />
               <folding>
                 <marker date="1495030665439" expanded="true" signature="2437:2610" placeholder="INSERT INTO ${$this-&gt;table_prefix}posts_likes... " />
@@ -143,7 +151,6 @@
         <option value="$PROJECT_DIR$/includes/ucp/ucp_main.php" />
         <option value="$PROJECT_DIR$/includes/constants.php" />
         <option value="$PROJECT_DIR$/phpbb/content_visibility.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ext/lygav/phpbbPostLike/styles/prosilver/theme/css/hello.css" />
         <option value="$PROJECT_DIR$/ext/lygav/phpbbPostLike/styles/prosilver/template/js/phpbbPostLike.js" />
         <option value="$PROJECT_DIR$/cache/production/url_generator.php" />
@@ -168,6 +175,7 @@
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php" />
         <option value="$PROJECT_DIR$/ext/anavaro/postlove/styles/all/template/js/lover.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -211,7 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,355 +238,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="travis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prosilver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prosilver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="all" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="notification" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="anavaro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="postlove" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cache" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -641,16 +303,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35267174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35801527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23404256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23404256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -658,6 +319,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258593" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -699,13 +361,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/prosilver/template/viewtopic_topic_tools.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4187192">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ext/lygav/phpbbPostLike/styles/prosilver/template/event/overall_footer_after.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -792,12 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21364452">
           <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-          <folding>
-            <marker date="1494820795474" expanded="true" signature="3523:3690" placeholder="SELECT COUNT... phpbb_topics" />
-            <marker date="1494820795474" expanded="true" signature="13069:13172" placeholder="SELECT poste... ${$this-&gt;posts_table}" />
-            <marker date="1494820795474" expanded="true" signature="19275:19464" placeholder="SELECT 1 AS ${POSTS_TABLE}" />
-            <marker date="1494820795474" expanded="true" signature="22647:22748" placeholder="SELECT topic... ${$this-&gt;topics_table}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,24 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7285429">
           <caret line="1718" column="5" selection-start-line="1718" selection-start-column="5" selection-end-line="1718" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#277#0#PHP" expanded="true" />
-            <element signature="e#4775#4908#0#PHP" expanded="false" />
-            <element signature="e#4943#5045#0#PHP" expanded="false" />
-            <element signature="e#5066#5176#0#PHP" expanded="false" />
-            <element signature="e#5180#5373#0#PHP" expanded="false" />
-            <element signature="e#5377#6055#0#PHP" expanded="false" />
-            <element signature="e#5574#6055#0#PHP" expanded="false" />
-            <element signature="e#6661#7514#0#PHP" expanded="false" />
-            <marker date="1495018321724" expanded="true" signature="30561:30758" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1495018321724" expanded="true" signature="40460:40750" placeholder="SELECT forum... ${POSTS_TABLE}" />
-            <marker date="1495018321724" expanded="true" signature="40919:40988" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1495018321724" expanded="true" signature="41210:41500" placeholder="SELECT topic... ${POSTS_TABLE}" />
-            <marker date="1495018321724" expanded="true" signature="41669:41739" placeholder="SELECT topic... ${TOPICS_TABLE}" />
-            <marker date="1495018321724" expanded="true" signature="44816:44909" placeholder="SELECT notif... ${$table_sql}" />
-            <marker date="1495018321724" expanded="true" signature="45866:45953" placeholder="DELETE FROM " />
-            <marker date="1495018321724" expanded="true" signature="48019:48141" placeholder="INSERT INTO ${$table_sql}... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,10 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
           <caret line="99" column="51" selection-start-line="99" selection-start-column="51" selection-end-line="99" selection-end-column="51" />
-          <folding>
-            <element signature="n#div#0;n#div#3;n#!!top" expanded="false" />
-            <element signature="n#dt#0;n#div#0;n#div#3;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030520646">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.7692308">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06104129">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.89587075">
           <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,7 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.096948">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.2567325">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29802513">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6929982">
           <caret line="37" column="42" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28977272">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,10 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2513465">
           <caret line="58" column="43" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="43" />
-          <folding>
-            <marker date="1495016967808" expanded="true" signature="2735:2860" placeholder="INSERT INTO ${$this-&gt;table_prefix}post_likes... " />
-            <marker date="1495016967808" expanded="true" signature="3489:3592" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1010,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.038462">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42010772">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,51 +638,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.846153">
           <caret line="2663" column="1" selection-start-line="2663" selection-start-column="1" selection-end-line="2663" selection-end-column="1" />
-          <folding>
-            <marker date="1495018317433" expanded="true" signature="912:982" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="1263:1353" placeholder="SELECT COUNT... ${SMILIES_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="1888:1966" placeholder="SELECT smile... ${SMILIES_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="2169:2409" placeholder="SELECT smile... ${SMILIES_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="2517:2612" placeholder="SELECT * FRO... ${SMILIES_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="5200:5390" placeholder="SELECT MAX(p... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="8041:8123" placeholder="UPDATE ${$ta... " />
-            <marker date="1495018317433" expanded="true" signature="19889:20111" placeholder="SELECT d.*, ${DRAFTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="20433:20524" placeholder="SELECT topic... ${TOPICS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="23909:24288" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="25807:25975" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="33719:33773" placeholder="SELECT forum... ${TOPICS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="36241:36542" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="36782:37036" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="38469:38577" placeholder="SELECT MAX(p... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="38823:39067" placeholder="SELECT post_... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="39440:39522" placeholder="SELECT 1 AS ${ATTACHMENTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="40125:40161" placeholder="UPDATE ${$ta... " />
-            <marker date="1495018317433" expanded="true" signature="40396:40499" placeholder="SELECT poste... ${POSTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="40749:40847" placeholder="DELETE FROM " />
-            <marker date="1495018317433" expanded="true" signature="43930:44173" placeholder="SELECT p.pos... ${TOPICS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="56638:56671" placeholder="INSERT INTO ${TOPICS_TABLE}... " />
-            <marker date="1495018317433" expanded="true" signature="57243:57275" placeholder="INSERT INTO ${POSTS_TABLE}... " />
-            <marker date="1495018317433" expanded="true" signature="59824:59947" placeholder="SELECT * FRO... ${POLL_OPTIONS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="61220:61348" placeholder="DELETE FROM " />
-            <marker date="1495018317433" expanded="true" signature="61679:61733" placeholder="DELETE FROM " />
-            <marker date="1495018317433" expanded="true" signature="62283:62481" placeholder="SELECT attac... ${ATTACHMENTS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="66416:66520" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="67767:67834" placeholder="UPDATE ${$ta... " />
-            <marker date="1495018317433" expanded="true" signature="68035:68094" placeholder="DELETE FROM " />
-            <marker date="1495018317433" expanded="true" signature="68363:68444" placeholder="DELETE FROM " />
-            <marker date="1495018317433" expanded="true" signature="69312:69445" placeholder="INSERT INTO ${TOPICS_WATCH_TABLE}... " />
-            <marker date="1495018317433" expanded="true" signature="69606:69716" placeholder="DELETE FROM " />
-            <marker date="1495018317433" expanded="true" signature="70243:70364" placeholder="SELECT mark_... ${FORUMS_TRACK_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="70790:70867" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="79218:79339" placeholder="SELECT mark_... ${FORUMS_TRACK_TABLE}" />
-            <marker date="1495018317433" expanded="true" signature="79753:79830" placeholder="SELECT forum... ${FORUMS_TABLE}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/viewtopic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8">
+        <state vertical-scroll-proportion="0.0">
           <caret line="812" column="35" selection-start-line="812" selection-start-column="35" selection-end-line="812" selection-end-column="35" />
           <folding>
             <marker date="1495018356068" expanded="true" signature="2305:2370" placeholder="SELECT forum... ${TOPICS_TABLE}" />
@@ -1101,18 +674,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.22082585">
           <caret line="109" column="17" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
-          <folding>
-            <marker date="1495016670738" expanded="true" signature="1776:1878" placeholder="SELECT COUNT... " />
-            <marker date="1495016670738" expanded="true" signature="2148:2234" placeholder="SELECT user_... ${$this-&gt;table_prefix}" />
-            <marker date="1495016670738" expanded="true" signature="3548:3650" placeholder="SELECT COUNT... " />
-            <marker date="1495016670738" expanded="true" signature="3920:4006" placeholder="SELECT user_... ${$this-&gt;table_prefix}" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/all/template/js/jquery.modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4871355">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/lygav/phpbbPostLike/styles/prosilver/template/event/viewtopic_body_contact_fields_after.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31439394">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/all/template/js/lover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49571183">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.6181817">
+        <state vertical-scroll-proportion="0.0">
           <caret line="125" column="50" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
           <folding>
             <marker date="1495034418356" expanded="true" signature="5631:5722" placeholder="SELECT COUNT... " />
@@ -1122,27 +710,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/all/template/js/jquery.modal.js">
+    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4871355">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ext/lygav/phpbbPostLike/styles/prosilver/template/event/viewtopic_body_contact_fields_after.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31439394">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/controller/ajaxify.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.923077">
+        <state vertical-scroll-proportion="0.0">
           <caret line="88" column="56" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="56" />
           <folding>
             <marker date="1495030665439" expanded="true" signature="2437:2610" placeholder="INSERT INTO ${$this-&gt;table_prefix}posts_likes... " />
@@ -1152,23 +734,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/all/template/js/lover.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49571183">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.12348668">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ext/anavaro/postlove/styles/prosilver/template/event/viewtopic_body_postrow_post_notices_after.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22077923">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

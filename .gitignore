@@ -1,3 +1,4 @@
 cache/
 !.gitignore
 .scannerwork/
+.idea/workspace.xml
