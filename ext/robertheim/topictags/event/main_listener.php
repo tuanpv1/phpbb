@@ -347,10 +347,12 @@ class main_listener implements EventSubscriberInterface
 					$rendered_tags = $this->template->assign_display('@robertheim_topictags/small_tag.html');
 					// remove temporary data
 					$this->template->destroy_block_vars('rh_tags_tmp');
-
 					// assign the template data
 					$data['topic_row']['RH_TOPICTAGS_TAGS'] = $rendered_tags;
-
+//					$data['topic_row1']['RH_TOPICTAGS_TAGS'] = $rendered_tags;
+					if((int)$data['row']['topic_id'] == 41){
+//						var_dump($data['topic_row'] );exit;
+					}
 					$event->set_data($data);
 				}
 			}
