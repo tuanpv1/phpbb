@@ -75,6 +75,7 @@ if (($mark_notification = $request->variable('mark_notification', 0)))
 
 display_forums('', $config['load_moderators']);
 
+
 $order_legend = ($config['legend_sort_groupname']) ? 'group_name' : 'group_legend';
 // Grab group details for legend display
 if ($auth->acl_gets('a_group', 'a_groupadd', 'a_groupdel'))

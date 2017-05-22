@@ -433,6 +433,7 @@ class auth
 		}
 
 		$hold_str = $this->build_bitstring($hold_ary);
+//		var_dump($userdata['user_id']);exit;
 
 		if ($hold_str)
 		{
@@ -889,7 +890,6 @@ class auth
 			}
 		}
 		$db->sql_freeresult($result);
-
 		return $hold_ary;
 	}
 

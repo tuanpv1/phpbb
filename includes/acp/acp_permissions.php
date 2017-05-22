@@ -31,6 +31,7 @@ class acp_permissions
 
 	function main($id, $mode)
 	{
+
 		global $db, $user, $auth, $template, $phpbb_container, $request;
 		global $config, $phpbb_root_path, $phpEx;
 
@@ -239,14 +240,16 @@ class acp_permissions
 		// Get permission type
 		$permission_type = $request->variable('type', $this->permission_dropdown[0]);
 
+
 		if (!in_array($permission_type, $this->permission_dropdown))
 		{
 			trigger_error($user->lang['WRONG_PERMISSION_TYPE'] . adm_back_link($this->u_action), E_USER_WARNING);
 		}
-
+//		var_dump($mode);exit;
 		// Handle actions
 		if (strpos($mode, 'setting_') === 0 && $action)
 		{
+
 			switch ($action)
 			{
 				case 'delete':
@@ -327,6 +330,7 @@ class acp_permissions
 				break;
 
 				case 'apply_all_permissions':
+
 					if (!isset($_POST['setting']))
 					{
 						send_status_line(403, 'Forbidden');
@@ -336,7 +340,6 @@ class acp_permissions
 					{
 						trigger_error($user->lang['FORM_INVALID']. adm_back_link($this->u_action), E_USER_WARNING);
 					}
-
 					$this->set_all_permissions($mode, $permission_type, $auth_admin, $user_id, $group_id);
 				break;
 			}
@@ -773,6 +776,7 @@ class acp_permissions
 		// User or group to be set?
 		$ug_type = (sizeof($user_id)) ? 'user' : 'group';
 
+
 		// Check the permission setting again
 		if (!$auth->acl_get('a_' . str_replace('_', '', $permission_type) . 'auth') || !$auth->acl_get('a_auth' . $ug_type . 's'))
 		{
@@ -811,7 +815,6 @@ class acp_permissions
 				$auth_admin->acl_set($ug_type, $forum_id, $ug_id, $auth_options, $assigned_role, false);
 			}
 		}
-
 		$auth_admin->acl_clear_prefetch();
 
 		// Do we need to recache the moderator lists?

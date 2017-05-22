@@ -23,8 +23,8 @@ include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
 // Start session
 $user->session_begin();
 $auth->acl($user->data);
-$icon_resold = $phpbb_root_path.'/images/icons/icon_topics/icon_solved.png';
-$icon_avatar = $phpbb_root_path.'download/file.php?avatar='.$user->data['user_avatar'];
+$icon_resold = $phpbb_root_path . '/images/icons/icon_topics/icon_solved.png';
+$icon_avatar = $phpbb_root_path . 'download/file.php?avatar=' . $user->data['user_avatar'];
 
 // Start initial var setup
 $forum_id = $request->variable('f', 0);
@@ -60,7 +60,6 @@ if ($config['load_db_lastread'] && $user->data['is_registered']) {
 		AND ft.forum_id = f.forum_id)';
     $lastread_select .= ', ft.mark_time';
 }
-
 if ($user->data['is_registered']) {
     $sql_from .= ' LEFT JOIN ' . FORUMS_WATCH_TABLE . ' fw ON (fw.forum_id = f.forum_id AND fw.user_id = ' . $user->data['user_id'] . ')';
     $lastread_select .= ', fw.notify_status';
@@ -68,7 +67,7 @@ if ($user->data['is_registered']) {
 
 $sql = "SELECT f.* $lastread_select
 	FROM $sql_from
-	WHERE f.forum_id = $forum_id";
+	WHERE f.forum_id = $forum_id and forum_status_display = " . STATUS_FORUM_ACTIVE;
 $result = $db->sql_query($sql);
 $forum_data = $db->sql_fetchrow($result);
 $db->sql_freeresult($result);
@@ -77,7 +76,15 @@ if (!$forum_data) {
     trigger_error('NO_FORUM');
 }
 
-
+if($user->data['user_id']){
+    $where_sql = '';
+    $where_sql = ' WHERE ' . $db->sql_in_set('user_id', $user->data['user_id']);
+    $sql_update_permission = 'UPDATE ' . USERS_TABLE . "
+			SET user_permissions = '',
+				user_perm_from = 0
+			$where_sql";
+    $db->sql_query($sql_update_permission);
+}
 // Configure style, language, etc.
 $user->setup('viewforum', $forum_data['forum_style']);
 
@@ -356,6 +363,11 @@ if (!empty($_EXTRA_URL)) {
     }
 }
 
+$sql_parent_id = 'SELECT COUNT(forum_id) as forum_id FROM phpbb_forums WHERE parent_id = ' . $forum_data['forum_id'];
+$result_parent = $db->sql_query($sql_parent_id);
+$topics_count_parent_id = (int)$db->sql_fetchfield('forum_id');
+
+
 $template->assign_vars(array(
     'MODERATORS' => (!empty($moderators[$forum_id])) ? implode($user->lang['COMMA_SEPARATOR'], $moderators[$forum_id]) : '',
 
@@ -386,6 +398,7 @@ $template->assign_vars(array(
     'S_IS_POSTABLE' => ($forum_data['forum_type'] == FORUM_POST) ? true : false,
     'S_USER_CAN_POST' => ($auth->acl_get('f_post', $forum_id)) ? true : false,
     'S_DISPLAY_ACTIVE' => $s_display_active,
+    'IS_NOT_PARENT' => ($topics_count_parent_id > 0) ? false : true,
     'S_SELECT_SORT_DIR' => $s_sort_dir,
     'S_SELECT_SORT_KEY' => $s_sort_key,
     'S_SELECT_SORT_DAYS' => $s_limit_days,
@@ -1363,7 +1376,7 @@ if (sizeof($topic_list)) {
             'TOPIC_IMG_STYLE' => $folder_img,
             'TOPIC_FOLDER_IMG' => $user->img($folder_img, $folder_alt),
             'TOPIC_FOLDER_IMG_ALT' => $user->lang[$folder_alt],
-            'AVATAR_AUTHOR'=> $icon_avatar,
+            'AVATAR_AUTHOR' => $icon_avatar,
             'TOPIC_ICON_IMG' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['img'] : '',
             'TOPIC_ICON_IMG_WIDTH' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['width'] : '',
             'TOPIC_ICON_IMG_HEIGHT' => (!empty($icons[$row['icon_id']])) ? $icons[$row['icon_id']]['height'] : '',
@@ -1535,7 +1548,7 @@ if (sizeof($topic_list_process)) {
             'LAST_POST_AUTHOR' => get_username_string('username', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
             'LAST_POST_AUTHOR_COLOUR' => get_username_string('colour', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
             'LAST_POST_AUTHOR_FULL' => get_username_string('full', $row['topic_last_poster_id'], $row['topic_last_poster_name'], $row['topic_last_poster_colour']),
-            'TOPIC_RESOLD' => ($row['topic_status_display'] == STATUS_IN_PROCESS)?$icon_resold:"",
+            'TOPIC_RESOLD' => ($row['topic_status_display'] == STATUS_IN_PROCESS) ? $icon_resold : "",
 
             'REPLIES' => $replies,
             'VIEWS' => $row['topic_views'],
@@ -1575,7 +1588,7 @@ if (sizeof($topic_list_process)) {
             'U_VIEW_FORUM' => append_sid("{$phpbb_root_path}viewforum.$phpEx", 'f=' . $row['forum_id']),
             'U_MCP_REPORT' => append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=reports&amp;mode=reports&amp;f=' . $row['forum_id'] . '&amp;t=' . $topic_id, true, $user->session_id),
             'U_MCP_QUEUE' => $u_mcp_queue,
-
+            'IS_NOT_PARENT' => false,
             'S_TOPIC_TYPE_SWITCH' => ($s_type_switch == $s_type_switch_test) ? -1 : $s_type_switch_test,
         );
 

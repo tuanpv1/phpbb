@@ -144,6 +144,7 @@
 
 <!-- EVENT viewforum_body_topic_row_before -->
 
+<!-- IF  IS_NOT_PARENT -->
 <!-- BEGIN topicrow -->
 
 <!-- IF not topicrow.S_TOPIC_TYPE_SWITCH and not topicrow.S_FIRST_ROW -->
@@ -304,13 +305,16 @@
     </div>
 </div>
 <!-- ENDIF -->
+<!-- ENDIF -->
 
+<!-- IF  IS_NOT_PARENT -->
 <!-- BEGIN topicrow1 -->
 
 <!-- IF not topicrow1.S_TOPIC_TYPE_SWITCH and not topicrow1.S_FIRST_ROW -->
 </ul>
 </div>
 </div>
+
 <!-- ENDIF -->
 
 <!-- IF topicrow1.S_FIRST_ROW or not topicrow1.S_TOPIC_TYPE_SWITCH -->
@@ -470,9 +474,10 @@
     </div>
 </div>
 <!-- ENDIF -->
+<!-- ENDIF -->
 
 
-
+<!-- IF  IS_NOT_PARENT -->
 <!-- BEGIN topicrow_answer -->
 
 <!-- IF not topicrow_answer.S_TOPIC_TYPE_SWITCH and not topicrow_answer.S_FIRST_ROW -->
@@ -637,9 +642,10 @@
     </div>
 </div>
 <!-- ENDIF -->
+<!-- ENDIF -->
 
 
-
+<!-- IF  IS_NOT_PARENT -->
 <!-- BEGIN topicrow_noanswer -->
 
 <!-- IF not topicrow_noanswer.S_TOPIC_TYPE_SWITCH and not topicrow_noanswer.S_FIRST_ROW -->
@@ -803,6 +809,7 @@
         <!-- ENDIF -->
     </div>
 </div>
+<!-- ENDIF -->
 <!-- ENDIF -->
 
 

@@ -31,9 +31,18 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 	$forum_rows = $subforums = $forum_ids = $forum_ids_moderator = $forum_moderators = $active_forum_ary = array();
 	$parent_id = $visible_forums = 0;
 
+
+
 	// Mark forums read?
 	$mark_read = $request->variable('mark', '');
-
+    if($user->data['user_id']){
+        $where_sql = ' WHERE ' . $db->sql_in_set('user_id', $user->data['user_id']);
+        $sql_update_permission = 'UPDATE ' . USERS_TABLE . "
+			SET user_permissions = '',
+				user_perm_from = 0
+			$where_sql";
+        $db->sql_query($sql_update_permission);
+    }
 	if ($mark_read == 'all')
 	{
 		$mark_read = '';
@@ -47,11 +56,11 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		}
 
 		$root_data = array('forum_id' => 0);
-		$sql_where = '';
+		$sql_where = ' forum_status_display = '.STATUS_FORUM_ACTIVE;
 	}
 	else
 	{
-		$sql_where = 'left_id > ' . $root_data['left_id'] . ' AND left_id < ' . $root_data['right_id'];
+		$sql_where = 'left_id > ' . $root_data['left_id'] . ' AND left_id < ' . $root_data['right_id'].' AND forum_status_display = '.STATUS_FORUM_ACTIVE;
 	}
 
 	// Handle marking everything read
@@ -156,6 +165,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 
 	while ($row = $db->sql_fetchrow($result))
 	{
+
 
 		$vars = array('branch_root_id', 'row');
 		extract($phpbb_dispatcher->trigger_event('core.display_forums_modify_row', compact($vars)));
@@ -850,6 +860,7 @@ function get_forum_parents(&$forum_data)
 				FROM ' . FORUMS_TABLE . '
 				WHERE left_id < ' . $forum_data['left_id'] . '
 					AND right_id > ' . $forum_data['right_id'] . '
+					AND forum_status_display = '.STATUS_FORUM_ACTIVE.'
 				ORDER BY left_id ASC';
 			$result = $db->sql_query($sql);
 
@@ -1201,7 +1212,8 @@ function display_user_activity(&$userdata_ary)
 		{
 			$sql = 'SELECT forum_name
 				FROM ' . FORUMS_TABLE . '
-				WHERE forum_id = ' . $active_f_row['forum_id'];
+				WHERE forum_id = ' . $active_f_row['forum_id'].
+				'AND forum_status_display = '.STATUS_FORUM_ACTIVE;
 			$result = $db->sql_query($sql, 3600);
 			$active_f_row['forum_name'] = (string) $db->sql_fetchfield('forum_name');
 			$db->sql_freeresult($result);
