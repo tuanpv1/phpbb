@@ -72,7 +72,6 @@ if (($mark_notification = $request->variable('mark_notification', 0)))
 		}
 	}
 }
-
 display_forums('', $config['load_moderators']);
 
 

@@ -366,7 +366,7 @@ if (!empty($_EXTRA_URL)) {
 $sql_parent_id = 'SELECT COUNT(forum_id) as forum_id FROM phpbb_forums WHERE parent_id = ' . $forum_data['forum_id'];
 $result_parent = $db->sql_query($sql_parent_id);
 $topics_count_parent_id = (int)$db->sql_fetchfield('forum_id');
-
+var_dump($topics_count_parent_id);exit;
 
 $template->assign_vars(array(
     'MODERATORS' => (!empty($moderators[$forum_id])) ? implode($user->lang['COMMA_SEPARATOR'], $moderators[$forum_id]) : '',
@@ -1588,7 +1588,6 @@ if (sizeof($topic_list_process)) {
             'U_VIEW_FORUM' => append_sid("{$phpbb_root_path}viewforum.$phpEx", 'f=' . $row['forum_id']),
             'U_MCP_REPORT' => append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=reports&amp;mode=reports&amp;f=' . $row['forum_id'] . '&amp;t=' . $topic_id, true, $user->session_id),
             'U_MCP_QUEUE' => $u_mcp_queue,
-            'IS_NOT_PARENT' => false,
             'S_TOPIC_TYPE_SWITCH' => ($s_type_switch == $s_type_switch_test) ? -1 : $s_type_switch_test,
         );
 

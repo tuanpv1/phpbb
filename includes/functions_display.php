@@ -339,6 +339,7 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		extract($phpbb_dispatcher->trigger_event('core.display_forums_modify_forum_rows', compact($vars)));
 	}
 	$db->sql_freeresult($result);
+
 	// Handle marking posts
 	if ($mark_read == 'forums')
 	{
@@ -716,7 +717,6 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 		'root_data',
 	);
 	extract($phpbb_dispatcher->trigger_event('core.display_forums_after', compact($vars)));
-
 	if ($return_moderators)
 	{
 		return array($active_forum_ary, $forum_moderators);
