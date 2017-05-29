@@ -29,7 +29,6 @@ class auth
 	function acl(&$userdata)
 	{
 		global $db, $cache;
-
 		$this->acl = $this->cache = $this->acl_options = array();
 		$this->acl_forum_ids = false;
 
@@ -92,6 +91,7 @@ class auth
 		// If a bitstring within the list does not match the options, we have a user with incorrect permissions set and need to renew them
 		if ($renew)
 		{
+
 			$this->acl_cache($userdata);
 			$this->_fill_acl($userdata['user_permissions']);
 		}
@@ -131,6 +131,7 @@ class auth
 
 		foreach ($user_permissions as $f => $seq)
 		{
+
 			if ($seq)
 			{
 				$i = 0;
@@ -175,7 +176,6 @@ class auth
 			$negate = true;
 			$opt = substr($opt, 1);
 		}
-
 		if (!isset($this->cache[$f][$opt]))
 		{
 			// We combine the global/local option with an OR because some options are global and local.
@@ -190,17 +190,21 @@ class auth
 					$this->cache[$f][$opt] = $this->acl[0][$this->acl_options['global'][$opt]];
 				}
 			}
-
 			// Is this option a local permission setting?
 			// But if we check for a global option only, we won't combine the options...
 			if ($f != 0 && isset($this->acl_options['local'][$opt]))
 			{
+//				var_dump($this->acl_options);exit;
 				if (isset($this->acl[$f]) && isset($this->acl[$f][$this->acl_options['local'][$opt]]))
 				{
+
+//					var_dump($this->acl[$f][$this->acl_options['local'][$opt]]);exit;
 					$this->cache[$f][$opt] |= $this->acl[$f][$this->acl_options['local'][$opt]];
+//					var_dump($this->cache[$f][$opt]);exit;
 				}
 			}
 		}
+
 
 		// Founder always has all global options set to true...
 		return ($negate) ? !$this->cache[$f][$opt] : $this->cache[$f][$opt];
@@ -433,7 +437,6 @@ class auth
 		}
 
 		$hold_str = $this->build_bitstring($hold_ary);
-//		var_dump($userdata['user_id']);exit;
 
 		if ($hold_str)
 		{
@@ -851,8 +854,10 @@ class auth
 			WHERE user_id = ' . $user_id;
 		$result = $db->sql_query($sql);
 
+
 		while ($row = $db->sql_fetchrow($result))
 		{
+
 			// If a role is assigned, assign all options included within this role. Else, only set this one option.
 			if ($row['auth_role_id'])
 			{
@@ -883,6 +888,7 @@ class auth
 			}
 			else if (!empty($this->role_cache[$row['auth_role_id']]))
 			{
+
 				foreach (unserialize($this->role_cache[$row['auth_role_id']]) as $option_id => $setting)
 				{
 					$this->_set_group_hold_ary($hold_ary[$row['forum_id']], $option_id, $setting);
@@ -890,6 +896,7 @@ class auth
 			}
 		}
 		$db->sql_freeresult($result);
+
 		return $hold_ary;
 	}
 

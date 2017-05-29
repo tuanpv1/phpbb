@@ -25,6 +25,9 @@ require($phpbb_root_path . 'includes/functions_module.' . $phpEx);
 $id 	= $request->variable('i', '');
 $mode	= $request->variable('mode', '');
 
+
+
+
 if (in_array($mode, array('login', 'login_link', 'logout', 'confirm', 'sendpassword', 'activate')))
 {
 	define('IN_LOGIN', true);
@@ -74,7 +77,6 @@ switch ($mode)
 	case 'confirm':
 		$module->load('ucp', 'confirm');
 	break;
-
 	case 'login':
 		if ($user->data['is_registered'])
 		{

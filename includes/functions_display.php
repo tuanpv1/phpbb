@@ -27,7 +27,6 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 	global $db, $auth, $user, $template;
 	global $phpbb_root_path, $phpEx, $config;
 	global $request, $phpbb_dispatcher, $phpbb_container;
-
 	$forum_rows = $subforums = $forum_ids = $forum_ids_moderator = $forum_moderators = $active_forum_ary = array();
 	$parent_id = $visible_forums = 0;
 
@@ -43,7 +42,8 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 			$where_sql";
         $db->sql_query($sql_update_permission);
     }
-	if ($mark_read == 'all')
+
+	if ($mark_read == 'all	')
 	{
 		$mark_read = '';
 	}
@@ -100,7 +100,6 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 
 	// Display list of active topics for this category?
 	$show_active = (isset($root_data['forum_flags']) && ($root_data['forum_flags'] & FORUM_FLAG_ACTIVE_TOPICS)) ? true : false;
-
 	$sql_array = array(
 		'SELECT'	=> 'f.*',
 		'FROM'		=> array(
@@ -200,9 +199,9 @@ function display_forums($root_data = '', $display_moderators = true, $return_mod
 			}
 			unset($right_id);
 		}
-
 		if (!$auth->acl_get('f_list', $forum_id))
 		{
+
 			// if the user does not have permissions to list this forum, skip everything until next branch
 			$right_id = $row['right_id'];
 			continue;

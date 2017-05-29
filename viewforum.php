@@ -85,6 +85,8 @@ if($user->data['user_id']){
 			$where_sql";
     $db->sql_query($sql_update_permission);
 }
+
+
 // Configure style, language, etc.
 $user->setup('viewforum', $forum_data['forum_style']);
 
@@ -366,7 +368,6 @@ if (!empty($_EXTRA_URL)) {
 $sql_parent_id = 'SELECT COUNT(forum_id) as forum_id FROM phpbb_forums WHERE parent_id = ' . $forum_data['forum_id'];
 $result_parent = $db->sql_query($sql_parent_id);
 $topics_count_parent_id = (int)$db->sql_fetchfield('forum_id');
-var_dump($topics_count_parent_id);exit;
 
 $template->assign_vars(array(
     'MODERATORS' => (!empty($moderators[$forum_id])) ? implode($user->lang['COMMA_SEPARATOR'], $moderators[$forum_id]) : '',
