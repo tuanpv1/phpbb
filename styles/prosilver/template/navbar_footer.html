@@ -1,69 +1,276 @@
-<div class="navbar" role="navigation">
-	<div class="inner">
+<style>
+	footer {
+		background: #1b1b1b none repeat scroll 0 0;
+		color: rgba(255, 255, 255, 0.8);
+	}
 
-	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
-		<li class="breadcrumbs">
-			<!-- IF U_SITE_HOME -->
-				{% spaceless %}
-				<span class="crumb">
-					<a href="{U_SITE_HOME}" data-navbar-reference="home">
-						<i class="icon fa-home fa-fw" aria-hidden="true"></i><span>{L_SITE_HOME}</span>
-					</a>
-				</span>
-				{% endspaceless %}
-			<!-- ENDIF -->
-			<!-- EVENT overall_footer_breadcrumb_prepend -->
-			{% spaceless %}
-			<span class="crumb">
-				<a href="{U_INDEX}" data-navbar-reference="index">
-					<!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw" aria-hidden="true"></i><!-- ENDIF --><span>{L_INDEX}</span>
-				</a>
-			</span>
-			{% endspaceless %}
-			<!-- EVENT overall_footer_breadcrumb_append -->
-		</li>
-		<!-- IF U_WATCH_FORUM_LINK and not S_IS_BOT -->
-			<li data-last-responsive="true">
-				<a href="{U_WATCH_FORUM_LINK}" title="{S_WATCH_FORUM_TITLE}" data-ajax="toggle_link" data-toggle-class="icon <!-- IF S_WATCHING_FORUM -->fa-check-square-o<!-- ELSE -->fa-square-o<!-- ENDIF --> fa-fw" data-toggle-text="{S_WATCH_FORUM_TOGGLE}" data-toggle-url="{U_WATCH_FORUM_TOGGLE}">
-					<i class="icon <!-- IF S_WATCHING_FORUM -->fa-square-o<!-- ELSE -->fa-check-square-o<!-- ENDIF --> fa-fw" aria-hidden="true"></i><span>{S_WATCH_FORUM_TITLE}</span>
-				</a>
-			</li>
-		<!-- ENDIF -->
+	.footer .pageContent {
+		background: rgba(255, 255, 255, 0.024) none repeat scroll 0 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		border-top: 5px solid #6cb2e4;
+		color: #646464;
+		font-size: 14px;
+		height: 50px;
+		line-height: 50px;
+		margin: 15px 0;
+		min-height: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
-		<!-- EVENT overall_footer_timezone_before -->
-		<li class="rightside">{S_TIMEZONE}</li>
-		<!-- EVENT overall_footer_timezone_after -->
-		<!-- IF not S_IS_BOT -->
-			<li class="rightside">
-				<a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem">
-					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>{L_DELETE_COOKIES}</span>
-				</a>
-			</li>
-			<!-- IF S_DISPLAY_MEMBERLIST -->
-				<li class="rightside" data-last-responsive="true">
-					<a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}" role="menuitem">
-						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span>
-					</a>
-				</li>
-			<!-- ENDIF -->
-		<!-- ENDIF -->
-		<!-- EVENT overall_footer_teamlink_before -->
-		<!-- IF U_TEAM -->
-			<li class="rightside" data-last-responsive="true">
-				<a href="{U_TEAM}" role="menuitem">
-					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{L_THE_TEAM}</span>
-				</a>
-			</li>
-		<!-- ENDIF -->
-		<!-- EVENT overall_footer_teamlink_after -->
-		<!-- IF U_CONTACT_US -->
-			<li class="rightside" data-last-responsive="true">
-				<a href="{U_CONTACT_US}" role="menuitem">
-					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>{L_CONTACT_US}</span>
-				</a>
-			</li>
-		<!-- ENDIF -->
-	</ul>
+	.footer .pageContent {
+		color: #646464;
+		font-size: 14px;
+		line-height: 50px;
+	}
 
+	.pageWidth {
+		margin: 0 auto;
+		max-width: 1170px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.footerLinks {
+		float: right;
+	}
+
+	.footer .pageContent {
+		color: #646464;
+		font-size: 14px;
+		line-height: 50px;
+	}
+
+	.footerLinks li {
+		float: left;
+	}
+
+	.footer a, .footer a:visited {
+		color: #a5cae4;
+		display: block;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	a:link, a:visited {
+		color: rgb(23, 96, 147);
+		text-decoration: none;
+	}
+
+	#XenForo a:link {
+		word-break: inherit;
+	}
+
+	a:link {
+		word-break: break-all;
+	}
+
+	.footer a, .footer a:visited {
+		color: #a5cae4;
+		display: block;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	a:link, a:visited {
+		color: rgb(23, 96, 147);
+		text-decoration: none;
+	}
+
+	.bigFooter .pageContent {
+		background: rgba(255, 255, 255, 0.024) none repeat scroll 0 0;
+		border-radius: 2px;
+		clear: both;
+		color: rgb(101, 165, 209);
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.pageWidth {
+		margin: 0 auto;
+		max-width: 1170px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.bigFooter .pageContent {
+		color: rgb(101, 165, 209);
+	}
+
+	.hasFlexbox .bigFooterRow--mainRow {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.bigFooterRow--mainRow {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.bigFooterCol {
+		-moz-border-bottom-colors: none;
+		-moz-border-left-colors: none;
+		-moz-border-right-colors: none;
+		-moz-border-top-colors: none;
+		border-color: rgba(255, 255, 255, 0.05);
+		border-image: none;
+		border-style: solid;
+		border-width: 0 0 0 1px;
+		box-sizing: border-box;
+		display: table-cell;
+		line-height: 90%;
+		padding: 15px;
+		vertical-align: top;
+	}
+
+	li {
+		list-style: outside none none;
+	}
+
+	.section {
+		margin: 15px auto;
+	}
+
+	.bigFooterHeader {
+		color: #fff;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	.bigFooterCol .footerMenu {
+		margin-bottom: 10px;
+	}
+
+	.bigFooterCol {
+		line-height: 90%;
+		width: 377px;
+	}
+
+	#XenForo a:link {
+		word-break: inherit;
+	}
+
+	.bigFooterCol .footerMenu a {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		display: block;
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	a:link {
+		word-break: break-all;
+	}
+
+	.bigFooterCol a {
+		color: #a5cae4;
+		text-decoration: none;
+	}
+
+	a:link, a:visited {
+		color: rgb(23, 96, 147);
+		text-decoration: none;
+	}
+
+	#copyright {
+		text-align: left;
+		color: rgb(100, 100, 100);
+		float: left;
+		font-size: 14px;
+	}
+
+	.footerLegal .pageContent {
+		border-radius: 2px;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		clear: both;
+		font-size: 12px;
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+
+	.pageWidth {
+		margin: 0 auto;
+		max-width: 1170px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.footerLegal .uix_socialMediaLinks {
+		float: right;
+	}
+
+	.uix_socialMediaLinks .uix_socialLink {
+		display: inline-block;
+		vertical-align: top;
+	}
+</style>
+
+<!-- EVENT overall_footer_body_after -->
+<footer>
+	<div id="uix_stickyFooterSpacer"></div>
+	<div class="footer">
+		<div class="pageContent">
+			<div class="pageWidth">
+				<ul class="footerLinks">
+					<li><a href="{U_INDEX}" class="homeLink"><i class="icon fa-home fa-fw" aria-hidden="true"></i>{L_INDEX}</a></li>
+					<li><a href="#">Giúp đỡ</a></li>
+					<li><a href="#">Điều khoản & Quy định</a></li>
+				</ul>
+				<span class="helper"></span>
+			</div>
+		</div>
 	</div>
-</div>
+	<div class="bigFooter">
+		<div class="pageContent">
+			<div class="pageWidth">
+				<ul class="bigFooterRow bigFooterRow--mainRow bigFooterRow--has4Columns">
+					<li class="bigFooterCol bigFooterCol--col1">
+						<div class="section">
+							<h3 class="bigFooterHeader">
+								Viettel Forum
+							</h3>
+							<ul class="footerMenu">
+								<li><a href="#">Giới thiệu</a></li>
+								<li><a href="#">Top trả lời</a></li>
+								<li><a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bigFooterCol bigFooterCol--col3">
+						<div class="section">
+							<h3 class="bigFooterHeader">
+								Liên hệ
+							</h3>
+							<ul class="footerMenu">
+								<li><a href="{U_CONTACT_US}">{L_CONTACT_US}</a></li>
+								<li><a href="{U_MEMBERLIST}">{L_MEMBERLIST}</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="bigFooterCol bigFooterCol--col4">
+						<div class="section">
+							<h3 class="bigFooterHeader">
+								Liên kết
+							</h3>
+							<ul class="footerMenu">
+								<li><a href="#" target="_blank">Viettel Portal</a></li>
+								<li><a href="#" target="_blank">Viettel Telecom</a></li>
+								<li><a href="#" target="_blank">My Viettel</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Facebook Pixel Code -->
+	<div id="uix_jumpToFixed">
+		<a href="#XenForo" title="Lên đầu" data-position="top"><i class="uix_icon uix_icon-jumpToTop"></i></a>
+	</div>
+	<div class="bdRealtime_Loader"
+		 data-config="{&quot;pusherAppKey&quot;:&quot;ws&quot;,&quot;pusherOptions&quot;:{&quot;encrypted&quot;:true,&quot;apiHost&quot;:&quot;10.0.0.3&quot;,&quot;apiPort&quot;:8183,&quot;wsHost&quot;:&quot;nhattao.com&quot;,&quot;wsPort&quot;:80,&quot;wssPort&quot;:443},&quot;pollingEnabled&quot;:&quot;1&quot;,&quot;pollingOptions&quot;:{&quot;timestamp&quot;:1496242369,&quot;url&quot;:&quot;https:\/\/photo2.tinhte.vn\/data\/bdRealtime\/polling&quot;},&quot;bingUrl&quot;:&quot;&quot;,&quot;debugMode&quot;:false,&quot;channelPrefix&quot;:&quot;httpstinhtevnf2107ae2ffda03ad4574a858933db9fa&quot;,&quot;eventNamePrefix&quot;:&quot;ea70f884356c0ea0030a0c7cc308a419&quot;}"></div>
+</footer>
