@@ -1519,7 +1519,15 @@ if (sizeof($topic_list_process)) {
         $s_type_switch_test = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
 
         // Replies
-        $replies = $phpbb_content_visibility->get_count('topic_posts', $row, $topic_forum_id) - 1;
+        // Replies
+        $sql = 'SELECT COUNT(post_id) AS num_posts
+		FROM ' . POSTS_TABLE . "
+		WHERE topic_id = $topic_id " ;
+        $result = $db->sql_query($sql);
+        $total_posts = (int)$db->sql_fetchfield('num_posts');
+        $db->sql_freeresult($result);
+
+        $replies = $total_posts - 1;
 
         if ($row['topic_status'] == ITEM_MOVED) {
             $topic_id = $row['topic_moved_id'];
@@ -1701,7 +1709,14 @@ if (sizeof($topic_list_answer)) {
         $s_type_switch_test = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
 
         // Replies
-        $replies = $phpbb_content_visibility->get_count('topic_posts', $row, $topic_forum_id) - 1;
+        $sql = 'SELECT COUNT(post_id) AS num_posts
+		FROM ' . POSTS_TABLE . "
+		WHERE topic_id = $topic_id " ;
+        $result = $db->sql_query($sql);
+        $total_posts = (int)$db->sql_fetchfield('num_posts');
+        $db->sql_freeresult($result);
+
+        $replies = $total_posts - 1;
 
         if ($row['topic_status'] == ITEM_MOVED) {
             $topic_id = $row['topic_moved_id'];
@@ -1884,7 +1899,14 @@ if (sizeof($topic_list_noanswer)) {
         $s_type_switch_test = ($row['topic_type'] == POST_ANNOUNCE || $row['topic_type'] == POST_GLOBAL) ? 1 : 0;
 
         // Replies
-        $replies = $phpbb_content_visibility->get_count('topic_posts', $row, $topic_forum_id) - 1;
+        $sql = 'SELECT COUNT(post_id) AS num_posts
+		FROM ' . POSTS_TABLE . "
+		WHERE topic_id = $topic_id " ;
+        $result = $db->sql_query($sql);
+        $total_posts = (int)$db->sql_fetchfield('num_posts');
+        $db->sql_freeresult($result);
+
+        $replies = $total_posts - 1;
 
         if ($row['topic_status'] == ITEM_MOVED) {
             $topic_id = $row['topic_moved_id'];
