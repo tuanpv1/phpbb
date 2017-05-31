@@ -69,6 +69,7 @@ $phpbb_content_visibility = $phpbb_container->get('content.visibility');
 
 // Find topic id if user requested a newer or older topic
 if ($view && !$post_id) {
+
     if (!$forum_id) {
         $sql = 'SELECT forum_id
 			FROM ' . TOPICS_TABLE . "
@@ -214,6 +215,7 @@ if ($user->data['is_registered']) {
     }
 }
 
+
 if (!$post_id) {
     $sql_array['WHERE'] = "t.topic_id = $topic_id";
 } else {
@@ -284,7 +286,16 @@ if ($post_id) {
 }
 
 $topic_id = (int)$topic_data['topic_id'];
-$topic_replies = $phpbb_content_visibility->get_count('topic_posts', $topic_data, $forum_id) - 1;
+
+$sql = 'SELECT COUNT(post_id) AS num_posts
+		FROM ' . POSTS_TABLE . "
+		WHERE topic_id = $topic_id " ;
+$result = $db->sql_query($sql);
+$total_posts = (int)$db->sql_fetchfield('num_posts');
+$db->sql_freeresult($result);
+
+$topic_replies = $total_posts - 1;
+
 
 // Check sticky/announcement time limit
 if (($topic_data['topic_type'] == POST_STICKY || $topic_data['topic_type'] == POST_ANNOUNCE) && $topic_data['topic_time_limit'] && ($topic_data['topic_time'] + $topic_data['topic_time_limit']) < time()) {
@@ -356,6 +367,7 @@ if (isset($_GET['e']) && $user->data['user_id'] == ANONYMOUS) {
 
 // What is start equal to?
 if ($post_id) {
+
     $start = floor(($topic_data['prev_posts']) / $config['posts_per_page']) * $config['posts_per_page'];
 }
 
@@ -407,7 +419,6 @@ if ($sort_days) {
     $total_posts = $topic_replies + 1;
     $limit_posts_time = '';
 }
-
 // Was a highlight request part of the URI?
 $highlight_match = $highlight = '';
 if ($hilit_words) {
@@ -650,7 +661,6 @@ $vars = array(
 extract($phpbb_dispatcher->trigger_event('core.viewtopic_assign_template_vars_before', compact($vars)));
 
 $pagination->generate_template_pagination($base_url, 'pagination', 'start', $total_posts, $config['posts_per_page'], $start);
-
 // Send vars to template
 $template->assign_vars(array(
         'FORUM_ID' => $forum_id,
@@ -664,7 +674,7 @@ $template->assign_vars(array(
         'TOPIC_AUTHOR_COLOUR' => get_username_string('colour', $topic_data['topic_poster'], $topic_data['topic_first_poster_name'], $topic_data['topic_first_poster_colour']),
         'TOPIC_AUTHOR' => get_username_string('username', $topic_data['topic_poster'], $topic_data['topic_first_poster_name'], $topic_data['topic_first_poster_colour']),
 
-        'TOTAL_POSTS' => $user->lang('VIEW_TOPIC_POSTS', (int)$total_posts),
+        'TOTAL_POSTS' => $user->lang('VIEW_TOPIC_POSTS', (int)$total_posts - 1),
         'U_MCP' => ($auth->acl_get('m_', $forum_id)) ? append_sid("{$phpbb_root_path}mcp.$phpEx", "i=main&amp;mode=topic_view&amp;f=$forum_id&amp;t=$topic_id" . (($start == 0) ? '' : "&amp;start=$start") . ((strlen($u_sort_param)) ? "&amp;$u_sort_param" : ''), true, $user->session_id) : '',
         'MODERATORS' => (isset($forum_moderators[$forum_id]) && sizeof($forum_moderators[$forum_id])) ? implode($user->lang['COMMA_SEPARATOR'], $forum_moderators[$forum_id]) : '',
 
@@ -732,6 +742,7 @@ $template->assign_vars(array(
 
 // Does this topic contain a poll?
 if (!empty($topic_data['poll_start'])) {
+
     $sql = 'SELECT o.*, p.bbcode_bitfield, p.bbcode_uid
 		FROM ' . POLL_OPTIONS_TABLE . ' o, ' . POSTS_TABLE . " p
 		WHERE o.topic_id = $topic_id
@@ -1008,19 +1019,20 @@ $store_reverse = false;
 $sql_limit = $config['posts_per_page'];
 $sql_sort_order = $direction = '';
 
-if ($start > $total_posts / 2) {
-    $store_reverse = true;
+if ($start > ($total_posts-1) / 2) {
+    $store_reverse = false;
 
     // Select the sort order
     $direction = (($sort_dir == 'd') ? 'ASC' : 'DESC');
 
     $sql_limit = $pagination->reverse_limit($start, $sql_limit, $total_posts);
-    $sql_start = $pagination->reverse_start($start, $sql_limit, $total_posts);
+    $sql_start = $start;
 } else {
     // Select the sort order
     $direction = (($sort_dir == 'd') ? 'DESC' : 'ASC');
     $sql_start = $start;
 }
+
 
 if (is_array($sort_by_sql[$sort_key])) {
     $sql_sort_order = implode(' ' . $direction . ', ', $sort_by_sql[$sort_key]) . ' ' . $direction;
@@ -1040,7 +1052,7 @@ $sql = 'SELECT p.post_id
 		AND " . $phpbb_content_visibility->get_visibility_sql('post', $forum_id, 'p.') . "
 		" . (($join_user_sql[$sort_key]) ? 'AND u.user_id = p.poster_id' : '') . "
 		$limit_posts_time
-	ORDER BY  p.post_status_display desc";
+	ORDER BY  p.post_time ASC";
 $result = $db->sql_query_limit($sql, $sql_limit, $sql_start);
 
 $i = ($store_reverse) ? $sql_limit - 2 : 1;
@@ -1050,7 +1062,6 @@ while ($row = $db->sql_fetchrow($result)) {
     ($store_reverse) ? $i-- : $i++;
 }
 $db->sql_freeresult($result);
-
 if (!sizeof($post_list)) {
     if ($sort_days) {
         trigger_error('NO_POSTS_TIME_FRAME');
@@ -1137,7 +1148,6 @@ while ($row = $db->sql_fetchrow($result)) {
             $has_approved_attachments = true;
         }
     }
-
     $rowset_data = array(
         'hide_post' => (($row['foe'] || $row['post_visibility'] == ITEM_DELETED) && ($view != 'show' || $post_id != $row['post_id'])) ? true : false,
 
@@ -2056,7 +2066,6 @@ if (!$request->variable('f', 0)) {
 if (!$request->variable('t', 0) && !empty($topic_id)) {
     $request->overwrite('t', $topic_id);
 }
-
 $page_title = $topic_data['topic_title'] . ($start ? ' - ' . sprintf($user->lang['PAGE_TITLE_NUMBER'], $pagination->get_on_page($config['posts_per_page'], $start)) : '');
 
 /**

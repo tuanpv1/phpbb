@@ -82,9 +82,12 @@ switch ($mode)
 		{
 			redirect(append_sid("{$phpbb_root_path}index.$phpEx"));
 		}
-
 		login_box($request->variable('redirect', "index.$phpEx"));
 	break;
+
+	case 'login1':
+		echo login_box1($request->variable('redirect', "index.$phpEx"));
+		break;
 
 	case 'login_link':
 		if ($user->data['is_registered'])
