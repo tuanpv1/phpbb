@@ -13,6 +13,7 @@
 
 namespace phpbb\auth\provider\oauth;
 
+use Exception;
 use OAuth\Common\Consumer\Credentials;
 
 /**
@@ -251,7 +252,7 @@ class oauth extends \phpbb\auth\provider\base
 
 			if (!$row)
 			{
-				throw new \Exception('AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY');
+				throw new Exception('AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY');
 			}
 
 			// Update token storage to store the user_id
@@ -352,7 +353,7 @@ class oauth extends \phpbb\auth\provider\base
 
 		if (!$service)
 		{
-			throw new \Exception('AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED');
+			throw new Exception('AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED');
 		}
 
 		return $service;

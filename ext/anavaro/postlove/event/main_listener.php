@@ -97,7 +97,7 @@ class main_listener implements EventSubscriberInterface
         }
         $this->db->sql_freeresult($result);
         $post_row = $event['post_row'];
-        if ($user_liked and $others_liked) {
+        if ($user_liked && $others_liked) {
             $post_row['EVERYBODY_LIKE'] = TRUE;
         } else if ($user_liked) {
             $post_row['ONLY_USER_LIKE'] = true;

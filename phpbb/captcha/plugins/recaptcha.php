@@ -13,6 +13,8 @@
 
 namespace phpbb\captcha\plugins;
 
+use Exception;
+
 class recaptcha extends captcha_abstract
 {
 	var $recaptcha_server = 'http://www.google.com/recaptcha/api';
@@ -63,7 +65,7 @@ class recaptcha extends captcha_abstract
 	*/
 	function get_generator_class()
 	{
-		throw new \Exception('No generator class given.');
+		throw new Exception('No generator class given.');
 	}
 
 	function acp_page($id, &$module)

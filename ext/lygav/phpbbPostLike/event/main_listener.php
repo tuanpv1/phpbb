@@ -59,7 +59,7 @@ class main_listener implements EventSubscriberInterface
         $this->user->add_lang_ext('lygav/phpbbPostLike', ['common']);
         $post_row = $event['post_row'];
         if (!$event['post_row']['LIKE']) {
-            if ($this->user->data['user_type'] == 1 OR $this->user->data['user_type'] == 2) {
+            if ($this->user->data['user_type'] == 1 || $this->user->data['user_type'] == 2) {
                 $post_row['SHOW_ANON_LIKES'] = TRUE;
                 $sql = 'SELECT
 				COUNT(user_id) as count
@@ -86,7 +86,7 @@ class main_listener implements EventSubscriberInterface
                     }
                 }
                 $like_opt = "opt2";
-                if ($user_liked and $others_liked) {
+                if ($user_liked && $others_liked) {
                     $post_row['EVERYBODY_LIKE'] = TRUE;
                 } else if ($user_liked) {
                     $post_row['ONLY_USER_LIKE'] = false;
@@ -98,7 +98,7 @@ class main_listener implements EventSubscriberInterface
                 $post_row["LIKE_QUERY_DATA"] = http_build_query(["sid" => $this->user->session_id, 'like_opt' => $like_opt]);
             }
         } else {
-            if ($this->user->data['user_type'] == 1 OR $this->user->data['user_type'] == 2) {
+            if ($this->user->data['user_type'] == 1 || $this->user->data['user_type'] == 2) {
                 $post_row['SHOW_ANON_LIKES'] = TRUE;
                 $sql = 'SELECT
 				COUNT(user_id) as count
@@ -125,7 +125,7 @@ class main_listener implements EventSubscriberInterface
                     }
                 }
                 $like_opt = "opt2";
-                if ($user_liked and $others_liked) {
+                if ($user_liked && $others_liked) {
                     $post_row['EVERYBODY_LIKE'] = TRUE;
                 } else if ($user_liked) {
                     $post_row['ONLY_USER_LIKE'] = TRUE;

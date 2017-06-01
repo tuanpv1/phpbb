@@ -581,11 +581,6 @@ class bbcode
 			$tpl = 'olist_open';
 			$type = 'upper-alpha';
 		}
-		else if (is_numeric($type))
-		{
-			$tpl = 'olist_open';
-			$type = 'decimal';
-		}
 		else
 		{
 			$tpl = 'olist_open';

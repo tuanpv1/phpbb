@@ -1626,11 +1626,7 @@ class acp_attachments
 				{
 					$iplist[] = "'" . trim($item) . "'";
 				}
-				else if (preg_match('#^([\w\-_]\.?){2,}$#is', trim($item)))
-				{
-					$hostlist[] = "'" . trim($item) . "'";
-				}
-				else if (preg_match("#^([a-z0-9\-\*\._/]+?)$#is", trim($item)))
+				else if (preg_match("#^([a-z0-9\-\*\._/]+?)$#is", trim($item)) || preg_match('#^([\w\-_]\.?){2,}$#is', trim($item)))
 				{
 					$hostlist[] = "'" . trim($item) . "'";
 				}

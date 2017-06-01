@@ -614,10 +614,6 @@ class jabber
 						return true;
 					break;
 
-					case 'sess_1':
-						return true;
-					break;
-
 					case 'reg_1':
 						$this->send("<iq type='set' id='reg_2'>
 								<query xmlns='jabber:iq:register'>
@@ -637,7 +633,7 @@ class jabber
 						}
 						return true;
 					break;
-
+					case 'sess_1':
 					case 'unreg_1':
 						return true;
 					break;

@@ -59,10 +59,10 @@ class controller
 	public function like ($post_id,$dislike = 0)
 	{
 		if(!$dislike){
-			if ($this->user->data['user_type'] != 1 AND $this->user->data['user_type'] != 2) {
+			if ($this->user->data['user_type'] != 1 && $this->user->data['user_type'] != 2) {
 				$json_response = new \phpbb\json_response();
 				$user_id       = $this->user->data['user_id'];
-				if ($post_id AND $user_id) {
+				if ($post_id && $user_id) {
 					$this->db->sql_query(
 						"DELETE FROM " . $this->table_prefix . "post_likes WHERE post_id = ".$post_id." and user_id = ".$user_id);
 					$err = $this->db->get_sql_error_returned();
@@ -77,10 +77,10 @@ class controller
 				]);
 			}
 		}else{
-			if ($this->user->data['user_type'] != 1 AND $this->user->data['user_type'] != 2) {
+			if ($this->user->data['user_type'] != 1 && $this->user->data['user_type'] != 2) {
 				$json_response = new \phpbb\json_response();
 				$user_id       = $this->user->data['user_id'];
-				if ($post_id AND $user_id) {
+				if ($post_id && $user_id) {
 					$this->db->sql_query(
 						"INSERT INTO " . $this->table_prefix . "post_likes (`post_id`, `user_id`)
 					VALUES ('" . $post_id . "', '" . $user_id . "')");
@@ -101,10 +101,10 @@ class controller
 	public function dislike ($post_id)
 	{
 
-		if ($this->user->data['user_type'] != 1 AND $this->user->data['user_type'] != 2) {
+		if ($this->user->data['user_type'] != 1 && $this->user->data['user_type'] != 2) {
 			$json_response = new \phpbb\json_response();
 			$user_id       = $this->user->data['user_id'];
-			if ($post_id AND $user_id) {
+			if ($post_id && $user_id) {
 				$this->db->sql_query(
 					"DELETE FROM " . $this->table_prefix . "post_likes WHERE post_id = ".$post_id." and user_id = ".$user_id);
 				$err = $this->db->get_sql_error_returned();

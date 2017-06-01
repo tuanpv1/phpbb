@@ -446,17 +446,13 @@ class acp_profile
 				{
 					$exploded_options = (is_array($options)) ? $options : explode("\n", $options);
 
-					if (sizeof($exploded_options) == sizeof($lang_options) || $action == 'create')
+					if (sizeof($exploded_options) == sizeof($lang_options) || $action == 'create' || $action == 'edit')
 					{
 						// The number of options in the field is equal to the number of options already in the database
 						// Or we are creating a new dropdown list.
 						$cp->vars['lang_options'] = $exploded_options;
 					}
-					else if ($action == 'edit')
-					{
 						// Changing the number of options? (We remove and re-create the option fields)
-						$cp->vars['lang_options'] = $exploded_options;
-					}
 				}
 				else
 				{

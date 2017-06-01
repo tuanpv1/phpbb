@@ -337,14 +337,14 @@ function mimetype($filename)
 	switch (strtolower($m[1]))
 	{
 		case 'zip':		return 'application/zip';
-		case 'jpeg':	return 'image/jpeg';
-		case 'jpg':		return 'image/jpeg';
+		case 'jpeg':
+		case 'jpg':
 		case 'jpe':		return 'image/jpeg';
 		case 'png':		return 'image/png';
 		case 'gif':		return 'image/gif';
 		case 'htm':
 		case 'html':	return 'text/html';
-		case 'tif':		return 'image/tiff';
+		case 'tif':
 		case 'tiff':	return 'image/tiff';
 		case 'ras':		return 'image/x-cmu-raster';
 		case 'pnm':		return 'image/x-portable-anymap';
@@ -356,7 +356,7 @@ function mimetype($filename)
 		case 'xpm':		return 'image/x-xpixmap';
 		case 'xwd':		return 'image/x-xwindowdump';
 		case 'z':		return 'application/x-compress';
-		case 'gtar':	return 'application/x-gtar';
+		case 'gtar':
 		case 'tgz':		return 'application/x-gtar';
 		case 'gz':		return 'application/x-gzip';
 		case 'tar':		return 'application/x-tar';

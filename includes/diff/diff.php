@@ -768,17 +768,13 @@ class diff3_op
 			// Prepare the arrays before we compare them. ;)
 			$this->solve_prepare();
 
-			if ($this->final1 === $this->final2)
+			if ($this->final1 === $this->final2 || $this->final2 === $this->orig)
 			{
 				$this->_merged = &$this->final1;
 			}
 			else if ($this->final1 === $this->orig)
 			{
 				$this->_merged = &$this->final2;
-			}
-			else if ($this->final2 === $this->orig)
-			{
-				$this->_merged = &$this->final1;
 			}
 			else
 			{
