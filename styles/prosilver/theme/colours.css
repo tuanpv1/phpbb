@@ -5,7 +5,8 @@ Colours and backgrounds for common.css
 
 html, body {
 	color: #536482;
-	background-color: #F5F7FA;
+	/*background-color: #F5F7FA;*/
+	background-color: rgb(240,240,240);
 }
 
 h1 {
