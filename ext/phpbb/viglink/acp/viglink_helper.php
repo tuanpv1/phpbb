@@ -9,6 +9,7 @@
  */
 
 namespace phpbb\viglink\acp;
+use RuntimeException;
 
 /**
  * Class to handle allowing or disallowing VigLink services
@@ -65,7 +66,7 @@ class viglink_helper
 
 		if ($info === false && $force_cache)
 		{
-			throw new \RuntimeException($this->language->lang('VERSIONCHECK_FAIL'));
+			throw new RuntimeException($this->language->lang('VERSIONCHECK_FAIL'));
 		}
 		else if ($info === false || $force_update)
 		{
@@ -76,7 +77,7 @@ class viglink_helper
 			catch (\phpbb\exception\runtime_exception $exception)
 			{
 				$prepare_parameters = array_merge(array($exception->getMessage()), $exception->get_parameters());
-				throw new \RuntimeException(call_user_func_array(array($this->language, 'lang'), $prepare_parameters));
+				throw new RuntimeException(call_user_func_array(array($this->language, 'lang'), $prepare_parameters));
 			}
 
 			if ($info === '0')

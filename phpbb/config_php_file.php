@@ -13,6 +13,8 @@
 
 namespace phpbb;
 
+use RuntimeException;
+
 class config_php_file
 {
 	/** @var string phpBB Root Path */
@@ -155,6 +157,6 @@ class config_php_file
 			return $dbms;
 		}
 
-		throw new \RuntimeException("You have specified an invalid dbms driver: $dbms");
+		throw new RuntimeException("You have specified an invalid dbms driver: $dbms");
 	}
 }

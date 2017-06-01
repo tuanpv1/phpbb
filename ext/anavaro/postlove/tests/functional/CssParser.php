@@ -123,8 +123,7 @@ class CssParser {
 							$property = trim(array_pop($rule)," \r\n\t");
 							$value = implode(':', array_reverse($rule));
 							
-							if(!isset($new[$selector][$property]) || !preg_match('/!important/',$new[$selector][$property])) $new[$selector][$property] = $value;
-							elseif(preg_match('/!important/',$new[$selector][$property]) && preg_match('/!important/',$value)) $new[$selector][$property] = $value;
+							if((!isset($new[$selector][$property]) || !preg_match('/!important/',$new[$selector][$property]))|| preg_match('/!important/',$new[$selector][$property]) && preg_match('/!important/',$value)) $new[$selector][$property] = $value;
 						}
 					}
 				}

@@ -54,7 +54,7 @@ if(!file_exists($cache_file) || filemtime($cache_file)+$cache_time < time() || $
 		if (!$data) throw new exception('Response is empty.');
 		$data .= "\r\n/* Updated: " . date('Y-m-d H:i:s') . " */";
 		@file_put_contents($cache_file, $data, LOCK_EX);
-		is_writable($cache_file) or @chmod($cache_file, 0666);
+		is_writable($cache_file) || @chmod($cache_file, 0666);
 		if ($update) die(date('[Y-m-d H:i:s]') . ' OK');
 	}
 	catch (exception $e)

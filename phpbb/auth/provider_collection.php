@@ -13,6 +13,7 @@
 
 namespace phpbb\auth;
 
+use RuntimeException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -61,7 +62,7 @@ class provider_collection extends \phpbb\di\service_collection
 		}
 		else
 		{
-			throw new \RuntimeException(sprintf('The authentication provider for the authentication method "%1$s" does not exist. It was not possible to recover from this by reverting to the database authentication provider.', $this->config['auth_method']));
+			throw new RuntimeException(sprintf('The authentication provider for the authentication method "%1$s" does not exist. It was not possible to recover from this by reverting to the database authentication provider.', $this->config['auth_method']));
 		}
 	}
 }
