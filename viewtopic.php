@@ -228,7 +228,6 @@ $sql = $db->sql_build_query('SELECT', $sql_array);
 $result = $db->sql_query($sql);
 $topic_data = $db->sql_fetchrow($result);
 $db->sql_freeresult($result);
-
 // link to unapproved post or incorrect link
 if (!$topic_data) {
     // If post_id was submitted, we try at least to display the topic as a last resort...
@@ -1052,16 +1051,19 @@ $sql = 'SELECT p.post_id
 		AND " . $phpbb_content_visibility->get_visibility_sql('post', $forum_id, 'p.') . "
 		" . (($join_user_sql[$sort_key]) ? 'AND u.user_id = p.poster_id' : '') . "
 		$limit_posts_time
-	ORDER BY  p.post_time ASC";
+	ORDER BY  p.post_status_display desc,p.post_time ASC";
 $result = $db->sql_query_limit($sql, $sql_limit, $sql_start);
-
-$i = ($store_reverse) ? $sql_limit - 2 : 1;
-$post_list[0] = (int)$topic_data['topic_first_post_id'];
+if($start == 0){
+    $store_reverse = true;
+    $post_list[0] = (int)$topic_data['topic_first_post_id'];
+}
+$i = ($store_reverse) ?  1 : 0;
 while ($row = $db->sql_fetchrow($result)) {
     $post_list[$i] = (int)$row['post_id'];
-    ($store_reverse) ? $i-- : $i++;
+    $i++;
 }
 $db->sql_freeresult($result);
+
 if (!sizeof($post_list)) {
     if ($sort_days) {
         trigger_error('NO_POSTS_TIME_FRAME');
@@ -1125,6 +1127,7 @@ extract($phpbb_dispatcher->trigger_event('core.viewtopic_get_post_data', compact
 $sql = $db->sql_build_query('SELECT', $sql_ary);
 
 $result = $db->sql_query($sql);
+
 $now = $user->create_datetime();
 $now = phpbb_gmgetdate($now->getTimestamp() + $now->getOffset());
 

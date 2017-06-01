@@ -633,8 +633,8 @@ if ($mode != 'edit')
 if ($mode == 'post')
 {
 	$post_data['topic_status']		= ($request->is_set_post('lock_topic') && $auth->acl_gets('m_lock', 'f_user_lock', $forum_id)) ? ITEM_LOCKED : ITEM_UNLOCKED;
+	$post_data['topic_status_display']		= STATUS_NEW_POST;
 }
-
 $post_data['enable_magic_url'] = $post_data['drafts'] = false;
 
 // User own some drafts?

@@ -3,23 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8ef3fc88-285c-45dc-b1fb-502fa3afe528" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbmedia.php" afterPath="$PROJECT_DIR$/bbmedia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php" afterPath="$PROJECT_DIR$/ext/anavaro/postlove/event/main_listener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/anavaro/postlove/tests/functional/CssParser.php" afterPath="$PROJECT_DIR$/ext/anavaro/postlove/tests/functional/CssParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/lygav/phpbbPostLike/controller/controller.php" afterPath="$PROJECT_DIR$/ext/lygav/phpbbPostLike/controller/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/lygav/phpbbPostLike/event/main_listener.php" afterPath="$PROJECT_DIR$/ext/lygav/phpbbPostLike/event/main_listener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ext/phpbb/viglink/acp/viglink_helper.php" afterPath="$PROJECT_DIR$/ext/phpbb/viglink/acp/viglink_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/acp/acp_attachments.php" afterPath="$PROJECT_DIR$/includes/acp/acp_attachments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/acp/acp_profile.php" afterPath="$PROJECT_DIR$/includes/acp/acp_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/bbcode.php" afterPath="$PROJECT_DIR$/includes/bbcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/diff/diff.php" afterPath="$PROJECT_DIR$/includes/diff/diff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions_convert.php" afterPath="$PROJECT_DIR$/includes/functions_convert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions_jabber.php" afterPath="$PROJECT_DIR$/includes/functions_jabber.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/memberlist.php" afterPath="$PROJECT_DIR$/memberlist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpbb/auth/provider/oauth/oauth.php" afterPath="$PROJECT_DIR$/phpbb/auth/provider/oauth/oauth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpbb/auth/provider_collection.php" afterPath="$PROJECT_DIR$/phpbb/auth/provider_collection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpbb/captcha/plugins/recaptcha.php" afterPath="$PROJECT_DIR$/phpbb/captcha/plugins/recaptcha.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpbb/config_php_file.php" afterPath="$PROJECT_DIR$/phpbb/config_php_file.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/functions_posting.php" afterPath="$PROJECT_DIR$/includes/functions_posting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posting.php" afterPath="$PROJECT_DIR$/posting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewtopic.php" afterPath="$PROJECT_DIR$/viewtopic.php" />
     </list>
     <ignored path="php-bb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +27,128 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reparse.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phpbb/console/command/reparser/reparse.php">
+      <file leaf-file-name="posting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posting.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9604938">
-              <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="1414" column="37" selection-start-line="1414" selection-start-column="37" selection-end-line="1414" selection-end-column="37" />
+              <folding>
+                <marker date="1496288071177" expanded="true" signature="4492:4550" placeholder="SELECT * FRO... ${FORUMS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="4687:4752" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="4938:5081" placeholder="SELECT f.*, ${TOPICS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="5346:5409" placeholder="SELECT forum... ${POSTS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="5594:5943" placeholder="SELECT f.*, ${POSTS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="6155:6225" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="16747:16859" placeholder="SELECT poll_... ${POLL_OPTIONS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="18765:18966" placeholder="SELECT attac... ${ATTACHMENTS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="20311:20373" placeholder="SELECT draft... ${DRAFTS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="21041:21145" placeholder="SELECT topic... ${TOPICS_WATCH_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="22408:22441" placeholder="INSERT INTO ${DRAFTS_TABLE}... " />
+                <marker date="1496288071177" expanded="true" signature="25008:25118" placeholder="SELECT draft... ${DRAFTS_TABLE}" />
+                <marker date="1496288071177" expanded="true" signature="28218:28278" placeholder="DELETE FROM " />
+                <marker date="1496288071177" expanded="true" signature="28327:28385" placeholder="DELETE FROM " />
+                <marker date="1496288071177" expanded="true" signature="34509:34636" placeholder="SELECT post_... ${POSTS_TABLE}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions_posting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/functions_posting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.038462">
+              <caret line="1486" column="25" selection-start-line="1486" selection-start-column="25" selection-end-line="1486" selection-end-column="25" />
+              <folding>
+                <marker date="1496288348169" expanded="true" signature="962:1032" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="1377:1467" placeholder="SELECT COUNT... ${SMILIES_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="2090:2168" placeholder="SELECT smile... ${SMILIES_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="2413:2653" placeholder="SELECT smile... ${SMILIES_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="2774:2869" placeholder="SELECT * FRO... ${SMILIES_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="5917:6107" placeholder="SELECT MAX(p... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="9037:9119" placeholder="UPDATE ${$ta... " />
+                <marker date="1496288348169" expanded="true" signature="23079:23301" placeholder="SELECT d.*, ${DRAFTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="23680:23771" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="27632:28011" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="29780:29948" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="38886:38940" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="41781:42082" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="42379:42633" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="44368:44476" placeholder="SELECT MAX(p... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="44791:45035" placeholder="SELECT post_... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="45474:45556" placeholder="SELECT 1 AS ${ATTACHMENTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="46239:46275" placeholder="UPDATE ${$ta... " />
+                <marker date="1496288348169" expanded="true" signature="46530:46633" placeholder="SELECT poste... ${POSTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="46919:47017" placeholder="DELETE FROM " />
+                <marker date="1496288348169" expanded="true" signature="50497:50740" placeholder="SELECT p.pos... ${TOPICS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="65633:65666" placeholder="INSERT INTO ${TOPICS_TABLE}... " />
+                <marker date="1496288348169" expanded="true" signature="66344:66376" placeholder="INSERT INTO ${POSTS_TABLE}... " />
+                <marker date="1496288348169" expanded="true" signature="69242:69365" placeholder="SELECT * FRO... ${POLL_OPTIONS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="70896:71024" placeholder="DELETE FROM " />
+                <marker date="1496288348169" expanded="true" signature="71389:71443" placeholder="DELETE FROM " />
+                <marker date="1496288348169" expanded="true" signature="72059:72257" placeholder="SELECT attac... ${ATTACHMENTS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="76749:76853" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="78347:78414" placeholder="UPDATE ${$ta... " />
+                <marker date="1496288348169" expanded="true" signature="78644:78703" placeholder="DELETE FROM " />
+                <marker date="1496288348169" expanded="true" signature="79001:79082" placeholder="DELETE FROM " />
+                <marker date="1496288348169" expanded="true" signature="80053:80186" placeholder="INSERT INTO ${TOPICS_WATCH_TABLE}... " />
+                <marker date="1496288348169" expanded="true" signature="80367:80477" placeholder="DELETE FROM " />
+                <marker date="1496288348169" expanded="true" signature="81059:81180" placeholder="SELECT mark_... ${FORUMS_TRACK_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="81647:81724" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="91540:91661" placeholder="SELECT mark_... ${FORUMS_TRACK_TABLE}" />
+                <marker date="1496288348169" expanded="true" signature="92116:92193" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewtopic.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/viewtopic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.63734293">
+              <caret line="1064" column="4" selection-start-line="1064" selection-start-column="4" selection-end-line="1064" selection-end-column="4" />
+              <folding>
+                <element signature="e#2265#5772#0#PHP" expanded="false" />
+                <element signature="e#8567#10318#0#PHP" expanded="false" />
+                <element signature="e#50167#50258#0#PHP" expanded="false" />
+                <element signature="e#50369#50755#0#PHP" expanded="false" />
+                <element signature="e#50775#52484#0#PHP" expanded="false" />
+                <element signature="e#53131#59697#0#PHP" expanded="false" />
+                <element signature="e#59761#60636#0#PHP" expanded="false" />
+                <element signature="e#60678#61321#0#PHP" expanded="false" />
+                <element signature="e#61365#63881#0#PHP" expanded="false" />
+                <marker date="1496290451069" expanded="true" signature="2330:2395" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="2896:3174" placeholder="SELECT post_... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="3349:3457" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="4059:4146" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="4570:4934" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="5142:5214" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="9550:9674" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="10371:10452" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="10371:10461" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="15489:15623" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="18661:18697" placeholder="INSERT INTO ${BOOKMARKS_TABLE}... " />
+                <marker date="1496290451069" expanded="true" signature="18932:19033" placeholder="DELETE FROM " />
+                <marker date="1496290451069" expanded="true" signature="33383:33631" placeholder="SELECT o.*, ${POLL_OPTIONS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="34032:34148" placeholder="SELECT poll_... ${POLL_VOTES_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="38788:38825" placeholder="INSERT INTO ${POLL_VOTES_TABLE}... " />
+                <marker date="1496290451069" expanded="true" signature="39388:39546" placeholder="DELETE FROM " />
+                <marker date="1496290451069" expanded="true" signature="47211:47648" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="47211:47651" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="60746:60960" placeholder="SELECT sessi... ${SESSIONS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="61492:61663" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="62468:62680" placeholder="SELECT a.pos... ${ATTACHMENTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="68602:68876" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
+                <marker date="1496290451069" expanded="true" signature="71431:71677" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.1923077">
+              <caret line="86" column="23" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -66,8 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/styles/prosilver/template/posting_topic_review.html" />
-        <option value="$PROJECT_DIR$/styles/prosilver/template/navbar_header.html" />
         <option value="$PROJECT_DIR$/ext/robertheim/topictags/styles/prosilver/template/show_tag.html" />
         <option value="$PROJECT_DIR$/ext/robertheim/topictags/styles/all/template/small_tag.html" />
         <option value="$PROJECT_DIR$/ext/robertheim/topictags/event/main_listener.php" />
@@ -94,7 +195,6 @@
         <option value="$PROJECT_DIR$/styles/prosilver/theme/common.css" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/overall_header.html" />
         <option value="$PROJECT_DIR$/styles/prosilver/template/viewtopic_body.html" />
-        <option value="$PROJECT_DIR$/viewtopic.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/ext/vse/similartopics/language/vi/similar_topics.php" />
         <option value="$PROJECT_DIR$/ext/vse/similartopics/core/similar_topics.php" />
@@ -117,6 +217,9 @@
         <option value="$PROJECT_DIR$/phpbb/auth/provider_collection.php" />
         <option value="$PROJECT_DIR$/phpbb/captcha/plugins/recaptcha.php" />
         <option value="$PROJECT_DIR$/phpbb/config_php_file.php" />
+        <option value="$PROJECT_DIR$/posting.php" />
+        <option value="$PROJECT_DIR$/includes/functions_posting.php" />
+        <option value="$PROJECT_DIR$/viewtopic.php" />
       </list>
     </option>
   </component>
@@ -175,86 +278,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="command" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-bb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="command" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reparser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,7 +349,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37291983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -334,7 +357,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2487725" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25531915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -384,20 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/default/container/tables.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default/routing/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21345708">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/default/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -409,13 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewtopic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04197531">
-          <caret line="418" column="33" selection-start-line="418" selection-start-column="26" selection-end-line="418" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -591,14 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.2872534">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,9 +934,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phpbb/console/command/reparser/reparse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9604938">
-          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.3728395">
+          <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1923077">
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="1414" column="37" selection-start-line="1414" selection-start-column="37" selection-end-line="1414" selection-end-column="37" />
+          <folding>
+            <marker date="1496288071177" expanded="true" signature="4492:4550" placeholder="SELECT * FRO... ${FORUMS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="4687:4752" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="4938:5081" placeholder="SELECT f.*, ${TOPICS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="5346:5409" placeholder="SELECT forum... ${POSTS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="5594:5943" placeholder="SELECT f.*, ${POSTS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="6155:6225" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="16747:16859" placeholder="SELECT poll_... ${POLL_OPTIONS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="18765:18966" placeholder="SELECT attac... ${ATTACHMENTS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="20311:20373" placeholder="SELECT draft... ${DRAFTS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="21041:21145" placeholder="SELECT topic... ${TOPICS_WATCH_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="22408:22441" placeholder="INSERT INTO ${DRAFTS_TABLE}... " />
+            <marker date="1496288071177" expanded="true" signature="25008:25118" placeholder="SELECT draft... ${DRAFTS_TABLE}" />
+            <marker date="1496288071177" expanded="true" signature="28218:28278" placeholder="DELETE FROM " />
+            <marker date="1496288071177" expanded="true" signature="28327:28385" placeholder="DELETE FROM " />
+            <marker date="1496288071177" expanded="true" signature="34509:34636" placeholder="SELECT post_... ${POSTS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions_posting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.038462">
+          <caret line="1486" column="25" selection-start-line="1486" selection-start-column="25" selection-end-line="1486" selection-end-column="25" />
+          <folding>
+            <marker date="1496288348169" expanded="true" signature="962:1032" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="1377:1467" placeholder="SELECT COUNT... ${SMILIES_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="2090:2168" placeholder="SELECT smile... ${SMILIES_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="2413:2653" placeholder="SELECT smile... ${SMILIES_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="2774:2869" placeholder="SELECT * FRO... ${SMILIES_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="5917:6107" placeholder="SELECT MAX(p... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="9037:9119" placeholder="UPDATE ${$ta... " />
+            <marker date="1496288348169" expanded="true" signature="23079:23301" placeholder="SELECT d.*, ${DRAFTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="23680:23771" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="27632:28011" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="29780:29948" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="38886:38940" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="41781:42082" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="42379:42633" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="44368:44476" placeholder="SELECT MAX(p... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="44791:45035" placeholder="SELECT post_... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="45474:45556" placeholder="SELECT 1 AS ${ATTACHMENTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="46239:46275" placeholder="UPDATE ${$ta... " />
+            <marker date="1496288348169" expanded="true" signature="46530:46633" placeholder="SELECT poste... ${POSTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="46919:47017" placeholder="DELETE FROM " />
+            <marker date="1496288348169" expanded="true" signature="50497:50740" placeholder="SELECT p.pos... ${TOPICS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="65633:65666" placeholder="INSERT INTO ${TOPICS_TABLE}... " />
+            <marker date="1496288348169" expanded="true" signature="66344:66376" placeholder="INSERT INTO ${POSTS_TABLE}... " />
+            <marker date="1496288348169" expanded="true" signature="69242:69365" placeholder="SELECT * FRO... ${POLL_OPTIONS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="70896:71024" placeholder="DELETE FROM " />
+            <marker date="1496288348169" expanded="true" signature="71389:71443" placeholder="DELETE FROM " />
+            <marker date="1496288348169" expanded="true" signature="72059:72257" placeholder="SELECT attac... ${ATTACHMENTS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="76749:76853" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="78347:78414" placeholder="UPDATE ${$ta... " />
+            <marker date="1496288348169" expanded="true" signature="78644:78703" placeholder="DELETE FROM " />
+            <marker date="1496288348169" expanded="true" signature="79001:79082" placeholder="DELETE FROM " />
+            <marker date="1496288348169" expanded="true" signature="80053:80186" placeholder="INSERT INTO ${TOPICS_WATCH_TABLE}... " />
+            <marker date="1496288348169" expanded="true" signature="80367:80477" placeholder="DELETE FROM " />
+            <marker date="1496288348169" expanded="true" signature="81059:81180" placeholder="SELECT mark_... ${FORUMS_TRACK_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="81647:81724" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="91540:91661" placeholder="SELECT mark_... ${FORUMS_TRACK_TABLE}" />
+            <marker date="1496288348169" expanded="true" signature="92116:92193" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewtopic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63734293">
+          <caret line="1064" column="4" selection-start-line="1064" selection-start-column="4" selection-end-line="1064" selection-end-column="4" />
+          <folding>
+            <element signature="e#2265#5772#0#PHP" expanded="false" />
+            <element signature="e#8567#10318#0#PHP" expanded="false" />
+            <element signature="e#50167#50258#0#PHP" expanded="false" />
+            <element signature="e#50369#50755#0#PHP" expanded="false" />
+            <element signature="e#50775#52484#0#PHP" expanded="false" />
+            <element signature="e#53131#59697#0#PHP" expanded="false" />
+            <element signature="e#59761#60636#0#PHP" expanded="false" />
+            <element signature="e#60678#61321#0#PHP" expanded="false" />
+            <element signature="e#61365#63881#0#PHP" expanded="false" />
+            <marker date="1496290451069" expanded="true" signature="2330:2395" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="2896:3174" placeholder="SELECT post_... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="3349:3457" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="4059:4146" placeholder="SELECT forum... ${TOPICS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="4570:4934" placeholder="SELECT topic... ${TOPICS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="5142:5214" placeholder="SELECT forum... ${FORUMS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="9550:9674" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="10371:10452" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="10371:10461" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="15489:15623" placeholder="SELECT COUNT... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="18661:18697" placeholder="INSERT INTO ${BOOKMARKS_TABLE}... " />
+            <marker date="1496290451069" expanded="true" signature="18932:19033" placeholder="DELETE FROM " />
+            <marker date="1496290451069" expanded="true" signature="33383:33631" placeholder="SELECT o.*, ${POLL_OPTIONS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="34032:34148" placeholder="SELECT poll_... ${POLL_VOTES_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="38788:38825" placeholder="INSERT INTO ${POLL_VOTES_TABLE}... " />
+            <marker date="1496290451069" expanded="true" signature="39388:39546" placeholder="DELETE FROM " />
+            <marker date="1496290451069" expanded="true" signature="47211:47648" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="47211:47651" placeholder="SELECT p.pos... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="60746:60960" placeholder="SELECT sessi... ${SESSIONS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="61492:61663" placeholder="SELECT * FRO... ${ATTACHMENTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="62468:62680" placeholder="SELECT a.pos... ${ATTACHMENTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="68602:68876" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
+            <marker date="1496290451069" expanded="true" signature="71431:71677" placeholder="SELECT DISTI... ${POSTS_TABLE}" />
+          </folding>
         </state>
       </provider>
     </entry>
