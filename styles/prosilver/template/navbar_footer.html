@@ -1,271 +1,334 @@
-<style>
-	footer {
-		background: #1b1b1b none repeat scroll 0 0;
-		color: rgba(255, 255, 255, 0.8);
-	}
+<style type="text/css">
+    .tp001 {
+        color: white;
+        text-decoration: none;
+    }
 
-	.footer .pageContent {
-		background: rgba(255, 255, 255, 0.024) none repeat scroll 0 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		border-top: 5px solid #6cb2e4;
-		color: #646464;
-		font-size: 14px;
-		height: 50px;
-		line-height: 50px;
-		margin: 15px 0;
-		min-height: 20px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+    footer {
+        background: #1b1b1b none repeat scroll 0 0;
+        color: rgba(255, 255, 255, 0.8);
+    }
 
-	.footer .pageContent {
-		color: #646464;
-		font-size: 14px;
-		line-height: 50px;
-	}
+    .footer .pageContent {
+        background: rgba(255, 255, 255, 0.024) none repeat scroll 0 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: 5px solid #6cb2e4;
+        color: #646464;
+        font-size: 14px;
+        height: 50px;
+        line-height: 50px;
+        margin: 15px 0;
+        min-height: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-	.pageWidth {
-		margin: 0 auto;
-		max-width: 1170px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+    .footer .pageContent {
+        color: #646464;
+        font-size: 14px;
+        line-height: 50px;
+    }
 
-	.footerLinks {
-		float: right;
-	}
+    .pageWidth {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-	.footer .pageContent {
-		color: #646464;
-		font-size: 14px;
-		line-height: 50px;
-	}
+    .footerLinks {
+        float: right;
+    }
 
-	.footerLinks li {
-		float: left;
-	}
+    .footer .pageContent {
+        color: #646464;
+        font-size: 14px;
+        line-height: 50px;
+    }
 
-	.footer a, .footer a:visited {
-		color: #a5cae4;
-		display: block;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
+    .footerLinks li {
+        float: left;
+    }
 
-	#XenForo a:link {
-		word-break: inherit;
-	}
+    .footer a, .footer a:visited {
+        color: white;
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
-	a:link {
-		word-break: break-all;
-	}
+    #XenForo a:link {
+        word-break: inherit;
+    }
 
-	.footer a, .footer a:visited {
-		color: #a5cae4;
-		display: block;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
+    a:link {
+        word-break: break-all;
+    }
 
-	a:link, a:visited {
-		color: rgb(23, 96, 147);
-		text-decoration: none;
-	}
+    .footer a, .footer a:visited {
+        color: #FFFFFF !important;
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
-	.bigFooter .pageContent {
-		background: rgba(255, 255, 255, 0.024) none repeat scroll 0 0;
-		border-radius: 2px;
-		clear: both;
-		color: rgb(101, 165, 209);
-		margin-bottom: 0;
-		margin-top: 0;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+    a:link, a:visited {
+        color: rgb(23, 96, 147);
+        text-decoration: none;
+    }
 
-	.pageWidth {
-		margin: 0 auto;
-		max-width: 1170px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+    .bigFooter .pageContent {
+        background: rgba(255, 255, 255, 0.024) none repeat scroll 0 0;
+        border-radius: 2px;
+        clear: both;
+        color: rgb(101, 165, 209);
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-	.bigFooter .pageContent {
-		color: rgb(101, 165, 209);
-	}
+    .pageWidth {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-	.hasFlexbox .bigFooterRow--mainRow {
-		display: flex;
-		flex-wrap: wrap;
-	}
+    .bigFooter .pageContent {
+        color: rgb(101, 165, 209);
+    }
 
-	.bigFooterRow--mainRow {
-		margin-left: -15px;
-		margin-right: -15px;
-	}
+    .hasFlexbox .bigFooterRow--mainRow {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-	.bigFooterCol {
-		-moz-border-bottom-colors: none;
-		-moz-border-left-colors: none;
-		-moz-border-right-colors: none;
-		-moz-border-top-colors: none;
-		border-color: rgba(255, 255, 255, 0.05);
-		border-image: none;
-		border-style: solid;
-		border-width: 0 0 0 1px;
-		box-sizing: border-box;
-		display: table-cell;
-		line-height: 90%;
-		padding: 15px;
-		vertical-align: top;
-	}
+    .bigFooterRow--mainRow {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 
-	li {
-		list-style: outside none none;
-	}
+    .bigFooterCol {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: rgba(255, 255, 255, 0.05);
+        border-image: none;
+        border-style: solid;
+        border-width: 0 0 0 1px;
+        box-sizing: border-box;
+        display: table-cell;
+        line-height: 90%;
+        padding: 15px;
+        vertical-align: top;
+    }
 
-	.section {
-		margin: 15px auto;
-	}
+    li {
+        list-style: outside none none;
+    }
 
-	.bigFooterHeader {
-		color: #fff;
-		font-family: Helvetica, Arial, sans-serif;
-		font-size: 20px;
-		font-weight: bold;
-		padding-bottom: 10px;
-		padding-top: 10px;
-	}
+    .section {
+        margin: 15px auto;
+    }
 
-	.bigFooterCol .footerMenu {
-		margin-bottom: 10px;
-	}
+    .bigFooterHeader {
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
 
-	.bigFooterCol {
-		line-height: 90%;
-		width: 377px;
-	}
+    .bigFooterCol .footerMenu {
+        margin-bottom: 10px;
+    }
 
-	#XenForo a:link {
-		word-break: inherit;
-	}
+    .bigFooterCol {
+        line-height: 90%;
+        width: 377px;
+    }
 
-	.tp001 {
-		color: white;
-		text-decoration: none;
-	}
+    #XenForo a:link {
+        word-break: inherit;
+    }
 
-	.bigFooterCol .footerMenu a {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		display: block;
-		padding: 10px;
-		font-size: 14px;
-	}
+    .bigFooterCol .footerMenu a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
 
-	a:link {
-		word-break: break-all;
-	}
+    a:link {
+        word-break: break-all;
+    }
 
-	.bigFooterCol a {
-		color: white;
-		text-decoration: none;
-	}
+    .bigFooterCol a {
+        color: white;
+        text-decoration: none;
+    }
 
-	#copyright {
-		text-align: left;
-		color: rgb(100, 100, 100);
-		float: left;
-		font-size: 14px;
-	}
+    #copyright {
+        text-align: left;
+        color: rgb(100, 100, 100);
+        float: left;
+        font-size: 14px;
+    }
 
-	.footerLegal .pageContent {
-		border-radius: 2px;
-		border-top: 1px solid rgba(255, 255, 255, 0.05);
-		clear: both;
-		font-size: 12px;
-		padding-bottom: 15px;
-		padding-top: 15px;
-	}
+    .footerLegal .pageContent {
+        border-radius: 2px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        clear: both;
+        font-size: 12px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
 
-	.pageWidth {
-		margin: 0 auto;
-		max-width: 1170px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+    .pageWidth {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-	.footerLegal .uix_socialMediaLinks {
-		float: right;
-	}
+    .footerLegal .uix_socialMediaLinks {
+        float: right;
+    }
 
-	.uix_socialMediaLinks .uix_socialLink {
-		display: inline-block;
-		vertical-align: top;
-	}
+    .uix_socialMediaLinks .uix_socialLink {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .tp001 {
+        color: #FFFFFF;
+    }
+    .uix_icon {
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+    .footerLinks .topLink .uix_icon {
+        vertical-align: top;
+    }
+    .footerLinks li {
+        float: left;
+    }
+    #toTop::after {
+        background-color: rgb(163, 96, 10);
+        content: "";
+        height: 12px;
+        left: 13px;
+        position: absolute;
+        top: 18px;
+        width: 10px;
+    }
+    #toTop::before {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: transparent transparent rgb(163, 96, 10);
+        border-image: none;
+        border-style: solid;
+        border-width: 11px;
+        content: "";
+        height: 0;
+        left: 7px;
+        position: absolute;
+        top: -4px;
+        width: 0;
+    }
+    #toTop {
+        background: #f7f7f7;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        bottom: 40px;
+        color: #333;
+        cursor: pointer;
+        display: none;
+        font-size: 11px;
+        padding: 18px;
+        position: fixed;
+        right: 20px;
+        text-align: center;
+    }
 </style>
 
 <!-- EVENT overall_footer_body_after -->
 <footer>
-	<div id="uix_stickyFooterSpacer"></div>
-	<div class="footer">
-		<div class="pageContent">
-			<div class="pageWidth">
-				<ul class="footerLinks">
-					<li><a class="tp001" href="{U_INDEX}" class="homeLink"><i class="icon fa-home fa-fw" aria-hidden="true"></i>{L_INDEX}</a></li>
-					<li><a class="tp001" href="#">Giúp đỡ</a></li>
-					<li><a class="tp001" href="#">Điều khoản & Quy định</a></li>
-				</ul>
-				<span class="helper"></span>
-			</div>
-		</div>
-	</div>
-	<div class="bigFooter">
-		<div class="pageContent">
-			<div class="pageWidth">
-				<ul class="bigFooterRow bigFooterRow--mainRow bigFooterRow--has4Columns">
-					<li class="bigFooterCol bigFooterCol--col1">
-						<div class="section">
-							<h3 class="bigFooterHeader">
-								Viettel Forum
-							</h3>
-							<ul class="footerMenu">
-								<li><a class="tp001" href="#">Giới thiệu</a></li>
-								<li><a class="tp001" href="#">Top trả lời</a></li>
-								<li><a class="tp001" href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="bigFooterCol bigFooterCol--col3">
-						<div class="section">
-							<h3 class="bigFooterHeader">
-								Liên hệ
-							</h3>
-							<ul class="footerMenu">
-								<li><a  class="tp001" href="{U_CONTACT_US}">{L_CONTACT_US}</a></li>
-								<li><a  class="tp001" href="{U_MEMBERLIST}">{L_MEMBERLIST}</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="bigFooterCol bigFooterCol--col4">
-						<div class="section">
-							<h3 class="bigFooterHeader">
-								Liên kết
-							</h3>
-							<ul class="footerMenu">
-								<li><a class="tp001" href="#" target="_blank">Viettel Portal</a></li>
-								<li><a class="tp001" href="#" target="_blank">Viettel Telecom</a></li>
-								<li><a class="tp001" href="#" target="_blank">My Viettel</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- End Facebook Pixel Code -->
-	<div id="uix_jumpToFixed">
-		<a href="#XenForo" title="Lên đầu" data-position="top"><i class="uix_icon uix_icon-jumpToTop"></i></a>
-	</div>
-	<div class="bdRealtime_Loader"
-		 data-config="{&quot;pusherAppKey&quot;:&quot;ws&quot;,&quot;pusherOptions&quot;:{&quot;encrypted&quot;:true,&quot;apiHost&quot;:&quot;10.0.0.3&quot;,&quot;apiPort&quot;:8183,&quot;wsHost&quot;:&quot;nhattao.com&quot;,&quot;wsPort&quot;:80,&quot;wssPort&quot;:443},&quot;pollingEnabled&quot;:&quot;1&quot;,&quot;pollingOptions&quot;:{&quot;timestamp&quot;:1496242369,&quot;url&quot;:&quot;https:\/\/photo2.tinhte.vn\/data\/bdRealtime\/polling&quot;},&quot;bingUrl&quot;:&quot;&quot;,&quot;debugMode&quot;:false,&quot;channelPrefix&quot;:&quot;httpstinhtevnf2107ae2ffda03ad4574a858933db9fa&quot;,&quot;eventNamePrefix&quot;:&quot;ea70f884356c0ea0030a0c7cc308a419&quot;}"></div>
+    <div id="uix_stickyFooterSpacer"></div>
+    <div class="footer">
+        <div class="pageContent">
+            <div class="pageWidth">
+                <ul class="footerLinks">
+                    <li><a class="tp001" style="color:#FFFFFF;" href="{U_INDEX}" class="homeLink"><i
+                            class="icon fa-home fa-fw" aria-hidden="true"></i>{L_INDEX}</a></li>
+                    <li><a class="tp001" href="#">Giúp đỡ</a></li>
+                    <li><a class="tp001" href="#">Điều khoản & Quy định</a></li>
+                    <li class="topLink">
+                        <a href="#top"><i
+                            class="icon fa-chevron-circle-up fa-fw icon-gray"></i> <span class="uix_hide">
+
+                        </span></a></li>
+                </ul>
+                <span class="helper"></span>
+            </div>
+        </div>
+    </div>
+    <div class="bigFooter">
+        <div class="pageContent">
+            <div class="pageWidth">
+                <ul class="bigFooterRow bigFooterRow--mainRow bigFooterRow--has4Columns">
+                    <li class="bigFooterCol bigFooterCol--col1">
+                        <div class="section">
+                            <h3 class="bigFooterHeader">
+                                Viettel Forum
+                            </h3>
+                            <ul class="footerMenu">
+                                <li><a class="tp001" href="#">Giới thiệu</a></li>
+                                <li><a class="tp001" href="#">Top trả lời</a></li>
+                                <li><a class="tp001" href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bigFooterCol bigFooterCol--col3">
+                        <div class="section">
+                            <h3 class="bigFooterHeader">
+                                Liên hệ
+                            </h3>
+                            <ul class="footerMenu">
+                                <li><a class="tp001" href="{U_CONTACT_US}">{L_CONTACT_US}</a></li>
+                                <li><a class="tp001" href="{U_MEMBERLIST}">{L_MEMBERLIST}</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bigFooterCol bigFooterCol--col4">
+                        <div class="section">
+                            <h3 class="bigFooterHeader">
+                                Liên kết
+                            </h3>
+                            <ul class="footerMenu">
+                                <li><a class="tp001" href="#" target="_blank">Viettel Portal</a></li>
+                                <li><a class="tp001" href="#" target="_blank">Viettel Telecom</a></li>
+                                <li><a class="tp001" href="#" target="_blank">My Viettel</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Facebook Pixel Code -->
+    <div id="uix_jumpToFixed">
+        <a href="#XenForo" title="Lên đầu" data-position="top"><i class="uix_icon uix_icon-jumpToTop"></i></a>
+    </div>
+    <div class="bdRealtime_Loader"
+         data-config="{&quot;pusherAppKey&quot;:&quot;ws&quot;,&quot;pusherOptions&quot;:{&quot;encrypted&quot;:true,&quot;apiHost&quot;:&quot;10.0.0.3&quot;,&quot;apiPort&quot;:8183,&quot;wsHost&quot;:&quot;nhattao.com&quot;,&quot;wsPort&quot;:80,&quot;wssPort&quot;:443},&quot;pollingEnabled&quot;:&quot;1&quot;,&quot;pollingOptions&quot;:{&quot;timestamp&quot;:1496242369,&quot;url&quot;:&quot;https:\/\/photo2.tinhte.vn\/data\/bdRealtime\/polling&quot;},&quot;bingUrl&quot;:&quot;&quot;,&quot;debugMode&quot;:false,&quot;channelPrefix&quot;:&quot;httpstinhtevnf2107ae2ffda03ad4574a858933db9fa&quot;,&quot;eventNamePrefix&quot;:&quot;ea70f884356c0ea0030a0c7cc308a419&quot;}"></div>
 </footer>
+<a href="#top"><div id="toTop" style="display: block;"> </div></a>
