@@ -363,6 +363,7 @@ $lang = array_merge($lang, array(
 
     'MARK' => 'Đánh dấu',
     'MARK_ALL' => 'Đánh dấu tất cả',
+    'MARK_ALL_READ' => 'Chuyển đã xem',
     'MARK_FORUMS_READ' => 'Đánh dấu đã xem tất cả chuyên mục',
     'MARK_SUBFORUMS_READ' => 'Đánh dấu đã xem tất cả chuyên mục con',
 	'MARK_READ'				=> 'Mark read',

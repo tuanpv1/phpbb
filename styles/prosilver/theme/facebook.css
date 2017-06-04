@@ -602,7 +602,7 @@ a:link {
     float: left;
 }
 #toTop::after {
-    background-color: rgb(163, 96, 10);
+    background: #1b1b1b none repeat scroll 0 0;
     content: "";
     height: 12px;
     left: 13px;
@@ -615,7 +615,7 @@ a:link {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: transparent transparent rgb(163, 96, 10);
+    border-color: transparent transparent #1b1b1b;
     border-image: none;
     border-style: solid;
     border-width: 11px;
@@ -649,7 +649,7 @@ a:link {
 #header {
 }
 .navTabs {
-    font-size: 14px;
+    font-size: 12px;
 }
 .navTabs {
     background-color: #0076B1;
@@ -661,10 +661,10 @@ a:link {
 .pageWidth {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: 1300px;
 }
 .navTabs {
-    font-size: 14px;
+    font-size: 12px;
 }
 #header .pageWidth .pageContent::after {
     clear: both;
@@ -768,12 +768,7 @@ li {
 }
 .nav-new a {
     color: #fff;
-    font-size: 14px;
-}
-a:link, a:visited {
-    color: #176093;
-    text-decoration: none;
-    transition: all 0.2s linear 0s;
+    font-size: 12px;
 }
 .navTabs .navTab {
     overflow-wrap: normal;
@@ -821,4 +816,846 @@ a:link, a:visited {
 .blockLinksList {
     font-size: 11px;
     padding: 2px;
+}
+.navTabs .visitorTabs {
+    float: right;
+}
+.navTabs .navTab.account .navLink {
+    font-weight: bold;
+}
+.navTabs .navTab.PopupOpen .navLink {
+    color: rgb(163, 96, 10);
+}
+.navTabs .visitorTabs .navLink {
+    padding: 0 10px;
+}
+.navTabs .navLink, .navTabs .SplitCtrl {
+    display: block;
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    outline: 0 none;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+}
+.navTabs .navTab {
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+.Popup .PopupControl.PopupOpen, .Popup.PopupContainerControl.PopupOpen {
+    background-color: rgb(255, 255, 255);
+    color: #2b485c;
+}
+.navTabs .navTab {
+    float: left;
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+.Popup .PopupControl, .Popup.PopupContainerControl {
+    cursor: pointer;
+    display: inline-block;
+}
+.Popup {
+    position: relative;
+}
+element.style {
+    display: block;
+    left: 905.5px;
+    position: fixed;
+    top: 54px;
+    visibility: visible;
+}
+#AccountMenu {
+    width: 274px;
+}
+.Menu {
+    border-top: 5px solid #6d3f03;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 11px;
+    min-width: 200px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 7500;
+}
+#AccountMenu .menuHeader {
+    position: relative;
+}
+.Menu .primaryContent {
+    background-color: rgba(255, 255, 255, 0.96);
+}
+.Menu .menuHeader {
+    overflow: hidden;
+}
+.primaryContent {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding: 10px;
+}
+.navTabs .navTab.PopupClosed {
+    position: relative;
+    transition: background-color 0.3s linear 0s;
+}
+.navTabs .navTab {
+    float: left;
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+.Popup .PopupControl, .Popup.PopupContainerControl {
+    cursor: pointer;
+    display: inline-block;
+}
+.Popup {
+    position: relative;
+}
+a.concealed:hover, .concealed a:hover {
+    text-decoration: underline;
+}
+.xenPreviewTooltip .previewContent {
+    min-height: 1em;
+    overflow: hidden;
+}
+.importantMessage {
+    background-color: #fff4e5;
+    border: 1px solid #f9bc6d;
+    border-radius: 5px;
+    color: #6d3f03;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+}
+.importantMessage a {
+    color: #6d3f03;
+    font-weight: bold;
+}
+.section {
+    margin: 10px auto;
+}
+.sectionMain {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+}
+.heading, .xenForm .formHeader {
+    background-color: #65a5d1;
+    border-bottom: 1px solid #176093;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: rgb(247, 247, 247);
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 3px;
+    padding: 5px 10px;
+}
+.formPopup {
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+}
+.formPopup form, .formPopup .ctrlUnit {
+    margin: 5px auto;
+}
+.formPopup .ctrlUnit {
+}
+.formPopup .textCtrl, .formPopup .button {
+    width: 232px;
+}
+.formPopup .ctrlUnit > dt label {
+    display: block;
+    margin-bottom: 2px;
+}
+.formPopup .submitUnit dd {
+    text-align: center;
+}
+.formPopup .ctrlUnit > dd .explain {
+    margin: 2px 0 0;
+}
+.formPopup .primaryControls {
+    overflow-wrap: normal;
+    padding: 0 5px;
+    white-space: nowrap;
+}
+.formPopup .primaryControls input.textCtrl {
+    margin-bottom: 0;
+}
+.formPopup .secondaryControls {
+    padding: 0 5px;
+}
+.formPopup .advSearchLink:hover {
+    background-color: rgb(229, 229, 229);
+    text-decoration: none;
+}
+#header {
+}
+#header .pageWidth .pageContent {
+}
+#header .pageWidth .pageContent::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#logoBlock {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+#logo {
+    display: block;
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+#logo img {
+    height: inherit;
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+#visitorInfo {
+    background: rgb(221, 221, 221) none repeat scroll 0 0;
+    border: 1px solid #032a46;
+    border-radius: 5px;
+    color: #032a46;
+    float: right;
+    margin: 10px 0;
+    min-width: 250px;
+    overflow: hidden;
+    padding: 5px;
+}
+#visitorInfo .avatar {
+    display: block;
+    float: left;
+}
+#visitorInfo .avatar .img {
+    border-color: #65a5d1;
+}
+#visitorInfo .username {
+    color: #032a46;
+    font-size: 18px;
+    overflow-wrap: normal;
+    text-shadow: 1px 1px 10px white;
+    white-space: nowrap;
+}
+#toTop {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 40px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+    font-size: 11px;
+    padding: 18px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+}
+#toTop::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent transparent rgb(163, 96, 10);
+    border-image: none;
+    border-style: solid;
+    border-width: 11px;
+    content: "";
+    height: 0;
+    left: 7px;
+    position: absolute;
+    top: -4px;
+    width: 0;
+}
+#toTop::after {
+    background-color: rgb(163, 96, 10);
+    content: "";
+    height: 12px;
+    left: 13px;
+    position: absolute;
+    top: 18px;
+    width: 10px;
+}
+@media (max-width: 600px) {
+    #toTop {
+        display: none;
+    }
+}
+.breadBoxTop, .breadBoxBottom {
+    box-sizing: border-box;
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.breadBoxTop {
+}
+.breadBoxTop .topCtrl {
+    float: right;
+    line-height: 24px;
+    margin-left: 5px;
+}
+.breadcrumb {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 2px;
+    font-size: 11px;
+    height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.breadcrumb.showAll {
+    height: auto;
+}
+.breadcrumb .boardTitle {
+    display: none;
+}
+.breadcrumb .crust {
+    display: block;
+    float: left;
+    max-width: 50%;
+    position: relative;
+}
+.breadcrumb .crust a.crumb {
+    background-color: rgb(247, 247, 247);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    cursor: pointer;
+    display: block;
+    line-height: 24px;
+    margin-bottom: -1px;
+    outline: 0 none;
+    padding: 0 10px 0 18px;
+    text-decoration: none;
+}
+.breadcrumb .crust a.crumb > span {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.breadcrumb .crust:first-child a.crumb, .breadcrumb .crust.firstVisibleCrumb a.crumb {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left: 10px;
+}
+.breadcrumb .crust:last-child a.crumb {
+    font-weight: bold;
+}
+.breadcrumb .crust .arrow {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: rgb(221, 221, 221);
+    -moz-border-top-colors: none;
+    border-color: transparent black transparent rgb(221, 221, 221);
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 12px 1px 12px 12px;
+    display: block;
+    height: 0;
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 0;
+    z-index: 50;
+}
+.breadcrumb .crust .arrow span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: rgb(247, 247, 247);
+    -moz-border-top-colors: none;
+    border-color: transparent black transparent rgb(247, 247, 247);
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 12px 1px 12px 12px;
+    display: block;
+    height: 0;
+    left: -13px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 9999px;
+    top: -12px;
+    white-space: nowrap;
+    width: 0;
+    z-index: 51;
+}
+.breadcrumb .crust:hover a.crumb {
+    background-color: rgb(229, 229, 229);
+}
+.breadcrumb .crust:hover .arrow span {
+    border-left-color: rgb(229, 229, 229);
+}
+.breadcrumb .crust .arrow {
+}
+.breadcrumb .jumpMenuTrigger {
+    background: transparent url("styles/vnxf2016/xenforo/xenforo-ui-sprite.png") no-repeat scroll 0 0;
+    display: block;
+    float: right;
+    height: 13px;
+    margin: 5px 5px 6px;
+    overflow: hidden;
+    text-indent: 9999px;
+    white-space: nowrap;
+    width: 13px;
+}
+@media (max-width: 480px) {
+    .Responsive .breadBoxTop.withTopCtrl {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .Responsive .breadBoxTop.withTopCtrl nav {
+        display: table-header-group;
+    }
+    .Responsive .breadBoxTop.withTopCtrl .topCtrl {
+        display: table-footer-group;
+        margin-top: 5px;
+        text-align: right;
+    }
+}
+#navigation .pageContent {
+    height: 55px;
+    position: relative;
+}
+#navigation .menuIcon {
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    text-indent: -9999px;
+    width: 16px;
+}
+#navigation .PopupOpen .menuIcon::before, #navigation .navLink .menuIcon::before {
+}
+#navigation .menuIcon::before {
+    border-bottom: 2px solid;
+    border-top: 6px double;
+    content: "";
+    font-size: 18px;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 1.3em;
+    width: 16px;
+}
+.navTabs {
+    background-color: rgb(163, 96, 10);
+    font-size: 12px;
+    height: 55px;
+    padding: 0 25px;
+}
+.navTabs .publicTabs {
+    float: left;
+}
+.navTabs .visitorTabs {
+    float: right;
+}
+.navTabs .navTab {
+    float: left;
+    overflow-wrap: normal;
+    white-space: nowrap;
+}
+.navTabs .navLink, .navTabs .SplitCtrl {
+    display: block;
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    outline: 0 none;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+}
+.navTabs .publicTabs .navLink {
+    padding: 0 15px;
+}
+.navTabs .visitorTabs .navLink {
+    padding: 0 10px;
+}
+.navTabs .navLink:hover {
+    text-decoration: none;
+}
+.navTabs .navTab.PopupClosed {
+    position: relative;
+    transition: background-color 0.3s linear 0s;
+}
+.navTabs .navTab.PopupClosed .navLink {
+    color: #fff;
+}
+.navTabs .navTab.PopupClosed:hover {
+    background-color: rgb(255, 255, 255);
+}
+.navTabs .navTab.PopupClosed .navLink:hover {
+    color: rgb(163, 96, 10);
+}
+.navTabs .navTab.PopupClosed .arrowWidget {
+    background-position: -64px 0;
+}
+.navTabs .navTab.PopupClosed .SplitCtrl {
+    margin-left: -14px;
+    width: 14px;
+}
+.navTabs .navTab.PopupClosed:hover .SplitCtrl {
+    background: transparent url("styles/vnxf2016/xenforo/xenforo-ui-sprite.png") no-repeat scroll -128px 20px;
+}
+.navTabs .navTab.selected .navLink {
+    background-color: rgb(255, 255, 255);
+    color: rgb(163, 96, 10);
+    position: relative;
+}
+.navTabs .navTab.selected .SplitCtrl {
+    display: none;
+}
+.navTabs .navTab.selected .arrowWidget {
+    background-position: -32px 0;
+}
+.navTabs .navTab.selected.PopupOpen .arrowWidget {
+    background-position: -16px 0;
+}
+.navTabs .navTab.PopupOpen .navLink {
+    color: rgb(163, 96, 10);
+}
+.navTabs .navTab.selected.PopupOpen .navLink {
+    background-color: rgb(255, 255, 255);
+    color: rgb(163, 96, 10);
+}
+.navTabs .navTab.selected .tabLinks {
+    background-color: rgb(255, 255, 255);
+    background-position: 0 -55px;
+    border: medium none;
+    height: 55px;
+    left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 57px;
+    width: 100%;
+}
+.navTabs .navTab.selected .blockLinksList {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    margin-left: 8px;
+    padding: 0;
+}
+.withSearch .navTabs .navTab.selected .blockLinksList {
+    margin-right: 275px;
+}
+.navTabs .navTab.selected .tabLinks .menuHeader {
+    display: none;
+}
+.navTabs .navTab.selected .tabLinks li {
+    float: left;
+    padding: 2px 0;
+}
+.navTabs .navTab.selected .tabLinks a {
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    line-height: 49px;
+    padding: 1px 10px;
+}
+.navTabs .navTab.selected .tabLinks .PopupOpen a {
+    color: inherit;
+    text-shadow: none;
+}
+.navTabs .navTab.selected .tabLinks a:hover, .navTabs .navTab.selected .tabLinks a:focus {
+    background-color: rgb(229, 229, 229);
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 5px;
+    color: #2b485c;
+    outline: 0 none;
+    padding: 0 9px;
+    text-decoration: none;
+}
+.navTabs .navTab.selected .tabLinks .Popup a:hover, .navTabs .navTab.selected .tabLinks .Popup a:focus {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    text-shadow: none;
+}
+.navTabs .navLink .itemCount {
+    background-color: #e03030;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    min-width: 12px;
+    overflow-wrap: normal;
+    padding: 0 2px;
+    position: absolute;
+    right: 2px;
+    text-align: center;
+    text-shadow: none;
+    top: -5px;
+    white-space: nowrap;
+}
+.navTabs .navLink .itemCount .arrow {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #e03030 transparent black;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 3px 3px 1px;
+    bottom: -3px;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    right: 4px;
+    text-shadow: none;
+    width: 0;
+}
+.navTabs .navLink .itemCount.Zero {
+    display: none;
+}
+.navTabs .navLink .itemCount.ResponsiveOnly {
+    display: none;
+}
+.NoResponsive #VisitorExtraMenu_Counter, .NoResponsive #VisitorExtraMenu_ConversationsCounter, .NoResponsive #VisitorExtraMenu_AlertsCounter {
+    display: none;
+}
+.navTabs .navTab.account .navLink {
+    font-weight: bold;
+}
+.navTabs .navTab.account .navLink strong, .navTabs .navTab.account .navLink span {
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: top;
+}
+.navTabs .navTab.account .avatar img {
+    border: medium none;
+    box-shadow: none;
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.navTabs .navTab.account .navLink .accountUsername {
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align: inherit;
+}
+#AccountMenu {
+    width: 274px;
+}
+#AccountMenu .menuHeader {
+    position: relative;
+}
+#AccountMenu .menuHeader .avatar {
+    float: left;
+    margin-right: 10px;
+}
+#AccountMenu .menuHeader .visibilityForm {
+    color: #176093;
+    margin-top: 10px;
+}
+#AccountMenu .menuHeader .links .fl {
+    bottom: 10px;
+    left: 116px;
+    position: absolute;
+}
+#AccountMenu .menuHeader .links .fr {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+}
+#AccountMenu .menuColumns {
+    overflow: hidden;
+    padding: 2px;
+}
+#AccountMenu .menuColumns ul {
+    float: left;
+    max-height: none;
+    overflow: hidden;
+    padding: 0;
+}
+#AccountMenu .menuColumns a, #AccountMenu .menuColumns label {
+    width: 115px;
+}
+#AccountMenu .statusPoster textarea {
+    margin: 0;
+    overflow: hidden;
+    resize: vertical;
+    width: 245px;
+}
+#AccountMenu .statusPoster .submitUnit {
+    margin-top: 5px;
+    text-align: right;
+}
+#AccountMenu .statusPoster .submitUnit .statusEditorCounter {
+    float: left;
+    height: 23px;
+    line-height: 23px;
+}
+.navPopup {
+    width: 260px;
+}
+.navPopup a:hover, .navPopup .listItemText a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    text-decoration: underline;
+}
+.navPopup .menuHeader .InProgress {
+    display: block;
+    float: right;
+    height: 20px;
+    width: 20px;
+}
+.navPopup .listPlaceholder {
+    max-height: 350px;
+    overflow: auto;
+}
+.navPopup .listPlaceholder ol.secondaryContent {
+    padding: 0 10px;
+}
+.navPopup .listPlaceholder ol.secondaryContent.Unread {
+    background-color: rgb(255, 255, 200);
+}
+.navPopup .listItem {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    overflow: hidden;
+    padding: 5px 0;
+}
+.navPopup .listItem:last-child {
+    border-bottom: medium none;
+}
+.navPopup .PopupItemLinkActive:hover {
+    background-color: rgb(229, 229, 229);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 -8px;
+    padding: 5px 8px;
+}
+.navPopup .avatar {
+    float: left;
+}
+.navPopup .avatar img {
+    height: 32px;
+    width: 32px;
+}
+.navPopup .listItemText {
+    margin-left: 37px;
+}
+.navPopup .listItemText .muted {
+    font-size: 9px;
+}
+.navPopup .unread .listItemText .title, .navPopup .listItemText .subject {
+    font-weight: bold;
+}
+.navPopup .sectionFooter .floatLink {
+    float: right;
+}
+.nav-new {
+    position: relative;
+    z-index: 1000000000;
+}
+.nav-new a {
+    color: #fff;
+    font-size: 14px;
+}
+.nav-new:hover {
+    background: #fff none repeat scroll 0 0;
+}
+.nav-new:hover a {
+    color: #363b3f;
+}
+.nav-new ul {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #363b3f;
+    border-image: none;
+    border-style: solid;
+    border-width: 5px 1px 1px;
+    display: none;
+    min-width: 220px;
+    position: absolute;
+    top: 55px;
+}
+.nav-new .NoPopupGadget {
+    display: none;
+}
+.nav-new:hover ul, .nav-new:hover ul li {
+    display: block;
+}
+@media (max-width: 800px) {
+    .Responsive .navTabs .navTab.account .navLink strong.itemCount, .Responsive .navTabs .navTab.account .navLink span {
+        display: none;
+    }
+}
+@media (max-width: 610px) {
+    .Responsive .navTabs {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .Responsive .withSearch .navTabs .navTab.selected .blockLinksList {
+        margin-right: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .Responsive.hasJs .navTabs:not(.showAll) .publicTabs .navTab:not(.selected):not(.navigationHiddenTabs) {
+        display: none;
+    }
+}
+#navigation .pageContent {
+    height: 82px;
+    position: relative;
+}
+#navigation .menuIcon {
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    text-indent: -9999px;
+    width: 16px;
+}
+#navigation .PopupOpen .menuIcon::before, #navigation .navLink .menuIcon::before {
+}
+#navigation .menuIcon::before {
+    border-bottom: 2px solid;
+    border-top: 6px double;
+    content: "";
+    font-size: 18px;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0.9em;
+    width: 16px;
+}
+.mblog {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+@media (max-width: 900px) {
+    .mblog {
+        display: block;
+    }
+}
+.midRightBlocks {
+    margin-top: 10px;
+}
+#widget-19.secondaryContent {
+    border: medium none;
+    box-shadow: none;
+}
+#logo img {
+    height: 40px;
+    margin-top: -3px;
+}
+#logoBlock {
+    padding-left: 5px;
 }

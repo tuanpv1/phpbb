@@ -116,29 +116,90 @@
                                     <img style="height: 45px;" src="{T_THEME_PATH}/images/plupload/logo.png"/>
                                 </a>
                             </div>
+
                             <ul class="publicTabs">
                                 <li class="navTab nav-new forums selected">
                                     <a href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" class="navLink">Trang chủ</a>
                                 </li>
                                 <li class="navTab nav-new nodetab57 ">
-                                    <a style="color: white" href="#" class="navLink">liên hệ</a>
+                                    <a href="#" class="navLink">liên hệ</a>
                                 </li>
                                 <li class="navTab home PopupClosed">
-                                    <a style="color: white" class="navLink" href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
+                                    <a class="navLink" href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
                                         <i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span>
                                     </a>
                                 </li>
+                                <!-- IF S_REGISTERED_USER -->
+                                <!-- IF U_ACP -->
                                 <li class="navTab home PopupClosed">
-                                    <a style="color: white" class="navLink" href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
+                                    <a class="navLink" href="{U_ACP}" title="{L_ACP}" role="menuitem">
+                                        <i class="icon fa-cogs fa-fw" aria-hidden="true"></i><span>{L_ACP_SHORT}</span>
+                                    </a>
+                                </li>
+                                <!-- ENDIF -->
+                                <!-- IF U_MCP -->
+                                <li class="navTab home PopupClosed">
+                                    <a class="navLink" href="{U_MCP}" title="{L_MCP}" role="menuitem">
+                                        <i class="icon fa-gavel fa-fw" aria-hidden="true"></i><span>{L_MCP_SHORT}</span>
+                                    </a>
+                                </li>
+                                <!-- ENDIF -->
+                                <li class="navTab home PopupClosed">
+                                    <a class="navLink" href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
+                                        <i class="icon fa-power-off fa-fw" aria-hidden="true"></i>{L_LOGIN_LOGOUT}
+                                    </a>
+                                </li>
+                                <!-- ELSE -->
+                                <li class="navTab home PopupClosed">
+                                    <a class="navLink" href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
                                         <i class="icon fa-power-off fa-fw" aria-hidden="true"></i>{L_LOGIN_LOGOUT}
                                     </a>
                                 </li>
                                 <li class="navTab home PopupClosed">
-                                    <a style="color: white" class="navLink" href="{U_REGISTER}" role="menuitem">
+                                    <a class="navLink" href="{U_REGISTER}" role="menuitem">
                                         <i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>{L_REGISTER}</span>
                                     </a>
                                 </li>
+                                <!-- ENDIF -->
                             </ul>
+                            <!-- IF S_REGISTERED_USER -->
+                            <ul class="visitorTabs">
+                                <li class="navTab account Popup PopupControl PopupClosed ">
+                                    <a href="{U_PROFILE}" role="menuitem" class="navLink accountPopup NoPopupGadget" rel="Menu">
+                                        <span class="avatar"><!-- IF CURRENT_USER_AVATAR -->{CURRENT_USER_AVATAR} <!-- ENDIF --></span>
+                                        <strong class="accountUsername">{CURRENT_USERNAME_SIMPLE}</strong>
+                                        <strong class="itemCount ResponsiveOnly Zero"
+                                                id="VisitorExtraMenu_Counter">
+                                            <span class="Total">0</span>
+                                            <span class="arrow"></span>
+                                        </strong>
+                                    </a>
+                                </li>
+                                <!-- IF S_DISPLAY_PM -->
+                                <li class="navTab inbox Popup PopupControl PopupClosed " style="padding-top: 3px;">
+
+                                    <a href="{U_PRIVATEMSGS}" role="menuitem" rel="Menu" class="navLink NoPopupGadget"><i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 20px;"></i>
+                                        <strong class="itemCount Zero"
+                                                id="ConversationsMenu_Counter" data-text="Bạn có %d đối thoại mới chưa đọc.">
+                                            <span class="Total"><strong class="badge<!-- IF not PRIVATE_MESSAGE_COUNT --> hidden<!-- ENDIF -->">{PRIVATE_MESSAGE_COUNT}</strong></span>
+                                        </strong>
+                                    </a>
+                                </li>
+                                <!-- ENDIF -->
+                                <!-- IF S_NOTIFICATIONS_DISPLAY -->
+                                <li class="navTab alerts Popup PopupControl PopupClosed dropdown-container dropdown-{S_CONTENT_FLOW_END}" style="padding-top: 3px;">
+                                    <a href="{U_VIEW_ALL_NOTIFICATIONS}" id="notification_list_button" role="menuitem" rel="Menu" class="navLink NoPopupGadget dropdown-trigger">
+                                        <i class="fa fa-bell-o" aria-hidden="true" style="font-size: 20px;"></i>
+                                        <strong class="itemCount Zero"
+                                                id="AlertsMenu_Counter" data-text="Bạn có %d thông báo mới.">
+                                            <span class="Total"><strong class="badge<!-- IF not NOTIFICATIONS_COUNT --> hidden<!-- ENDIF -->">{NOTIFICATIONS_COUNT}</strong></span>
+                                            <!-- INCLUDE notification_dropdown.html -->
+                                        </strong>
+                                    </a>
+                                </li>
+                                <!-- ENDIF -->
+                            </ul>
+                            <!-- ENDIF -->
                             <span class="helper"></span>
                         </div>
                     </div>
