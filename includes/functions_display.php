@@ -1212,7 +1212,7 @@ function display_user_activity(&$userdata_ary)
 			$sql = 'SELECT forum_name
 				FROM ' . FORUMS_TABLE . '
 				WHERE forum_id = ' . $active_f_row['forum_id'].
-				'AND forum_status_display = '.STATUS_FORUM_ACTIVE;
+				' AND forum_status_display = '.STATUS_FORUM_ACTIVE;
 			$result = $db->sql_query($sql, 3600);
 			$active_f_row['forum_name'] = (string) $db->sql_fetchfield('forum_name');
 			$db->sql_freeresult($result);
